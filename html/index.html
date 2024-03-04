@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reference Cards</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+            <link rel="stylesheet" type="text/css" media="all" href="../css/syft_style_1.css"/>
+    </head>
+    <body>
+        <header>      
+            <nav>
+                <div class="heading">     
+                    <ul class="nav-links">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="#html_card" >html</a></li>
+                    <li><a href="#css_card" >css</a></li>
+                    <li><a href="#js_card" >js</a></li>
+                    <li><a href="#jquery_card" >jquery</a></li>
+                    <li><a href="#cli_card" >cli</a></li>
+                    <li><a href="#git_card" >git</a></li>
+                    <li><a href="../html/dev.html" >dev</a></li>
+                    <li><a href="../html/devops.html" >devops</a></li>
+                    </ul>
+            </nav>
+        </div>
+            <div class="body-text"><h1>Smartworker's I.T. Reference Cards</h1></div>
+        </header>
+      <article>
+          <h1>Reference card: Frequently used commands for programmers.</h1>
+          <div class="lastdate">
+            <p>Last Updated: 2024-02-25</p>
+        </div>
+        <p>The following reference cards provide a list of frequently used commands for programmers</p>
+        <p>The reference cards are designed to cover commands for full stack developers. You can see the topics covered in the nav bar. </p>
+        <p>The final reference card, devops, includes a guide to end-to-end deveopment lifecycle. Encapsulates the entire lifecycle of a software application, going from the definition of requirements, conception, and design through development to testing and maintenance.  </p>
+        <p>The style sheet for this site is <a href="../html/syft_style_guide-01.html" ><strong>Syft Style 01</strong> </p>
+    </article>
+        <article>
+            <h1 id="html_card" class="article_head">HTML</h1>
+            <p>The foundation of web content and structure. It can work on its own but really is useful when used as part of team with CSS and JavaScript</p>
+            <h2>HTML fundamentals</h2>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">mdn link to HTML Basics</a> </p>
+            <p>Come to grips with the fundamental parts of HTML. Make sure you know what the items on this list are and how to use them. Your mastering of the syntax to come depends on it.</p>
+            <ul>
+                <li>elements</li>
+                <li>tags</li>
+                <li>content</li>
+                <li>attribute</li>
+                <li>nesting elements</li>
+                <li>void element</li>
+                <li>HTML comments </li>
+            </ul>
+        </article>
+        <article>
+        <h2>The DOCTYPE</h2>     
+        <p>The &lt!DOCTYPE html&gt declaration tells the browser that a given file is a markup .html file and that a set of web standards must be applied to it. It is the first line of code that goes at the top of every HTML or XHTML file.</p>
+        </article>
+        <article>
+        <h2>Elements</h2>
+        <p>There are six kinds of elements: void; template; raw text; escapable raw test; foreign, and normal</p>
+          </article>
+          <article class="article">
+            <h1>LINKS</h1>
+            <h2>Linking in CSS files</h2>
+            <p>CSS files are often kept in a "ccs" or "style" director as part of the site. This is preferred to including CSS styling in the html file because it is easier see, and control when it's a seperate file</p>
+            <p class="code"> &lt link href="pathname of the CSS file" type="text/css" rel="stylesheet" /&gt; </p>
+            <p>CSS links are defined in the &lt head &gt section of the html page. It is common to define multiple CSS files, one after another in the &lt head &gt section. When styling in the files clash eg &lth1&gt styling in all files, the styling is applied in the order the files are defined.  The last  &lt h1 &gt tag found in the last file will override earlier tags </p>
+            <h2>Creating navigation links. The &lt a &gt element</a></h2>
+            <p>Links are also a core feature of Internet navigation. They power movement from one page to another, thats surfing the web!</p>
+            <p>The &lta&gt HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. To link to different website you use an <strong>absulute URL.</strong> Linking to other pages on the same website you don't have to specifiy the domain name you can use shorthand known as <strong>relative URL.</strong></p>
+            <h3>Relative URL</h3>
+            <p>If all the pages of the site are in the same folder then the value for the href attribute is just the file name.</p>
+            <p>To link to a file in <strong>same folder, </strong> with text descriptor of 'Adding CSS styling to elements'</p>
+            <p class="code">&lta href="Styling.html"&gtAdding CSS styling to elements&lta&gt</p>
+            <p>To link to a file in a <strong>child folder, </strong> with text descriptor of 'Getting started in DEVOPS'</p>
+            <p class="code">&lta href="devops/introduction.html"&gtGetting started in DEVOPS&lta&gt</p>
+            <p>To link to a file in a <strong>grandchild folder, </strong> with text descriptor of 'Using CPanel'</p>
+            <p class="code">&lta href="devops/cpanel/cpanel.html"&gtUsing CPanel&lta&gt</p>
+            <p>To link to a file in a <strong>parent folder, </strong> with text descriptor of 'Australian Shares Home'</p>
+            <p class="code">&lta href="../index.html"&gtAustralian Shares Home&lta&gt</p>
+            <p>To link to a file in a <strong>grandparent folder, </strong> with text descriptor of 'Smartworker'</p>
+            <p class="code">&lta href="../../index.html"&gtSmartworker&lta&gt</p>
+            <h3>EMAIL links</h3>
+            <p>Create a link that starts up the users email program and specifies a to: address</p>
+            <p class="code"> &lta href="mailto:brigalow@smartworker.com"&gtEmail Brigalow&lta&gt</p>
+            <h3>Open links in a new window</h3>
+            <p>To link to a another site in a <strong>parent folder, </strong> with text descriptor of 'Australian Shares' and open it in a new browser window. Use the <strong>target keyword</strong></p>
+            <p class="code">&lta href="../index.html"&gtAustralian Shares Home&lta target="_blank"&gtAustralian Shares&lta&gt</p>
+            <h3>Linking to a specific part of the same page</h3>
+            <p>First you must add an <strong>id="target name"</strong> to the elements where you want to land. The <strong>id's target name</strong> must be unique on the page and can only start with an underscore or letter</p>
+            <p class="code">&lth2 id="navlinks"&gtCreating navigation links&lth2&gt</p>
+            <p>To create links to to your landing element you use the &lta&gt element and the href attribute starts with a # symbol.</p>
+            <p class="code">&lta href="#navlinks"&gtCreating navigation links&lth2&gt</p>
+            <h3>Linkeing to a specific part of another page or website.</h3>
+            <p>Use exactly the same technique as for same page links. the two differences are</p>
+            <nl>
+                <li>the target must have an id </li>
+                <li>you must use the correct absolute URL or relative url</li>
+            </nl>
+            
+          </article>
+         <article>
+           <h1>HTML Table Reference</h1>
+           <h2>Table Tags</h2>
+            <table>
+                <thead>
+                    <th>Tag</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td><span class="code">&lt;table&gt;</span></td>
+                    <td>Table</td>
+                    <td>The wrapper element for all HTML tables.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;thead&gt;</span></td>
+                        <td>Table Head</td>
+                        <td>The set of rows defining the column headers in a table.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;tbody&gt;</span></td>
+                        <td>Table Body</td>
+                        <td>The set of rows containing actual table data.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;tr&gt;</span></td>
+                        <td>Table Row</td>
+                        <td>The table row container.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;td&gt;</span></td>
+                        <td>Table Data</td>
+                        <td>The table row container.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;tfoot&gt;</span></td>
+                        <td>Table Foot</td>
+                        <td>The set of rows defining the footer in a table.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <h2>Table Attributes</h2>
+            <table>
+                <thead>
+                    <th>Attribute</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="code">colspan</span></td> 
+                        <td>Column Span</td>
+                        <td>Defines how many columns a td element should span.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">rowspan</span></td>
+                        <td>Row Span</td>
+                        <td>Defines how many rows a td element should span.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    <article claSS="article">
+        <h1>HTML Images reference</h1>
+        <table>
+            <thead>
+                <th>Tag</th>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                <td><span class="code">&lt;img&gt;</span></td>
+                <td>Image</td>
+                <td>To add an image into the page. &ltimg&gt is avoid element. It must contain src and alt attributes.</td>
+                </tr>
+            </tbody>
+        </table>
+
+<h2>Image Attributes</h2>
+        <table>
+            <thead>
+                <th>Attribute</th>
+                <th>Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code">src</span></td>  
+                    <td>Source URL</td>
+                    <td>A <strong>link</strong> to the image source file, usually a relative link.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">alt</span></td>
+                    <td>Text Description</td>
+                    <td>Text description of the image, It dispalys if the image file is not found. Value for visually impaired</td>
+                </tr>
+                <tr>
+                    <td><span class="code">title</span></td>  
+                    <td>Image Title</td>
+                    <td>A <strong>title</strong> attribute add extra information to the image that will be displayed as a tool tip when user hovers.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">height</span></td>
+                    <td>Height in pixels</td>
+                    <td>Good idea to specify so browser can leave the right amount of space for the image while it loads the rest of page. Images take longer to load than text.</td>
+                </tr>
+                <tr>
+                    <td><span class="code">width</span></td>
+                    <td>Width in pixels</td>
+                    <td>Good idea to specify so browser can leave the right amount of space for the image while it loads the rest of page. Images take longer to load than text.</td>
+                </tr>
+                <tr >
+                    <td><span class="tablefootnote">Footnote</span></td>
+                    <td><span class="tablefootnote">Sizing Images</span></td>
+                    <td><span class="tablefootnote"> Best to specify size using CSS. Many more options and greater flexibility and better control.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    <h2>Image Guideline</h2>
+    <img src="../images/smiling_black_poodle.png" alt="Smiling black poodle puppy">
+    <p>To get the best from images on your website follow these simple guide lines. </p>
+        <table>
+            <thead>
+                <th>Topic</th>
+                <th>Guideline</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rule 1</td>  
+                    <td><strong>Save images in the right format,</strong> mainly use jpeg,gif,png.</td>
+                </tr>
+                <tr>
+                    <td>Rule 2</td>
+                    <td><strong>Same images at the right size.</strong> Save images at the size it will be displayed on the website. You can change the size using CSS but it distort if you make it larger or smaller.</td>
+                </tr>
+                <tr>
+                    <td>Rule 3</td>
+                    <td><strong>Measure images in pixels</strong>This prevents distortion when users change screen resolution. </td>
+                </tr>
+                <tr>
+                    <td>Image Editors</td>
+                    <td><ul>
+                        <li>Photoshop is the most popular, photoshop elements is a cheaper version for atating out</li>
+                        <li>Pixelmator Pro is a MacOS app $49.95</li>
+                        <li>pixlr.com an Broswer based editor 1000 AI credits included for $usd 4.90 /month </li>
+                        <li>GIMP a open source editor, does all the basics and more</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td>jpg</td>
+                    <td><strong>.jpeg file types</strong>Best format for photos with many colors, be cafeful of whites and greys can hide many tones in an image. </td>
+                </tr>
+                <tr>
+                    <td>gif </td>
+                    <td><strong>.gif file types</strong>Best format for images with areas filled with exactly the same color, know as flat color. common in logos, illistrations and diagrams. Be cafeful of whites and greys can hide many tones in an image.</td>
+                </tr>
+                <tr>
+                    <td>png </td>
+                    <td><strong>.png file types</strong>Same as gif.</td>
+                </tr>
+                <tr>
+                    <td>Cropping</td>
+                    <td><strong>Cropping images</strong>in the code will usually lose valuable information or create a distorted image. Go back to the image editor and resize the iamge for a superior result. </td>
+                </tr>
+                <tr>
+                    <td>Vector Images</td>
+                    <td><strong>Vector images</strong> advantage is that you can increase dimensions of the image without affecting its quality. Commonly used in Adobe Illistrator where you can generate a .gif file of the size you want. A new methor is <strong>.svg format vector image</strong> it can be used directly without the intermediary step of generating a .gif</td>
+                </tr>
+                <tr>
+                    <td>Animated gifs</td>
+                    <td><strong>Animated gifs</strong> are just cartoons, multiple versions of the same image changing a bit at a time. Animated gifs add to your file size and slow down you page load because every version of the image is a seperat file.</td>
+                </tr>
+                <tr>
+                    <td>Transparency</td>
+                    <td><strong>Transparency</strong> gif format can be used if the portion that is transparent has straight edges and is 100% transparent, select the transparency option. Otherwise you have to use .png format.</td>
+                </tr>
+                <tr>
+                    <td>Sizing live Images</td>
+                    <td>To <strong>size a live image</strong> in the browser, right click the image and select "open in a new tab". Th dimensions will be displayed with the image. </td>
+                </tr>
+                <tr>
+                    <td>Captions</td>
+                    <td>Images often make more sense when they come with <strong>captions.</strong> HTML5 introduced the <span class="code">&ltfigure&gt</span> and  <span class="code">&ltfigcapture&gt</span> elements to deliver elegant solution for images with captions. </td>
+                </tr>
+                <tr >
+                    <td><span class="tablefootnote">Footnote</span></td>
+                    <td><span class="tablefootnote"> Best to specify size using CSS. Many more options and greater flexibility and better control.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </article> 
+    <h1 id="html_card" class="article_head">HTML</h1>
+    <div>
+        <article>
+            <h1 id="css_card" class="article_head">CSS</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+    <div>
+        <article>
+            <h1 id="js_card" class="article_head">JavaScript</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+    <div>
+        <article>
+            <h1 id="jquery_card" class="article_head">JQuery</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+    <div >
+        <article>
+            <h1 id="cli_card" class="article_head">Command Line Interface</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+    <div >
+        <article>
+            <h1 id="git_card" class="article_head">Git and Github</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+    <div >
+        <article>
+            <h1 id="devops_card" class="article_head">DEVOPS</h1>
+            <p> <a href="#top">Back to top</a> </p>
+        </article>
+    </div> 
+        
+         
+    <footer>
+    <p>footer</p>   
+    <p> <a href="#top">Back to top</a> </p>
+  </body>
+</html>
