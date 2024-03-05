@@ -36,13 +36,13 @@ body {
 }
 
 h1 {
-  text-align: center;
-  color: greenyellow;
-  font-family: "plutoBold", sans-serif;
+  text-align: left;
+  color: #27495d;
+  font-family: "pluto", sans-serif;
 }
 h2 {
-  color: rebeccapurple;
-  text-align: center;
+  color: #8ba0b7;
+  text-align: left;
   font-family: "pluto", sans-serif;
 }
 p {
@@ -115,30 +115,41 @@ article {
   color: #fff;
 }
 .amethyst {
-  background-color: rgb(120,43,144);
+  background-color: #782b90;
   color: #fff;
 }
 .florentine {
-  background-color: rgb(255,209,0);
+  background-color: #ffd100;
   color: #fff;
 }  
-
 .midnight-blue {
-  background-color: rgb(39,73,93);
+  background-color: #27495d;
   color: #fff;
 }  
 .blue-nile {
-  background-color: rgb(117,190,233);
+  background-color: #75bee9;
 }
 .mauve {
-  background-color: rgb(189,140,191);
+  background-color: #bd8cbf;
 }
 .green {
   background-color: #a5c300;
 }
 .blackcut {
-  background-color: rgb(0,0,0);
+  background-color: #000000;
   color: #fff;
+}
+
+.text-container {
+  width: 100%;
+}
+
+.text-panel {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 20px 20px;
+ 
 }
 
 .lastdate {
