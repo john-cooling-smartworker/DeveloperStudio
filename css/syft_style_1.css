@@ -1,19 +1,14 @@
 /*
-  Syft system style number 1 ~ syft_style_1.css .
-  Learn more ~ http://960.gs/
-
-  Licensed under GPL and MIT.
+  Rule set for Syft system style number 1 ~ syft_style_1.css .
 */
 
-/* `Basic HTML
-----------------------------------------------------------------------------------------------------*/
 /* Universal style ruleset. Used to reser the browsers user agent */
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-/* Active private font files can be used for unique branding */
+/* Private font files can be used for unique branding */
 @font-face {
   font-family: "pluto";
   src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
@@ -24,27 +19,129 @@
   src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
 }
 /* Default styling ruleset for standard HTML elements */
+
 html {
   margin: 2px;
   padding: 2px;
-}
-body {
-  font-family: "Montserrat", Arial, sans-serif;
-  background-color: gainsboro;
-  min-height: 100vh; /* use viewport height units to allow the boby to set a minimum height vale based upon the full heigh of the viewport. A responsive site setting */
-  margin: 0 10%;
+  font-size: 16px;
+  font-family: var(--font);
+  line-height: 1.5;
 }
 
+:root {
+  /* Syft colors*/
+  --silver:  #8ba0b7;
+  --sapphire: #0072bc;
+  --amethyst: #782b90;  
+  --florentine: #ffd100;  
+  --midnight-blue: #27495d;  
+  --blue-nile:  #75bee9;  
+  --mauve: #bd8cbf;
+  --green: #a5c300;
+  --blackcut: #000000;
+  --border-color: rgba(0, 0, 0, .1);
+    --body-color: #212529;
+  
+  --font: Montserrat, Helvetica, Arial, sans-serif;
+    --font-heading: "pluto";
+  --gap: 2em;
+}
+
+body {
+ color: var(--body-color)  
+}
+
+/* default format container full width header section, one column aside and four column main */
+.container {
+   display: grid;
+   gap: 10px;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto auto auto auto;
+   grid-template-areas:
+     "header header header header header "
+     "aside  main main main main"
+     "aside footer footer footer footer";
+   border: 2px solid #a2a2a6;
+   padding: 10px;
+   margin: 10px auto;
+
+ }
+/* default layout for HTML5 sections*/
+ header {
+   grid-area: header;
+ }
+
+ footer {
+   grid-area: footer;
+ }
+
+ aside {
+   grid-area: aside;
+ }
+
+ main {
+   grid-area: main;
+ }
+
+ article {
+   display: grid;
+   gap: var(--gap) ;
+   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 2fr));
+   background-color: whitesmoke;
+   color: black;
+   padding: 15px;
+   margin: 15px auto;
+ }
+ 
+.article_head {
+  background-color: rgb(200, 213, 185);
+  color: black;
+}
+ /* default style for text element */
+ h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-family: var(--font-heading), var(--font);
+    font-weight: 600;
+    line-height: 1.5;
+ }
 h1 {
-  text-align: left;
-  color: #27495d;
-  font-family: "pluto", sans-serif;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  color: var(--midnight-blue);
+  margin-top: 20px;
 }
 h2 {
-  color: #8ba0b7;
+  color: var(--silver);
   text-align: left;
-  font-family: "pluto", sans-serif;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  border-top: 0.25em solid;
+  font-size: 2em;
+  grid-column: auto / span 2;
 }
+
+h3 {
+  color: var(--saphire);
+  text-align: left;  
+}
+
+h4 {
+  color: var(--blue-nile);
+  text-align: left;
+}
+
+h5 {
+  color: var(--florentine);
+  text-align: left;    
+  }
+
 p {
   display: block;
   margin-block-start: 1em;
@@ -52,53 +149,14 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
- /* ruleset for link styling, The order below is importat as link styles build on one another */
- a {
-  background-color: #75bee9;
-  color: #0072bc;
-  text-decoration: none;
-  cursor: pointer;
-}
 
-a:link {
-  color: #27495d
-}
+/* second container style  */
 
-a:visited {
-  background-color: #27495d;
-  color: #a5c300;
-}
-
-a:focus { 
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  background: #27495d;
-  color: #782b90;
-}
-/* default styling for HTML5 setions */
-article {
-  display: block;
-  background-color: beige;
-}
-/* end of HTML5 section styling */
-
-/* ruleset for style sheet, rules can be used in pages to apply the syft syle 001 rules*/
-
-.container {
-  border: 2px solid #a2a2a6;
-  padding: 10px;
-  margin: 10px auto;
-}
 
 .color-container {
   width: 100%;
 }
+
 .color-panel {
   display: inline-block;
   width: 32%;
@@ -106,6 +164,102 @@ article {
   margin: 20px auto;
   min-height: 100px;
 }
+
+/* third contain style */
+
+.text-container {
+  width: 100%;
+}
+
+.text-panel {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 20px 20px;
+}
+
+.col2-header {
+  grid-column: 1 / 3;
+  text-align: center;
+}
+
+.col2-container {
+  display: grid;
+  --florentine: #ffd100;  
+  border: 0.25em solid var(--florentine); 
+  max-width: 80em;
+  padding: 2em;
+  margin: 2em;
+
+    }
+.content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto;
+      gap: calc(var(--gap)* 2) var(--gap);
+      align-items: stretch;
+}
+  
+    /* default layout for HTML5 sections*/
+    header2 {
+      grid-area: header2;
+    }
+  
+    footer2 {
+      grid-area: footer2;
+    }
+  
+    aside2 {
+      grid-area: aside2;
+    }
+  
+    main2 {
+      grid-area: main2;
+    }
+  
+    article2 {
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%),  1fr));
+      background-color: whitesmoke;
+      color: black;
+      padding: 15px;
+      margin: 15px auto;
+    }
+
+/* forth container style*/
+
+.font-panel {
+  display: inline-block;
+  width: 45%;
+}
+
+.font-label {
+  font-size: 20px;
+  text-decoration: underline;
+}
+/* fifth container style*/
+.syntax-container {
+  width: 100%;
+}
+
+.syntax-panel {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin: 20px 20px;
+}
+
+.syntax-panel {
+  display: inline-block;
+  width: 45%;
+}
+
+.syntax-label {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* Syft branding style colored boxs with text */
 .silver {
   background-color: #8ba0b7;
   color: #fff;
@@ -140,120 +294,78 @@ article {
   color: #fff;
 }
 
-.text-container {
-  width: 100%;
+
+.inline_list {
+  display: inline-block;
 }
 
-.text-panel {
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  margin: 20px 20px;
- 
+/* text font styling  */
+/* xxxxjc need to add media query to reduce font size for smaller screens when I find out how to do that*/
+.syft-masthead-title {
+  margin-bottom: 1rem;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: .9;
+  color: inherit;
 }
+
+.regular {
+  font-style: normal;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.source-code-pro {
+  font-family: "Source Code Pro", monospace;
+}
+
 
 .lastdate {
   font-family: monospace;
   font-style: italic;
 }
-.body-text {
-  display: flex;
-  font-family: "Montserrat", sans-serif;
-  align-items: center;
-  justify-content: center;
-  margin-top: 150px;
-  background-image: url("../images/Red Gradient.png");
+
+.code {
+  font-family: "Source Code Pro" monospace;
+  background-color: beige;
 }
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: teal;
-  font-family: "pluMontserrat", sans-serif;
  
-}
-.heading {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
-}
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+
+/* rule set for lists*/
+ul li {
+  list-style-position: inside;}
+ul li::marker { 
+  color:#782b90;
+  font-size: 1.25em;
 }
 
-.nav-links li {
-  list-style: none;
+/* table style one */  
+ 
+table {
+  border: 2px solid darkorchid;
+  width: 650px;
+  margin: 0 auto;
 }
 
-.nav-links a {
-  color: #0072bc;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 14px 16px;
+thead {
+  background-color: plum;
 }
 
-.nav-links a:hover:not(.active) {
-  background-color: lightseagreen;
+td {
+  border-top: 1px solid darkorchid;
 }
+  
 
-.nav-links li a.active {
-  background-color: #4caf50;
-}
-
-  
- 
-  
-  table {
-    border: 2px solid darkorchid;
-    width: 650px;
-    margin: 0 auto;
-  }
-  
-  thead {
-    background-color: plum;
-  }
-  
-  td {
-    border-top: 1px solid darkorchid;
-  }
- 
- 
- 
-  
-  .code {
-    font-family: monospace;
-    background-color: beige;
-  }
- .article {
-    background-color: rgb(200,213,185);
-    color: black; 
-}
-.article_head {
-  background-color: rgb(200,213,185);
-  color: black; 
-}
-.tophead {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(143,192,169);
-}
-.tablefootnote {
-    background-color: rgb(204,0,0);
-    color: rgb(250,243,221);
-}
-.card_link {
-  background-color: rgb(204,0,0);
-  color: rgb(250,243,221);
-}
-/* button set of formats need to change colors */
+/* button style set one for skeuomorpic style buttons xxxxjc need to change colors */
 button {
-  height: 50px;
-  width: 200px;
+  height: 40px;
+  width: 160px;
   cursor: pointer;
   font-weight: 600;
   font-size: 15px;
@@ -282,16 +394,16 @@ button {
   background: #0c960c;
   background: linear-gradient(#0c960c, #0ebc0e);
 }
-
+/* button style set two for flat style buttons xxxxjc need to change colors */
 .flat {
-  background-color: #1D1;
+  background-color: #bd8cbf;
   color: #fff;
-  border: 2px solid #12dd23;
+  border: 2px solid #8ba0b7;
   border-radius: 10px;
 }
 
 .flat:hover {
-  background-color: #0c960c;
+  background-color: #782b90;
   transition: background-color .15s, font-size .15s;
   font-size: 18px;
 }
@@ -299,7 +411,92 @@ button {
 .flat:active {
   border-color: #fff;
 }
-    
+
+/* Navigation styles: includes main nav bar with optional dropdowns and responsive collapse. Bread Crumbs, inpage links (internal and external)  */
+
+/* link styling, keep in order, styles built on top of another */
+a {
+  background-color: #fff;
+  color: #0072bc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  color: #27495d
+}
+
+a:visited {
+  background-color: #27495d;
+  color: #a5c300;
+}
+
+a:focus {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background: #27495d;
+  color: #782b90;
+}
+/* Page nav using flexbox functions of CSS */
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+} 
+ 
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+/* .nav-links a {
+  color: #0072bc;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+}*/
+
+.nav-links a:hover:not(.active) {
+  background-color: lightseagreen;
+}
+
+.nav-links li a.active {
+  background-color: #4caf50;
+}
 /* fancy breadcrumbs uses a <ul> to define the content*/ 
 .breadcrumb {
   text-align: left;
