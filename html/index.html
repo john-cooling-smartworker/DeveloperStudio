@@ -14,16 +14,34 @@
 <body>    
     <!-- Nav from Sitepoint bootstrap boof first week with bootstrap-->
     <nav>
-        <!-- Branding logo -->  
-        <a href="../html/index.html">Smartworker Cards</a>      
-            <!-- navigation menu -->
+        <div class="topofpage">
+            <!-- Branding logo --> 
+            <div class="item six"> 
+            <img src="../images/Smartworker_Markets_Logo_Chair.png" alt="SmartWorker Market">
+            <!-- Site header -->
+            </div>
+            <div class="item two">
+            <h1>Programmer Reference Cards</h1>
+            </div>
+            <!-- search form inside the top of page header -->
+            <div class="item two">
+            <form action="" method="get" rel="search">
+            </form>
+            </div>
+            <div class="item two">
+                <input type="text" name="q" id="q" placeholder="search site" required />
+                <button class="flat two">Search</button>
+            </div>  
+        </div>
+        
+        <!-- navigation menu -->
         <ul>
             <!-- active link corresponding to the current page -->
             <li>
-                <a   href="../html/index.html">Home</a>
+                <a href="../html/index.html">Home</a>
             </li>
             <li>
-                <a class="active" href="../html/frontend.html">Frontend</a>
+                <a href="../html/frontend.html">Frontend</a>
             </li>
             <li>
                 <a href="../html/backend.html">Backend</a>
@@ -41,31 +59,21 @@
                 <a href="../html/syft_style_guide-01.html">Style Guide</a>
             </li>
         </ul>
-        <!-- search form inside the navbar -->
-        <form class="form-inline ">
-            <input  type="search" placeholder="Search" >
-            <button class="flat" type="submit">Search
-            </button>
-        </form>
     </nav>
     
 <div class="container">
     <header> 
             
-        <h1 class="syft-masthead-title">Programmer Reference Cards</h1>
+        <h1>Programmer Reference Cards</h1>
         
-        <div class="lastdate">    
-            <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub repo</a> Last Updated: 2024-03-11</p>
-        </div>
-       
-        <hr />
+        
     </header>
     <aside>
-        <h2>Frequently used commands, techniques and tools from 50 years of programming!!</h2>
+        <h2>50 years of programming!!</h2>
         
             <article>
-            <p>The reference cards provide a list of frequently used commands for various language with correct syntax. Guides for techniques commonly used to address challenges with developing software, from beginner to expert. References to the many of the common and useful tools a programmer has in his tool chest.</p>
-            <p>The information is compliled by someone with fifty years programming experince. They first coded banking applications using IBM Assempler written on coding sheets for creation of punch cards. Cards feed into a IBM 370 computer to assemble, link, and execute.</p>
+           
+            <p>The information is compliled by someone with fifty years programming experince. They first coded banking applications using IBM Assempler in 1974. Writing the programs out long hand, on coding sheets. Coding sheets turned into punch cards by enormous data preparation teams, fifty to one hundered people. Cards feed into a IBM 370 computer to assemble, link, and execute.</p>
              
             </article>
         
@@ -75,18 +83,19 @@
         <!-- first article-->
             <article>
             <div>
-            <h3>Hyper Text Markup Language</h3>          
+                <h3>Hyper Text Markup Language</h3>          
                 <h4  id="html-card">HTML Fundamentals</h4>
                 <p class="regular source-code-pro">The foundation of web content and structure. It can work on its own but really is useful when used as part of team
-                    with CSS and JavaScript</p>
+                    with CSS and JavaScript
+                </p>
                 <h4>HTML References</h4>
                 <p><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">mdn
                         link to HTML Basics</a> </p>
                 <p><a href="https://codeguide.co" target="_blank">Mark Ottman
-                        Code Guideline</a> </p>
-                
-                <p>Come to grips with the fundamental parts of HTML. Make sure you know the items on this list and how to use
-                    them. Your mastering of the syntax fundamentals depends on it.</p>
+                        Code Guideline</a> 
+                </p>
+                <p>Come to grips with the fundamental parts of HTML. Make sure you know the items on this list and how to use them. Your mastering of the syntax fundamentals depends on it.
+                </p>
                 <ul>
                     <li>elements</li>
                     <li>tags</li>
@@ -95,7 +104,7 @@
                     <li>nesting elements</li>
                     <li>void element</li>
                     <li>HTML comments </li>
-                </ul></p>
+                </ul>
             </div>
             
         <!-- Second article -->
@@ -220,12 +229,16 @@
 
 
 <footer> 
+    <div class="lastdate">
+        <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub repo</a> Last Updated: 2024-03-11</p>
+    </div>
     
+    <hr />
         <small>
             <p>© 2024</p>
         </small>
             
-        <ul class="inline_list">
+        <ul  >
             <li>
                 <a href="#">About Us</a>
             </li>

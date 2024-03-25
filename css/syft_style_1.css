@@ -34,16 +34,17 @@ html {
   --sapphire: #0072bc;
   --amethyst: #782b90;  
   --florentine: #ffd100;  
+   --florentine_clear: #ffd100 opacity 30%;
   --midnight-blue: #27495d;  
   --blue-nile:  #75bee9;  
   --mauve: #bd8cbf;
   --green: #a5c300;
   --blackcut: #000000;
   --border-color: rgba(0, 0, 0, .1);
-    --body-color: #212529;
+  --body-color: #212529;
   
   --font: Montserrat, Helvetica, Arial, sans-serif;
-    --font-heading: "pluto";
+  --font-heading: "pluto";
   --gap: 2em;
 }
 
@@ -51,52 +52,8 @@ body {
  color: var(--body-color)  
 }
 
-/* default format container full width header section, one column aside and four column main */
-.container {
-   display: grid;
-   gap: 10px;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: auto auto auto auto;
-   grid-template-areas:
-     "header header header header header "
-     "aside  main main main main"
-     "aside footer footer footer footer";
-   border: 2px solid #a2a2a6;
-   padding: 10px;
-   margin: 10px auto;
 
- }
-/* default layout for HTML5 sections*/
- header {
-   grid-area: header;
- }
 
- footer {
-   grid-area: footer;
- }
-
- aside {
-   grid-area: aside;
- }
-
- main {
-   grid-area: main;
- }
-
- article {
-   display: grid;
-   gap: var(--gap) ;
-   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 2fr));
-   background-color: whitesmoke;
-   color: black;
-   padding: 15px;
-   margin: 15px auto;
- }
- 
-.article_head {
-  background-color: rgb(200, 213, 185);
-  color: black;
-}
  /* default style for text element */
  h1, h2, h3, h4 {
     margin-top: 0;
@@ -116,6 +73,52 @@ h1 {
   color: var(--midnight-blue);
   margin-top: 20px;
 }
+/*Branding header at top of page, using flex, xxxxjc need more work for responsive */
+.topofpage {
+  background-color: #f4f7f8;
+    resize: horizontal;
+    overflow: hidden;
+    display: flex;
+    margin: 1em;
+}
+.item {
+margin: 1em;
+padding: 0.5em;
+width: 110px;
+min-width: 0;
+color: white;
+font-family: monospace;
+font-size: 13px;
+}
+.auto {
+  flex: auto;
+}
+.six {
+  flex: 6;
+}
+
+.two {
+  flex: 2;
+}
+
+.one {
+  flex: 1;
+}
+/* End of Braniding header*/
+
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+/*space for search form and button */ 
+input,
+label {
+  margin: 0.4rem 0;
+}
+
 h2 {
   color: var(--silver);
   text-align: left;
@@ -151,7 +154,61 @@ p {
 }
 
 /* second container style  */
+/* first grid container used on index.html format container full width header section, one column aside and four column main */
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "aside header header"
+    "aside main main"
+    "aside footer footer";
+  border: 2px solid #a2a2a6;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px auto;
 
+}
+
+/* default layout for HTML5 sections*/
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+  border: 2px solid #a2a2a6;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+article {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 2fr);
+  background-color: whitesmoke;
+  color: black;
+  padding: 15px;
+  margin: 15px auto;
+  border: 2px solid #a2a2a6;
+  border-radius: 20px;
+
+}
+
+.article_head {
+  background-color: whitesmoke;
+  color: black;
+}
 
 .color-container {
   width: 100%;
@@ -184,8 +241,7 @@ p {
 }
 
 .col2-container {
-  display: grid;
-  --florentine: #ffd100;  
+  display: grid; 
   border: 0.25em solid var(--florentine); 
   max-width: 80em;
   padding: 2em;
@@ -197,6 +253,39 @@ p {
       grid-template-rows: auto auto;
       gap: calc(var(--gap)* 2) var(--gap);
       align-items: stretch;
+          /* default layout for HTML5 sections*/
+            header2 {
+              grid-area: header2;
+            }
+          
+            footer2 {
+              grid-area: footer2;
+            }
+          
+            aside2 {
+              grid-area: aside2;
+            }
+          
+            main2 {
+              grid-area: main2;
+            }
+          
+            article2 {
+              display: grid;
+              gap: var(--gap);
+              grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+              background-color: whitesmoke;
+              color: black;
+              padding: 15px;
+              margin: 15px auto;
+            }
+}
+/* grid ruleset for card detail pages */
+.card{
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-auto-rows: 100px;
+  grid-gap: 4em 2em;
 }
   
     /* default layout for HTML5 sections*/
@@ -275,6 +364,11 @@ p {
 .florentine {
   background-color: #ffd100;
   color: #fff;
+}  
+.florentine_clear {
+  background-color: #ffd100;
+  color: #fff;
+  opacity: 80%;
 }  
 .midnight-blue {
   background-color: #27495d;
@@ -364,42 +458,18 @@ td {
 
 /* button style set one for skeuomorpic style buttons xxxxjc need to change colors */
 button {
-  height: 40px;
-  width: 160px;
+  height: 1.5em;
+  width: 8em;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
-}
-
-.skeuomorphic {
-  border: 2px solid #0c960c;
-  border-radius: 5px;
-  color: #F8F8F8;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px -2px 2px rgba(255, 255, 255, 0.5) inset, 0 2px 2px rgba(255, 255, 255, 0.8) inset;
-  background: linear-gradient(#1D1, #0ebc0e);
-  text-shadow: 0 -2px #0c960c;
-}
-
-.skeuomorphic:hover {
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
-  background: #0ebc0e;
-  background: linear-gradient(#0ebc0e, #0c960c);
-  border-color: #064f06;
-}
-
-.skeuomorphic:active {
-  margin-top: 2px;
-  margin-bottom: -2px;
-  box-shadow: 0px 2px 2px rgba(63, 63, 63, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
-  background: #0c960c;
-  background: linear-gradient(#0c960c, #0ebc0e);
 }
 /* button style set two for flat style buttons xxxxjc need to change colors */
 .flat {
-  background-color: #bd8cbf;
-  color: #fff;
-  border: 2px solid #8ba0b7;
-  border-radius: 10px;
+  background-color: var(silver);
+  color: var(blackcut);
+  border: 4px solid #8ba0b7;
+  border-radius: .8em;
 }
 
 .flat:hover {
@@ -427,7 +497,7 @@ a:link {
 }
 
 a:visited {
-  background-color: #27495d;
+  background-color: var(--floritine_clear);
   color: #a5c300;
 }
 
@@ -440,12 +510,13 @@ a:hover {
 }
 
 a:active {
-  background: #27495d;
+ background-color: var(--floritine_clear);
   color: #782b90;
 }
 /* Page nav using flexbox functions of CSS */
 nav {
   width: 100%;
+  font-size:x-large 
 }
 
 nav ul {
@@ -453,6 +524,14 @@ nav ul {
   flex-direction: row;
   margin: 0;
   padding: 0;
+}
+nav h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #a2a2a6;
+  border-radius: 20px;
+  margin: 10px auto;
 }
 
 nav ul li {
@@ -464,38 +543,10 @@ nav ul li {
 nav ul li a {
   display: block;
 } 
+.secondnav {
  
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-
-}
-
-.navbar {
-  display: flex;
-  width: 100%;
-}
-
-.nav-links li {
-  list-style: none;
-}
-
-/* .nav-links a {
-  color: #0072bc;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 14px 16px;
-}*/
-
-.nav-links a:hover:not(.active) {
-  background-color: lightseagreen;
-}
-
-.nav-links li a.active {
-  background-color: #4caf50;
+  background-color: var(nileblue);
+  font-size: medium;
 }
 /* fancy breadcrumbs uses a <ul> to define the content*/ 
 .breadcrumb {
@@ -546,7 +597,7 @@ nav ul li a {
 /* simple bread crumb */
 .breadcrumb-simple > li {
   display: inline;
-   }
+}
 
 .breadcrumb-simple li+li::before {
 	padding: 10px;
@@ -560,3 +611,4 @@ text-decoration: none;
 .breadcrumb-simple a:hover {
 color: red;
 }
+
