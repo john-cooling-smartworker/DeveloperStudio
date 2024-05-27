@@ -1,0 +1,13 @@
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+     color: var(--silver)
+}
+
+.card {
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-background-color)
+   
+}
