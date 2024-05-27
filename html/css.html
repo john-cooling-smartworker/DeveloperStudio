@@ -14,67 +14,41 @@
 
 <body>
     <!-- Nav from Sitepoint bootstrap boof first week with bootstrap-->
-    <nav>
-        <div class="topofpage">
-            <!-- Branding logo -->
-            <div class="item six">
-                <img src="../images/Smartworker_Markets_Logo_Chair.png" alt="SmartWorker Market">
-                <!-- Site header -->
-            </div>
-            <div class="item two">
-                <h1>CSS Reference Cards</h1>
-            </div>
-            <!-- search form inside the top of page header -->
-            <div class="item two">
-                <form action="" method="get" rel="search">
-                </form>
-            </div>
-            <div class="item two">
-                <input type="text" name="q" id="q" placeholder="search site" required />
-                <button class="flat two">Search</button>
-            </div>
-        </div>
-        <!-- navigation menu -->
-        <div>
+    <header>
+ <!-- search form inside the top of page header -->
+    <nav class="navbar">
+        <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
+            
         <ul>
-            <!-- active link corresponding to the current page -->
-            <li>
-                <a href="../html/index.html">Home</a>
-            </li>
-            <li>
-                <a href="../html/frontend.html">Frontend</a>
-            </li>
-            <li>
-                <a href="../html/backend.html">Backend</a>
-            </li>
-            <li>
-                <a href="../html/tools.html">Tools</a>
-            </li>
-            <li>
-                <a href="../html/dev.html">End-to-End</a>
-            </li>
-            <li>
-                <a href="../html/devops.html">Devops</a>
-            </li>
+            <li><a  href="../html/index.html">Home</a></li>
+             <li><a href="../html/frontend.html">Frontend</a></li>li>
+            <li><a href="../html/backend.html">Backend</a></li>  
+            <li><a href="../html/tools.html">Tools</a></li>  
+            <li><a href="../html/dev.html">End-to-End</a></li>
+            <li><a href="../html/devops.html">Devops</a></li>
+            <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#Press">Press</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#contact">Contact</a></li> 
+          <!-- change contact text to be and icon pen in a box -->
+            <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
         </ul>
-        </div>
-        <hr />
-        <div class="secondnav">
-            <ul>
-                <!-- active link corresponding to the current page -->
-                <li>
-                    <a href="../html/html.html">HTML</a>
-                </li>
-                <li>
-                    <a href="../html/css.html">CSS</a>
-                </li>
-                <li>
-                    <a href="../html/js.html">JavaScript</a>
-                </li>
-             
-            </ul>
-        </div>  
+ 
+       <div class="menulogo"><a href="#home"><center>Cascading Style Sheets</center></a></div> 
     </nav>
+</header>
+<nav>
+    <!-- On page navigation menu -->
+    <hr />
+        <ul>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a class="active" href="../html/css.html">CSS</a></li>
+            <li><a href="../html/js.html">JavaScript</a></li>
+        </ul>
+</nav>
+<!-- Page content starts here -->
     <div class="container">
     <header>
         <h2>CSS External References</h2>
@@ -896,7 +870,58 @@
                
     </div>
     </main>
-        
+    <main class="col2-container content">
+    <h2 class="col2-header">Cascading Style Sheets</h2>
+       <div>
+        <h3>CSS</h3>
+        <p>Cascading Style Sheets</p>
+        <p>A tangled web of techniques that clash with each other. It's a religious battlefield</p>
+        <h4>Elements</h4>
+        <p>There are six kinds of elements: void; template; raw text; escapable raw test; foreign, and normal</p>
+    </div>
+
+    <div>
+        <h3>LINKS</h3>
+        <h4>Linking in CSS files</h4>
+        <p>CSS files are often kept in a "ccs" or "style" director as part of the site. This is preferred to including CSS styling in the html file because it is easier see, and control when it's a seperate file</p>
+        <p class="code"> &lt link href="pathname of the CSS file" type="text/css" rel="stylesheet" /&gt; </p>
+        <p>CSS links are defined in the &lt head &gt section of the html page. It is common to define multiple CSS files, one after another in the &lt head &gt section. When styling in the files clash eg &lth1&gt styling in all files, the styling is applied in the order the files are defined.  The last  &lt h1 &gt tag found in the last file will override earlier tags </p>
+        <h3>Creating navigation links. The &lt a &gt element</a></h3>
+        <p>Links are also a core feature of Internet navigation. They power movement from one page to another, thats surfing the web!</p>
+        <p>The &lta&gt HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. To link to different website you use an <strong>absulute URL.</strong> Linking to other pages on the same website you don't have to specifiy the domain name you can use shorthand known as <strong>relative URL.</strong></p>
+        <h4>Relative URL</h4>
+        <p>If all the pages of the site are in the same folder then the value for the href attribute is just the file name.</p>
+        <p>To link to a file in <strong>same folder, </strong> with text descriptor of 'Adding CSS styling to elements'</p>
+        <p class="code">&lta href="Styling.html"&gtAdding CSS styling to elements&lta&gt</p>
+        <p>To link to a file in a <strong>child folder, </strong> with text descriptor of 'Getting started in DEVOPS'</p>
+        <p class="code">&lta href="devops/introduction.html"&gtGetting started in DEVOPS&lta&gt</p>
+        <p>To link to a file in a <strong>grandchild folder, </strong> with text descriptor of 'Using CPanel'</p>
+        <p class="code">&lta href="devops/cpanel/cpanel.html"&gtUsing CPanel&lta&gt</p>
+        <p>To link to a file in a <strong>parent folder, </strong> with text descriptor of 'Australian Shares Home'</p>
+        <p class="code">&lta href="../index.html"&gtAustralian Shares Home&lta&gt</p>
+        <p>To link to a file in a <strong>grandparent folder, </strong> with text descriptor of 'Smartworker'</p>
+        <p class="code">&lta href="../../index.html"&gtSmartworker&lta&gt</p>
+        <h4>EMAIL links</h4>
+        <p>Create a link that starts up the users email program and specifies a to: address</p>
+        <p class="code"> &lta href="mailto:brigalow@smartworker.com"&gtEmail Brigalow&lta&gt</p>
+        <h4>Open links in a new window</h4>
+        <p>To link to a another site in a <strong>parent folder, </strong> with text descriptor of 'Australian Shares' and open it in a new browser window. Use the <strong>target keyword</strong></p>
+        <p class="code">&lta href="../index.html"&gtAustralian Shares Home&lta target="_blank"&gtAustralian Shares&lta&gt</p>
+        <h4>Linking to a specific part of the same page</h4>
+        <p>First you must add an <strong>id="target name"</strong> to the elements where you want to land. The <strong>id's target name</strong> must be unique on the page and can only start with an underscore or letter</p>
+        <p class="code">&lth2 id="navlinks"&gtCreating navigation links&lth2&gt</p>
+        <p>To create links to to your landing element you use the &lta&gt element and the href attribute starts with a # symbol.</p>
+        <p class="code">&lta href="#navlinks"&gtCreating navigation links&lth2&gt</p>
+        <h3>Linkeing to a specific part of another page or website.</h3>
+        <p>Use exactly the same technique as for same page links. the two differences are</p>
+        <nl>
+            <li>the target must have an id </li>
+            <li>you must use the correct absolute URL or relative url</li>
+        </nl>
+    </div>
+
+</main>
+    
 
     <footer>
         <div class="lastdate">

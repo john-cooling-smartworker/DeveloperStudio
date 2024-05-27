@@ -2,12 +2,6 @@
   Rule set for Syft system style number 1 ~ syft_style_1.css .
 */
 
-/* Universal style ruleset. Used to reser the browsers user agent */
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 /* Private font files can be used for unique branding */
 @font-face {
   font-family: "pluto";
@@ -18,23 +12,15 @@
   font-weight: bold;
   src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
 }
-/* Default styling ruleset for standard HTML elements */
 
-html {
-  margin: 2px;
-  padding: 2px;
-  font-size: 16px;
-  font-family: var(--font);
-  line-height: 1.5;
-}
-
+/* Theme style rules  */
 :root {
   /* Syft colors*/
   --silver:  #8ba0b7;
   --sapphire: #0072bc;
   --amethyst: #782b90;  
   --florentine: #ffd100;  
-   --florentine_clear: #ffd100 opacity 30%;
+  --florentine_clear: #ffd100 opacity 30%;
   --midnight-blue: #27495d;  
   --blue-nile:  #75bee9;  
   --mauve: #bd8cbf;
@@ -42,69 +28,284 @@ html {
   --blackcut: #000000;
   --border-color: rgba(0, 0, 0, .1);
   --body-color: #212529;
-  
+  /* Generice colors */
+  --white: #FFFFFF;
+  --lightest-gray: #FAFAFA;
+  --light-gray: #EDEDED;
+  --dark-gray: #4D4D4D;
+  --darkest-gray: #454545;
+  --black: #333333;
+  --deep-black: #222222;
+  --primary: #196EC2;
+  --alert: #DF2020;
+  /* Set some of colors to uses as variable names */
+  --text-color: var(--black);
+  --weak-text-color: var(--dark-gray);
+  --link-color: var(--primary);
+  --icon-color: var(--black);
+  --background-color: var(--white);
+  --hover-color: var(--light-gray);
+  --inverted-background-color: var(--dark-gray);
+  --inverted-text-color: var(--white);
+  --weak-border-color: var(--light-gray);
+  --border-color: var(--dark-gray);
+  --header-background-color: var(--primary);
+  --header-text-color: var(--white);
+  --card-background-color: var(--lightest-gray);
+  --toggle-background-off: var(--light-gray);
+  --toggle-background-on: var(--primary);
+  --button-background-color: var(--primary);
+  --button-border-color: var(--primary);
+  --button-text-color: var(--white);
+  --button-alert-color: var(--alert);
   --font: Montserrat, Helvetica, Arial, sans-serif;
   --font-heading: "pluto";
-  --gap: 2em;
+  --gap: 2rem;
+}
+/* Setup for use when dark mode is selected. will need additional work ro test */
+/* @media (prefers-color-scheme: dark) { 
+    :root {
+        --text-color: var(--white);
+        --weak-text-color: var(--light-gray);
+        --link-color: var(--white);
+        --icon-color: var(--white);
+        --hover-color: var(--darkest-gray);
+        --inverted-background-color: var(--deep-black);
+        --weak-border-color: var(--dark-gray);
+        --border-color: var(--light-gray);
+        --background-color: var(--black);
+        --button-border-color: var(--white);
+    }
+  }*/
+/* Setup to prepare for smaller screen viewing */
+@media screen and (max-width: 800px) {
+    :root {
+        --header-height: 4rem;
+        --body-padding: 1rem;
+    }  
+  }     
+/* Default setting for universal selector   */
+*{
+  text-decoration: none;
+   }
+
+/* Default styling ruleset for standard type selector HTML elements */
+html {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 2px;
+  padding: 2px;
+  font-size: 16px;
+  font-family: var(--font);
+  line-height: 1.5;
 }
 
 body {
- color: var(--body-color)  
+  color: var(--body-color)  
 }
 
+/* rule set for unordered lists type elements */
+ul {
+  list-style: disk;
+}
 
+ul li {
+  list-style-position: inside;
+}
 
- /* default style for text element */
+ul li::marker { 
+  color: var(--amethyst);
+  font-size: 1.25em;
+}
+
+/* Rule set for oredered list type elements */
+ol {
+    list-style: decimal;
+}
+
+/* Rules set for header type elements */
+
  h1, h2, h3, h4 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    font-family: var(--font-heading), var(--font);
-    font-weight: 600;
-    line-height: 1.5;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading), var(--font);
+  font-weight: 600;
  }
+
+/* rules set for H1, One per page */ 
 h1 {
-  display: block;
-  font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  display: inline-flexbox;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--midnight-blue);
-  margin-top: 20px;
-}
-/*Branding header at top of page, using flex, xxxxjc need more work for responsive */
-.topofpage {
-  background-color: #f4f7f8;
-    resize: horizontal;
-    overflow: hidden;
-    display: flex;
-    margin: 1em;
-}
-.item {
-margin: 1em;
-padding: 0.5em;
-width: 110px;
-min-width: 0;
-color: white;
-font-family: monospace;
-font-size: 13px;
-}
-.auto {
-  flex: auto;
-}
-.six {
-  flex: 6;
+  text-align: center;
+} 
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--silver);
+  text-align: left;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 0.25rem solid;
+  font-size: 1.5rem;
+  grid-column: auto / span 3;
+
 }
 
-.two {
-  flex: 2;
+h3 {
+  font-size: 1.25rem;
+  color: var(--saphire);
+  text-align: left; 
 }
 
-.one {
-  flex: 1;
+h4 {
+  font-size: 1.1rem;
+  color: var(--blue-nile);
+  text-align: left;
 }
-/* End of Braniding header*/
+
+h5 {
+  color: var(--florentine);
+  text-align: left;   
+  font-size: 1rem; 
+  }
+
+p {
+  display: block;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Ruleset for table type elements   */  
+
+table {
+  border: 2px solid darkorchid;
+  width: 650px;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: plum;
+}
+
+td {
+  border-top: 1px solid darkorchid;
+}
+
+/* Default rule set for button type element */
+button {
+  height: 1.5rem;
+  width: 8rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+}
+a {
+  
+  color: var(--silver);
+  cursor: pointer;
+}
+
+/* Position the navbar container inside the image */
+ /* link styling, keep in order, styles built on top of another */
+
+/*
+a:link {
+  color: #27495d
+}
+
+a:visited {
+  background-color: var(--floritine_clear);
+  color: #a5c300;
+}
+
+a:focus {
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+a:active {
+ background-color: var(--floritine_clear);
+  color: #782b90;
+}
+/*
+/* Page nav using flexbox functions of CSS */
+
+nav {
+  width: 100%;
+  font-size: 17px; 
+  background-color: var(--midnight-blue);
+  font-family: var(--font-heading);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+ 
+nav li a {
+  display: block;
+  padding: 14px 16px;
+  background-color: var(--blackcut);
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+} 
+nav li a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+}
+.active{
+  background-color: var(--sapphire);
+}
+/* The navbar */
+
+.navbar {
+  background-color: var(--midnight-blue);
+  font-family: var(--font-heading);
+  padding-right: 15px;
+  padding-left:15px;
+}
+
+.logo a{
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--florentine);
+  background: transparent;
+
+}
+.logo a:hover{
+  color:antiquewhite;
+}
+
+.menulogo a{
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--florentine);
+  background: transparent;
+ 
+}
+
+.menulogo a:hover{
+  color:antiquewhite;
+}
+ 
 
 form.form-example {
   display: table;
@@ -114,43 +315,24 @@ div.form-example {
   display: table-row;
 }
 /*space for search form and button */ 
-input,
-label {
-  margin: 0.4rem 0;
+ 
+input[type=text] {
+  width: 240px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../images/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
-h2 {
-  color: var(--silver);
-  text-align: left;
-  padding-top: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  border-top: 0.25em solid;
-  font-size: 2em;
-  grid-column: auto / span 2;
-}
-
-h3 {
-  color: var(--saphire);
-  text-align: left;  
-}
-
-h4 {
-  color: var(--blue-nile);
-  text-align: left;
-}
-
-h5 {
-  color: var(--florentine);
-  text-align: left;    
-  }
-
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+input[type=text]:focus {
+  width: 60%;
 }
 
 /* second container style  */
@@ -158,12 +340,12 @@ p {
 .container {
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    "aside header header"
-    "aside main main"
-    "aside footer footer";
+    "header header aside"
+    "main main aside "
+    "footer footer aside";
   border: 2px solid #a2a2a6;
   border-radius: 20px;
   padding: 10px;
@@ -285,7 +467,7 @@ article {
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
   grid-auto-rows: 100px;
-  grid-gap: 4em 2em;
+  grid-gap: 4rem 2rem;
 }
   
     /* default layout for HTML5 sections*/
@@ -348,45 +530,6 @@ article {
   text-decoration: underline;
 }
 
-/* Syft branding style colored boxs with text */
-.silver {
-  background-color: #8ba0b7;
-  color: #fff;
-}
-.sapphire {
-  background-color: #0072bc;
-  color: #fff;
-}
-.amethyst {
-  background-color: #782b90;
-  color: #fff;
-}
-.florentine {
-  background-color: #ffd100;
-  color: #fff;
-}  
-.florentine_clear {
-  background-color: #ffd100;
-  color: #fff;
-  opacity: 80%;
-}  
-.midnight-blue {
-  background-color: #27495d;
-  color: #fff;
-}  
-.blue-nile {
-  background-color: #75bee9;
-}
-.mauve {
-  background-color: #bd8cbf;
-}
-.green {
-  background-color: #a5c300;
-}
-.blackcut {
-  background-color: #000000;
-  color: #fff;
-}
 
 
 .inline_list {
@@ -429,47 +572,14 @@ article {
   font-family: "Source Code Pro" monospace;
   background-color: beige;
 }
- 
 
-/* rule set for lists*/
-ul li {
-  list-style-position: inside;}
-ul li::marker { 
-  color:#782b90;
-  font-size: 1.25em;
-}
 
-/* table style one */  
- 
-table {
-  border: 2px solid darkorchid;
-  width: 650px;
-  margin: 0 auto;
-}
-
-thead {
-  background-color: plum;
-}
-
-td {
-  border-top: 1px solid darkorchid;
-}
-  
-
-/* button style set one for skeuomorpic style buttons xxxxjc need to change colors */
-button {
-  height: 1.5em;
-  width: 8em;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 15px;
-}
-/* button style set two for flat style buttons xxxxjc need to change colors */
+/* Rule set for button style for flat style buttons xxxxjc need to change colors */
 .flat {
-  background-color: var(silver);
+  background-color: var(--silver);
   color: var(blackcut);
   border: 4px solid #8ba0b7;
-  border-radius: .8em;
+  border-radius: .8rem;
 }
 
 .flat:hover {
@@ -484,131 +594,5 @@ button {
 
 /* Navigation styles: includes main nav bar with optional dropdowns and responsive collapse. Bread Crumbs, inpage links (internal and external)  */
 
-/* link styling, keep in order, styles built on top of another */
-a {
-  background-color: #fff;
-  color: #0072bc;
-  text-decoration: none;
-  cursor: pointer;
-}
 
-a:link {
-  color: #27495d
-}
-
-a:visited {
-  background-color: var(--floritine_clear);
-  color: #a5c300;
-}
-
-a:focus {
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
- background-color: var(--floritine_clear);
-  color: #782b90;
-}
-/* Page nav using flexbox functions of CSS */
-nav {
-  width: 100%;
-  font-size:x-large 
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-nav h1 {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  border: 2px solid #a2a2a6;
-  border-radius: 20px;
-  margin: 10px auto;
-}
-
-nav ul li {
-  list-style: none;
-  flex-grow: 1;
-  text-align: center;
-}
-
-nav ul li a {
-  display: block;
-} 
-.secondnav {
- 
-  background-color: var(nileblue);
-  font-size: medium;
-}
-/* fancy breadcrumbs uses a <ul> to define the content*/ 
-.breadcrumb {
-  text-align: left;
-}
-.breadcrumb li {
-   float: left;
-}
-
-.breadcrumb a {
-  color: #fff;
-  background: darkcyan;
-  text-decoration: none;
-  position: relative;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  margin-right: 15px;
-  padding: 0 5px;
-}
-.breadcrumb a::before,
-.breadcrumb a::after {
-  content: "";
-  position: absolute;
-  border-color: darkcyan;
-  border-style: solid;
-  border-width: 15px 5px;
-}
-.breadcrumb a::before {
-  left: -10px;
-   border-left-color: transparent;
-}
-.breadcrumb a::after {
-  left: 100%;
-  border-color: transparent;
-  border-left-color: darkcyan;
-}
-.breadcrumb a:hover {
-  background-color: blue;
-}
-.breadcrumb a:hover::before {
-  border-color: blue;
-  border-left-color: transparent;
-}
-.breadcrumb a:hover::after {
-  border-left-color: blue;
-}
-/* simple bread crumb */
-.breadcrumb-simple > li {
-  display: inline;
-}
-
-.breadcrumb-simple li+li::before {
-	padding: 10px;
-  content: ">";
-}
-
-.breadcrumb-simple a {
-text-decoration: none;
-}
-
-.breadcrumb-simple a:hover {
-color: red;
-}
 

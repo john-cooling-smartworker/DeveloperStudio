@@ -14,186 +14,86 @@
 
 
 <body>
-    <!-- Nav from Sitepoint bootstrap boof first week with bootstrap-->
-    <nav>
-        <div class="topofpage">
-            <!-- Branding logo -->
-            <div class="item six">
-                <img src="../images/Smartworker_Markets_Logo_Chair.png" alt="SmartWorker Market">
-                <!-- Site header -->
-            </div>
-            <div class="item two">
-                <h1>Frontend Reference Cards</h1>
-            </div>
-            <!-- search form inside the top of page header -->
-            <div class="item two">
-                <form action="" method="get" rel="search">
-                </form>
-            </div>
-            <div class="item two">
-                <input type="text" name="q" id="q" placeholder="search site" required />
-                <button class="flat two">Search</button>
-            </div>
-        </div>
-        <!-- navigation menu -->
-        <div>
+<header>
+ <!-- search form inside the top of page header -->
+    <nav class="navbar">
+        <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
+            
         <ul>
-            <!-- active link corresponding to the current page -->
+            <li><a  href="../html/index.html">Home</a></li>
+             <li><a class="active" href="../html/frontend.html">Frontend</a></li>li>
+            <li><a href="../html/backend.html">Backend</a></li>  
+            <li><a href="../html/tools.html">Tools</a></li>  
+            <li><a href="../html/dev.html">End-to-End</a></li>
+            <li><a href="../html/devops.html">Devops</a></li>
+            <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#Press">Press</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#contact">Contact</a></li> 
+          <!-- change contact text to be and icon pen in a box -->
+            <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
+        </ul>
+ 
+       <div class="menulogo"><a href="#home"><center>Frontend Programmer Reference</center></a></div> 
+    </nav>
+</header>
+<nav>
+    <!-- On page navigation menu -->
+    <hr />
+        <ul>
+            <li><a href="../html/html.html">HTML</a></li>
+            <li><a href="../html/css.html">CSS</a></li>
+            <li><a href="../html/js.html">JavaScript</a></li>
+        </ul>
+</nav>
+<!-- Start of two column display with left and right rows keeping in step-->
+<div class="container">
+    <aside> 
+    <h2>Frontend References</h2>
+        <!-- Reference links for HTML and CSS  -->
+        <article> 
+        <h3 id="htmlcss"> <a href="#htmlref">HTML and CSS Reference</a> </h3>
+        <ul>
             <li>
-                <a href="../html/index.html">Home</a>
+                <a href="#mdn_webdocs">MDN Web Docs</a>
             </li>
             <li>
-                <a class="active" href="../html/frontend.html">Frontend</a>
+                <a href="#codeguide">Mark Ottman Code Guide</a>
             </li>
             <li>
-                <a href="../html/backend.html">Backend</a>
+                <a href="#can_i_use">Can I Use</a>
             </li>
             <li>
-                <a href="../html/tools.html">Tools</a>
+                <a href="#geeksweb">Geeks for Geeks Web Design</a>
             </li>
             <li>
-                <a href="../html/dev.html">End-to-End</a>
-            </li>
-            <li>
-                <a href="../html/devops.html">Devops</a>
+                <a href="#csstricks">CSS Tricks</a>
             </li>
         </ul>
-        </div>
-        <hr />
-        <div class="secondnav">
-            <ul>
-                <!-- active link corresponding to the current page -->
-                <li>
-                    <a href="../html/html.html">HTML</a>
-                </li>
-                <li>
-                    <a href="../html/css.html">CSS</a>
-                </li>
-                <li>
-                    <a href="../html/js.html">JavaScript</a>
-                </li>
-             
-            </ul>
-        </div>
-    </nav>
-    <header>
-        
-       
-    </header>
-
-
-    <!-- Start of two column display with left and right rows keeping in step-->
-    <main class="col2-container content">
-    
-        <h2 class="col2-header">Frontend References</h2>
-        <div>
-            <h3 id="htmlcss">
-                <a href="#htmlref">HTML and CSS Reference</a>
-            </h3>
-            <ul>
-                <li>
-                    <a href="#mdn_webdocs">MDN Web Docs</a>
-                </li>
-                <li>
-                    <a href="#codeguide">Mark Ottman Code Guide</a>
-                </li>
-                <li>
-                    <a href="#can_i_use">Can I Use</a>
-                </li>
-                <li>
-                    <a href="#geeksweb">Geeks for Geeks Web Design</a>
-                </li>
-                <li>
-                    <a href="#csstricks">CSS Tricks</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3 id="jsref">
-                <a href="#jsref">Java Script References</a>
-            </h3>
-            <ul>
-                <li>
-                    <a href="#typescript">Typescript</a>
-                </li>
-                <li>
-                    <a href="#jsstandard">Java Script Standard Style</a>
-                </li>
-                <li>
-                    <a href="#geeksjs">Geeks for Geeks Java Script</a>
-                </li>
-                <li>
-                    <a href="#js30">Javescript 30 Challenge</a>
-                </li>
-                
-            </ul>
-        </div>
-    
-        <h2 class="col2-header">Country Wisdom Gems</h2>
-        <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what’s incorrect. For
-            additions or contributions to this Code Guide, please open an issue on GitHub.</p>
-        <blockquote>
-            <p>Naming conventions and styles should all be captured in the Style Guide</p>
-        </blockquote>
-
-        <div>
-            <h2 class="col2-header" id="htmlref">HTML & CSS <Ri:type></Ri:type></h2>
-            <h3 id="basic_tools"> MDN Web Docs</h3>
-            <ul>
-                <li>MDN Web Docs is an open-source, collaborative project documenting Web platform technologies, including CSS, HTML, JavaScript, and Web APIs. It also provides an extensive set of learning resources for beginning developers and students.
-                 
-            </ul>
-        </div>
-        <div>
-            <h2 class="col2-header" id="htmlref">Reference Links<Ri:type></Ri:type>
-            </h2>
-            <h3 id="basic_tools"> MDN Web Docs HTML reference </h3>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"> HTML reference</a> 
-                </li>
-            </ul>
-
-            </h2>
-            <h3 id="basic_tools"> MDN Web Docs CSS reference </h3>
-            <ul>
-                 
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> CSS reference</a>
-                </li>
-            
-            </ul>
-        </div>
-<!-- End of a 2 equal length row column set  -->
-<!-- Start of a 2 equal length row column set  -->
-            <div>
-                
-                <h3 id="basic_tools"> Mark Ottman Code Guide</h3>
-                <ul>
-                    <li>Standards for developing consistent, flexible, and sustainable HTML and CSS. Not a complete syntactical guide, but provides great understanding of many HTML and CSS concepts</li>
-            
-                </ul>
-            </div>
-            <div>
-                <h3 id="basic_tools"> MDN Web Docs HTML reference </h3>
-                <ul>
-                    <li><a href="https://codeguide.co/#html"> HTML reference</a>
-                    </li>
-                    <li><a href="https://codeguide.co/#css"> CSS reference</a>
-                    </li>
-            
-                </ul>
-            </div>
-<!-- End of a 2 equal length row column set within a container  -->
-    </main>
-<!--End of container class on main-->
-     
-<!-- Start of two column container with left and right rows keeping in step-->
-    <main class="col2-container content">
-    
-        <h2 class="col2-header">CSS Concepts and Code Samples</h2>
-        <div>
-            <h3 id="tools">
-                <a href="#css_concepts">CSS Concepts</a>
-            </h3>
+        </article>
+        <!-- Reference Links for Javascript -->
+         <article> 
+        <h3 id="jsref"> <a href="#jsref">Java Script References</a> </h3>
+        <ul>
+            <li>
+                <a href="#typescript">Typescript</a>
+            </li>
+            <li>
+                <a href="#jsstandard">Java Script Standard Style</a>
+            </li>
+            <li>
+                <a href="#geeksjs">Geeks for Geeks Java Script</a>
+            </li>
+            <li>
+                <a href="#js30">Javescript 30 Challenge</a>
+            </li>
+        </ul>
+        </article>
+        <!-- Page links to CSS Concepts -->
+        <article> 
+            <h3 id="tools"> <a href="#css_concepts">CSS Concepts</a> </h3>
             <ul>
                 <li>
                     <a href="#out_wrap">Outer Wrapper</a>
@@ -205,33 +105,102 @@
                     <a href="#git">Git and GitHub</a>
                 </li>
             </ul>
-        </div>
-        <div>
-            <h3 id="platforms">
-                <a href="#platforms">CSS Sample code</a>
-            </h3>
+        </article>
+        <!-- Page links to CSS sample code -->
+        <article>
+        <h3 id="csssamples"> <a href="#csssamples">CSS Code Samples</a> </h3>
+        <ul>
+            <li>
+                <a href="#navigation">Navigation Samples</a>
+            </li>
+        </ul>
+        </article>
+        <!-- Reference links to other frontend support platforms -->
+        <article> 
+         <h3 id="platforms"> <a href="#platforms">Frontend Support Platforms</a> </h3>
+         <ul>
+             <li>
+                 <a href="#google">Google Developer</a>
+             </li>
+             <li>
+                 <a href="#wordpress">Wordpress</a>
+             </li>
+             <li>
+                 <a href="#mamp">MAMP</a>
+             </li>
+             <li>
+                 <a href="#mysql">mySql Database</a>
+             </li>
+             <li>
+                 <a href="#mariadb">MariaDB Database</a>
+             </li>
+             <li>
+                 <a href="#security">Security</a>
+             </li>
+         </ul>
+    </article>
+</aside>
+<main>
+    <article> 
+        <h2 >Country Wisdom Gems</h2>
+        <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what’s incorrect. For additions or contributions to this Code Guide, please open an issue on GitHub.</p>
+        <blockquote>
+            <p>Naming conventions and styles should all be captured in the Style Guide</p>
+        </blockquote>
+    </article>
+    <article> 
+            <h2 id="htmlref">HTML & CSS <Ri:type></Ri:type></h2>
+            <h3 id="basic_tools"> MDN Web Docs</h3>
             <ul>
-                <li>
-                    <a href="#google">Google Developer</a>
-                </li>
-                <li>
-                    <a href="#wordpress">Wordpress</a>
-                </li>
-                <li>
-                    <a href="#mamp">MAMP</a>
-                </li>
-                <li>
-                    <a href="#mysql">mySql Database</a>
-                </li>
-                <li>
-                    <a href="#mariadb">MariaDB Database</a>
-                </li>
-                <li>
-                    <a href="#security">Security</a>
+                <li>MDN Web Docs is an open-source, collaborative project documenting Web platform technologies, including CSS, HTML, JavaScript, and Web APIs. It also provides an extensive set of learning resources for beginning developers and students.
+                 
+            </ul>
+    </article>
+       <article> 
+            <h2   id="htmlref">Reference Links<Ri:type></Ri:type>
+            </h2>
+            <h3 id="basic_tools"> MDN Web Docs HTML reference </h3>
+
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"> HTML reference</a> 
                 </li>
             </ul>
-        </div>
-    
+
+            <h3 id="basic_tools"> MDN Web Docs CSS reference </h3>
+            <ul>
+                 
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> CSS reference</a>
+                </li>
+            
+            </ul>
+        </article>
+<!-- End of a 2 equal length row column set  -->
+<!-- Start of a 2 equal length row column set  -->
+          <article>
+                
+                <h3 id="basic_tools"> Mark Ottman Code Guide</h3>
+                <ul>
+                    <li>Standards for developing consistent, flexible, and sustainable HTML and CSS. Not a complete syntactical guide, but provides great understanding of many HTML and CSS concepts</li>
+            
+                </ul>
+            </article>
+            <article>
+                <h3 id="basic_tools"> MDN Web Docs HTML reference </h3>
+                <ul>
+                    <li><a href="https://codeguide.co/#html"> HTML reference</a>
+                    </li>
+                    <li><a href="https://codeguide.co/#css"> CSS reference</a>
+                    </li>
+            
+                </ul>
+            </article>
+<!-- End of a 2 equal length row column set within a container  -->
+  
+<!--End of container class on main-->
+     
+<!-- Start of two column container with left and right rows keeping in step-->
+ 
+   
         <h2 class="col2-header">CSS Concepts</h2>
        
         <div>
@@ -292,10 +261,10 @@
             </li>
             </ul>
     </div>
-        </div>
+</div>
     
     
-    </main>
+</main>
     <footer>
         <div class="lastdate">
             <p>Created by <a class="link-primary" href="#">@jrc</a> - V1.0.1 - <a class="link-primary" href="#">GitHub
