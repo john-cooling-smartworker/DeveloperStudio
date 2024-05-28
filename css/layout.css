@@ -61,9 +61,7 @@ body > header .button, body > header button {
     --background: var(--header-background-color);
     --border: var(--header-text-color);
 }
-body > header {
-  
-}
+
 nav {
     background-color: var(--card-background-color);
     grid-area: sidebar;

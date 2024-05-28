@@ -340,16 +340,16 @@ input[type=text]:focus {
 .container {
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header aside"
     "main main aside "
-    "footer footer aside";
+    "footer footer footer";
   border: 2px solid #a2a2a6;
   border-radius: 20px;
   padding: 10px;
-  margin: 10px auto;
+  margin: 10px auto auto 5px;
 
 }
 
@@ -360,10 +360,13 @@ header {
 
 footer {
   grid-area: footer;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 3fr);
+  background-color: var(--florentine);
   border: 2px solid #a2a2a6;
   border-radius: 20px;
-  padding: 10px;
-  margin: 10px auto;
+  padding: 15px;
+  margin: 15px auto auto 5px;
 }
 
 aside {
@@ -378,7 +381,7 @@ article {
   display: grid;
   gap: var(--gap);
   grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 2fr);
-  background-color: whitesmoke;
+  background-color: var(--lightest-gray);
   color: black;
   padding: 15px;
   margin: 15px auto;
@@ -386,12 +389,19 @@ article {
   border-radius: 20px;
 
 }
-
+/* Ruleset for article header */
 .article_head {
-  background-color: whitesmoke;
-  color: black;
+  background-color: var(--blackcut);
+  color: var(--lightest-gray);
+  border-radius: .8rem;
 }
-
+/* Rule set for an aside article header */
+.aside_head {
+  background-color: var(--sapphire);
+  color: var(--florentine);
+  border-radius: .8rem;
+}
+/* Ruleset for color chart pacel */
 .color-container {
   width: 100%;
 }
@@ -430,75 +440,7 @@ article {
   margin: 2em;
 
     }
-.content {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto;
-      gap: calc(var(--gap)* 2) var(--gap);
-      align-items: stretch;
-          /* default layout for HTML5 sections*/
-            header2 {
-              grid-area: header2;
-            }
-          
-            footer2 {
-              grid-area: footer2;
-            }
-          
-            aside2 {
-              grid-area: aside2;
-            }
-          
-            main2 {
-              grid-area: main2;
-            }
-          
-            article2 {
-              display: grid;
-              gap: var(--gap);
-              grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-              background-color: whitesmoke;
-              color: black;
-              padding: 15px;
-              margin: 15px auto;
-            }
-}
-/* grid ruleset for card detail pages */
-.card{
-  display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
-  grid-auto-rows: 100px;
-  grid-gap: 4rem 2rem;
-}
-  
-    /* default layout for HTML5 sections*/
-    header2 {
-      grid-area: header2;
-    }
-  
-    footer2 {
-      grid-area: footer2;
-    }
-  
-    aside2 {
-      grid-area: aside2;
-    }
-  
-    main2 {
-      grid-area: main2;
-    }
-  
-    article2 {
-      display: grid;
-      gap: var(--gap);
-      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%),  1fr));
-      background-color: whitesmoke;
-      color: black;
-      padding: 15px;
-      margin: 15px auto;
-    }
-
-/* forth container style*/
-
+ 
 .font-panel {
   display: inline-block;
   width: 45%;
