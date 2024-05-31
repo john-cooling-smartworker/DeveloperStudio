@@ -7,6 +7,10 @@
     <meta name="theme-color" content="#0072bc"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SW Ref Cards</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
    
     <!-- Syft styling added last  -->
@@ -14,39 +18,40 @@
 </head>
 
 <body>
-<!--Header set with menu hamburger on left logo center and search right  -->
+<!--Page header common to all pages with the top level navigation and search form  -->
 <header>
 
-<nav class="navbar">
-    <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
-        
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="../html/frontend.html">Frontend</a></li>
-        <li><a href="../html/backend.html">Backend</a></li>  
-        <li><a href="../html/tools.html">Tools</a></li>  
-        <li><a href="../html/dev.html">End-to-End</a></li>
-        <li><a href="../html/devops.html">Devops</a></li>
-        <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#Press">Press</a></li>
-        <li><a href="#journal">Journal</a></li>
-        <li><a href="#contact">Contact</a></li> 
-<!-- search form inside the top of page header -->
-<!-- change contact text to be and icon pen in a box -->
-        <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
-    </ul>
-</nav>
-</header>
+    <nav class="navbar">
+        <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
 
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="../html/frontend.html">Frontend</a></li>
+            <li><a href="../html/backend.html">Backend</a></li>  
+            <li><a href="../html/tools.html">Tools</a></li>  
+            <li><a href="../html/dev.html">End-to-End</a></li>
+            <li><a href="../html/devops.html">Devops</a></li>
+            <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#Press">Press</a></li>
+            <li><a href="#journal">Journal</a></li>
+    <!-- change contact text to be and icon pen in a box -->
+            <li><a href="#contact">Contact</a></li> 
+    <!-- search form inside the top of page header -->
+            <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Using a grid layout of a main column and smaller aside column -->
 <div class="container">
+
     <header>
         <h2>Project Portfolio</h2>
     </header>
+
     <aside>
-        <h2>Profile</h2>
-        <h3>John Cooling</h3>
+        <h3 class="aside_head ">John Cooling Profile</h3>
             <article>
                 <h4>In the Beginning</h4>
                 <p>Started programming in 1974. Yes, that's fifty years programming experince!</p>
@@ -55,7 +60,7 @@
             </article>
              <article>
                 <h4>Software Developer</h4>
-                <p>Developemnt and Devops of Banking applictions for Austratlias largest bank, Commbank</p>
+                <p>Development and Devops of Banking applictions for Austratlias largest bank, Commbank</p>
                 <p>Analyst programmer and project management of banking applications for one of Australias smallest banks, The Bank of Queensland</p>
                 <p>Analyst programmer of ERP applications for Australias largest software company, Mincom</p>
             </article>
@@ -63,7 +68,7 @@
                 <h4>Corporate Executive</h4>
                 <p>Director and Vice President of consulting and customer value for Mincom.</p>
                 <p>Customers were global and industries were mining, utility, transport and government enterprises.</p>
-                <p>These were great roles working with customers and consultants to help people achive the best they could.</p>
+                <p>These were great roles working with customers and consultants to help people achive the best they could from a top tier ERP system.</p>
             </article>
              <article>
                 <h4>Business Owner</h4>
@@ -83,20 +88,22 @@
     <main >
         <!-- first article-->
         <article>
-         <h2>Frontend Programming Reference Project</h2>
+         <h3 class="aside_head ">Project Creative - Frontend Programming Reference</h3>
+          <img src="../images/frontend development.jpg" alt="Technologies of frontend development " Title="Frontend devlopment technologies" width="1024" height="756"/>
          <p>The three core elements of frontend programming. Hypertext Markup Language, Cascading Style Sheets and Javascript. The project to study the three elements and produce an online reference for programming the frontend of sites and apps.
          </p> 
          
-            <p class="regular source-code-pro">The foundation of web content and structure. It can work on its own but really is most useful when used as part of team with CSS and JavaScript
-            </p>
+        <p>The foundation of web content and structure. It can work on its own but really is most useful when used as part of team with CSS and JavaScript
+        </p>
+         <h4>Hypertext Markup language</h4>
             <p>Come to grips with the fundamental parts of HTML. Your mastering of the syntax fundamentals depends on it. The HTML referernce card is a big help, prompting!
             </p>
-            <h3>Cascading Style Sheets</h3>
-            <p class="regular source-code-pro">The language used to describe the presentation of web content written in HTML. It describes how elements should be rendered on screen, on paper, or on other media.</p>
-            <h3  id="js_card">JavaScript</h3>
-            <p class="regular source-code-pro">JavaScript is a lightweight interpreted programming language. It is best know as the scripting language for web pages.  </p>
-            <h3>Frontend Technical Tips</h3>
-            <p class="regular source-code-pro">The techniques and processes for development of web sites and applications combine frontend tools in creative ways to achive great solutions.</p>
+            <h4>Cascading Style Sheets</h4>
+            <p >The language used to describe the presentation of web content written in HTML. It describes how elements should be rendered on screen, on paper, or on other media.</p>
+            <h4>JavaScript</h4>
+            <p >JavaScript is a lightweight interpreted programming language. It is best know as the scripting language for web pages.  </p>
+            <h4>Frontend Technical Tips</h4>
+            <p  >The techniques and processes for development of web sites and applications combine frontend tools in creative ways to achive great solutions.</p>
     
             <p> <a href="#top">Back to top</a> </p>
          
@@ -104,7 +111,7 @@
       
     <!-- Second article -->
         <article> 
-        <h2>Backend Programming Reference Project</h2>
+        <h3 class="aside_head ">Project Engine - Backend Programming Reference Project</h2>
          <p>Data and the API's to access it are a big part of the backend. Add on languages and platforms and you are talking a lot of stuff to know. The project to study the elements of the backend and produce an online reference for programming the backend.
          </p> 
          <img src="../images/back-end-roadmap.jpeg" alt="Roadmap of the path to backend development success" Title="Backend devlopment roadmap" width="768" height="896"/>
@@ -113,7 +120,7 @@
         <!-- third article -->
         <article>
     
-        <h2>End-to-End Development Project</h2>
+        <h3 class="aside_head ">Project Best Practice - End-to-End Development Project</h3>
          <p>From request for proposal all the way to produciton support softwware development best practise has been developed. Studing the best practise processes and produce an online reference for the end-to-end development process.
          </p> 
         <img src="../images/Software-Development-Life-Cycle-scaled.jpg" alt="Figure eight racetrack diagram of software development lifecycle" Title=
@@ -123,7 +130,7 @@
 
     <!-- forth article -->
     <article>
-        <h2>Development and Operations Project</h2>
+        <h3 class="aside_head ">Project Plumbing - Development and Operations Project</h2>
          <p><strong>Where to start?</strong> <br>
             Devops covers all the processes from request for proposal all the way to production support. The "dev" part is the softwware development lifecycle best practise.The "ops" part the operations lifecycle best practise. Now this is a hugh amount to learn. The project is to study the best practise processes and produce an online reference for Devops.  
          </p> 

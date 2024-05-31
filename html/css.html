@@ -7,8 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SW Ref Cards</title>
+     <!--Load google fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-   <!-- <link rel="stylesheet" media="all" href="../css/bootstrap.css">-->
+    <!-- Reset browsers style back to clear -->
+    <link rel="stylesheet" media="all" href="../css/reset.css">
+    <!-- Load my style rules -->
     <link rel="stylesheet" media="all" href="../css/syft_style_1.css">
 </head>
 
@@ -21,7 +27,7 @@
             
         <ul>
             <li><a  href="../html/index.html">Home</a></li>
-             <li><a href="../html/frontend.html">Frontend</a></li>li>
+            <li><a href="../html/frontend.html">Frontend</a></li>li>
             <li><a href="../html/backend.html">Backend</a></li>  
             <li><a href="../html/tools.html">Tools</a></li>  
             <li><a href="../html/dev.html">End-to-End</a></li>
@@ -49,144 +55,85 @@
         </ul>
 </nav>
 <!-- Page content starts here -->
-    <div class="container">
+<div class="container">
     <header>
-        <h2>CSS External References</h2>
+        <h2>CSS Notes</h2>
     </header>
 
     <!-- Start of two column display with left and right rows keeping in step-->
     <aside>
-        <div> 
-        <h2 >Reference Index</h2>
-        <div>
-            <h3 id="htmlcss">
-                <a href="#htmlref">External References</a>
+        <h2>CSS References</h2>
+        <article>
+            <h3 id="htmlcss" class="aside_head" >
+                <a href="#htmlref" >External References</a>
             </h3>
             <ul>
                 <li>
-                    <a href="#mdn_webdocs">mdn Web Docs</a>
-                </li>
-                <li>
-                    <a href="#mocg">Mark Ottman Code Guide</a>
-                </li>
-                <li>
-                    <a href="#lecoupa">LeCoupa on Github</a>
-                </li>
-                <li>
-                    <a href="#can_i_use">Can I Use</a>
-                </li>
-                <li>
-                    <a href="#geeksweb">Geeks for Geeks Web Design</a>
-                </li>
-                <li>
-                    <a href="#csstricks">CSS Tricks</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-         <h3 id="csssamples" class="aside_head "> <a href="#csssamples">CSS Code Samples</a> </h3>
-        <ul>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
+            </li>
             <li>
-                <a href="#navigation">Navigation Samples</a>
+                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.html">CSS3 - awesome-cheatsheets (GitHub)</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Javascript - Dynamic client-side scripting (mdn)</a>
+            </li>
+            <li>
+                <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
+            </li>
+            <li>
+                <a href="https://codeguide.co/#css"> @mdo Code guide for CSS and HTML </a>
+             </li>
+            <li><a href="https://web.dev/learn/css">Google WebDev CSS Lessons
+                            Link</a>
+                    </li>
+            </ul>
+        </article>
+         <article> 
+        <h3 id="jsref" class="aside_head "> <a href="#jsref">Internal References</a> </h3>
+        <ul>
+             <li>
+                <a href="#selectors">Selectors, Cascade and Inheritance</a>
+            </li>
+            
+            <li>
+                <a href="#color">Color</a>
+            </li>
+            <li>
+                <a href="#text">Text</a>
+            </li>
+            <li>
+                <a href="#boxmodel">Box Model</a>
+            </li>
+            <li>
+                <a href="#lists">Lists</a>
+            </li>
+            <li>
+                <a href="#tables">Tables</a>
+            </li>
+             <li>
+                <a href="#forms">Forms/a>
+            </li>
+            <li>
+                <a href="#layout">Layout</a>
+            </li>
+            <li>
+                <a href="#media">Media</a>
+            </li>
+            <li>
+                <a href="#image">Images</a>
+            </li>
+            <li>
+                <a href="#designprocess">Design Process</a>
             </li>
         </ul>
         </article>
-    </aside>
-    <main>
-        <article> 
-        <div>
-            
-            <h3 id="mdn_webdocs"> MDN Web Docs</h3>
-            <ul>
-                <li>MDN Web Docs is an open-source, collaborative project documenting Web platform technologies, including CSS, HTML, JavaScript, and Web APIs. It also provides an extensive set of learning resources for beginning developers and students.
-                 
-            </ul>
-        </div>
-        <div>
-            
-            </h2>
-            <h3> MDN Web Docs CSS Link </h3>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> CSS reference</a>
-                </li>
-            </ul>
-        </div>
-        </article>
-<!-- End of a 2 equal length row column set  -->
-<!-- Start of a 2 equal length row column set  -->
-        <article>  
-            <div>
-                <h3 id="mocg"> Mark Ottman Code Guide</h3>
-                <ul>
-                    <li>Standards for developing consistent, flexible, and sustainable HTML and CSS. Not a complete syntactical guide, but provides great understanding of many HTML and CSS concepts</li>
-            
-                </ul>
-            </div>
-            <div>
-                <h3> Mark Ottman Code Guide Link </h3>
-                <ul>
-                    <li><a href="https://codeguide.co/#css"> CSS reference</a>
-                    </li>
-            
-                </ul>
-            </div>
-        </article>
+      
+
         <article>
-            <div>
-                <h3 id="lecoupa"> LeCoupa Github Guide to CSS3</h3>
-                <ul>
-                    <li> CSS3 CHEATSHEET - Beginner Friendly</li>
-                    <li> PDF for Better Readability: </li>
-                    <li> Learn more from Google Developer Support Network: </li>
-                    <li>  * Brief overview about CSS: http://jonkinney.com/assets/21/advanced_css.pdf </li>
-                </ul>
-            </div>
-            <div>
-                <h3 id="lecoupa"> LeCoupa Cheat Sheet </h3>
-                <ul>
-                    <li><a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.css"> LeCoupa CSS3 Cheat Sheet Link</a>
-                    </li>
-                    <li><a href="https://github.com/LeCoupa/awesome-cheatsheets/files/8880372/CSS_Cheatsheet.pdf"> LeCoupa CSS3 Cheat Sheet PDF
-                            Link</a>
-                    </li>
-                    <li><a href="https://web.dev/learn/css">Google WebDev CSS Lessons
-                            Link</a>
-                    </li>
-        
-                </ul>
-            </div>
-        </article>
-<!-- End of a 2 equal length row column set within a container  -->
-    </main>
-    </div>
-<!--End of container class on main-->
-     
-<!-- Start of two column container with left and right rows keeping in step-->
-    <div class="container"> 
-    <header> 
-        <h2>CSS Syntax & Concepts</h2>
-        <article>
-            <div>
-                <h3 id="mdn_webdocs"> CSS Syntax</h3>
-                <ul>
-                    <li>The syntax section shows the syntax and explains the rules of CSS3.  </li>
-                </ul>
-            </div>
-            <div>
-                <h3> CSS Concepts </h3>
-                <ul>
-                    <li> The concept section discusses CSS concepts that combine a range of syntacixcal options to achive a design outcome. </a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-    </header>
-    <aside>
-        <h2>CSS Index</h2>
-            <div>
-                <h3>
+                <h3 class="aside_head ">
                     <a id="#csssyntax">Syntax</a>
                 </h3>
+                 <p>The syntax section shows the syntax and explains the rules of CSS3.</p>
                 <ul>
                     <li>
                         <a href="#font">Font</a>
@@ -235,17 +182,15 @@
                         <a href="#media">Media Query</a>
                     </li>
                 </ul>
-            </div>
-            <div>
-                <h3>
+            </article>
+            <article> 
+                <h3 class="aside_head ">
                     <a id="#cssconcept">Concept</a>
                 </h3>
+               <p>The concept section discusses CSS concepts that combine a range of syntacixcal options to achive a design outcome.</p>
                 <ul>
                     <li>
-                        <a href="#selector">Selectors</a>
-                    </li>
-                    <li>
-                        <a href="#cascade">Cascade and Inheritance</a>
+                        <a href="#selector">Selectors, Cascade, Specificity and Inheritance</a>
                     </li>
                     <li>
                         <a href="#responsive">Responsive, Screen Sizes</a>
@@ -263,29 +208,161 @@
                         <a href="#design">Design Process</a>
                     </li>
                 </ul>
-            </div>
-    </aside>
-    <main>      
+            </article>
 
-
-        
-        <!-- first article-->
         <article>
+         <h3 id="csssamples" class="aside_head "> <a href="#csssamples">CSS Code Samples</a> </h3>
+        <ul>
+            <li>
+                <a href="#navigation">Navigation Samples</a>
+            </li>
+        </ul>
+        </article>
+    </aside>
+ 
+<!-- Start of main body -->
+    <main>
+        <article> 
+        <h2 class="article_head">CSS Selector Card </h2>
+            
+<table>
+  <caption>
+    Common selectors
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Selector</th>
+      <th scope="col">HTML Syntax</th>
+      <th scope="col">CSS Syntax</th>
+      <th scope="col">Usage Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Unversal</th>
+      <td>Not Applicable</td>
+      <td>*</td>
+      <td>Applies to whole document. </td>
+    </tr>
+    <tr>
+      <th scope="row">Type</th>
+      <td class="source-code-pro">h1 h2 h3 p div ul li etc.</td>
+      <td class="source-code-pro"> h1, h2, h3 {...}</td>
+      <td>Matches element names</td>
+    </tr>
+     <tr>
+      <th scope="row">Class</th>
+      <td class="source-code-pro"> class=“className”></td>
+      <td class="source-code-pro"> .classname {...}</td>
+      <td>Matches an element whose class attribute has matching value</td>
+    </tr>
+    <tr>
+      <th scope="row">Id</th>
+      <td class="source-code-pro"> id=“identifiername”></td>
+      <td class="source-code-pro"> #identifiername {...}</td>
+      <td>Matches an element whose Id attribute has matching value</td>
+    </tr>
+    <tr>
+      <th scope="row">Child</th>
+      <td class="source-code-pro"> ul  li</td>
+      <td class="source-code-pro"> ul > li {...}</td>
+      <td>Matches an element that is a direct child of another</td>
+    </tr>
+     <tr>
+      <th scope="row">Descendant </th>
+      <td class="source-code-pro"> ul  li</td>
+      <td class="source-code-pro"> ul  li {...}</td>
+      <td>Matches an element that is a descendant of another(not just a direct child)</td>
+    </tr> 
+     <tr>
+      <th scope="row">Adjacent Sibling </th>
+      <td class="source-code-pro"> h1 p</td>
+      <td class="source-code-pro"> h1+p {...}</td>
+      <td>Matches an element that is the next sibling of another. Targets the first &ltp&gt element after any &lth1&gt element(but not other &ltp&gt elements.)</td>
+    </tr> 
+      <tr>
+      <th scope="row">General Sibling </th>
+      <td class="source-code-pro"> h1 p</td>
+      <td class="source-code-pro"> h1~p {...}</td>
+      <td>Matches an element that is a sibling of another. Although it does not have to be the directly preceeding element. If you had two  &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both of them.</td>
+    </tr> 
+    
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Concept Notes</th>
+      <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
+    </tr>
+  </tfoot>
+</table>
+            <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute Selectors</a></h3>
+
+            <ul>
+                <li>Existence []</li>
+                <li>Equality [...=...]</li>
+                <li>Space [...~=...]</li>
+                <li>Prefix [...^= ...]</li>
+                <li>Substring [...*-...]</li>
+                <li>Suffix [...$=...]</li>
+            </ul>
+        </article>
+
+        <article>   
+        <h2 id="selectors" class="article_head">CSS Selectors, Cascade, Specificity, Inheritance</h2>
+        <p>Selectors marry up HTML elements with CSS rule set. </p>
+         <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">CSS - Pseudo classes and Pseudo Elements (mdn)</a>
+
+        <h3>Pseudo Class</h3>
+        <p>A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.</p>
+
+        <p>Pseudo-classes are keywords that start with a colon. For example, :hover is a pseudo-class.</p>
+     
+        
+        <h3>Pseudo-elements</h3>
+
+        <p class="source-code-pro">::before {
+            content: /* value */;
+            /* properties */
+        }
+        </p>
+
+        <p>::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.</p>
+        <p>Pseudo-elements are keywords that start with a double colons. For example, to emphasise the first line of paragraphs use this CSS rule set:</p>
+        <p class="source-code-pro">article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}</p>
+        <h3>Combining Selectors for Better Targetting Styles </h3>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">CSS - Combinators</a></h3>
+        <p>The final selectors we will look at are called combinators, because they combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.</p>
+        <h3>Cascade, Specificity, Inheritance </h3>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">CSS - Cascade</a></h3>
+        <p>Cascade and the closely-related concept of specificity are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.</p>
+
+        <p>Also significant here is the concept of inheritance, which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect..</p>
+        <p>Stylesheets cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.</p>
+         <h3>Cascade Layers </h3>
+         <p>An advanced topic about precedence </p>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers">CSS - Cascade Layers</a></h3>
+
+</article> 
+        
+    <article>
             <div> 
                 <h3 id="font">Font</h3>
                 <h4>Font Fundamentals</h4>
-                <p class="source-code-pro">There are many properties related to the font, such as the face, weight, style, etc. These
+                <p class="source-code-pro-600">There are many properties related to the font, such as the face, weight, style, etc. These
                 properties allow you to change the style or complete look of your text.</p>
                 <h4>Font Syntax</h4>
                 <p>Body Selector which applies properties to whole body</p>
-                <p class="source-code-pro">
+                <p class="source-code-pro-600">
                 &ltbody&gt &lt/body&gt </p>
                 <p> 
                 Font-Family, if first font doesn't exists other ones will be declared serial wise </p>
-                <p class="source-code-pro"> 
+                <p class="source-code-pro-600"> 
                 font-family: "Segoe UI", Tahoma, sans-serif; /* You can declare multiple fonts. */</p>
                <p> Font-Style </p>
-                <p class="source-code-pro">
+                <p class="source-code-pro-600">
                 font-style: italic;
                 
                 <p> Font-Variant </p>
@@ -478,12 +555,12 @@
             <p>background-color - this property styles an elements background color</p>
             <P>Color Contrast Rules. <a href="https://webaim.org/articles/contrast/"> Understanding WCAG 2 Contrast and Color Requirements</p>
             <h4>Color Syntax</h4>
-            <p class="source-code-pro">p,
+            <p class="source-code-pro-600">p,
             span,
             .text </p>
-            <p class="source-code-pro">{</p>
+            <p class="source-code-pro-600">{</p>
              
-            <p class="source-code-pro">bordercolor: cornsilk;</p>
+            <p class="source-code-pro-600">bordercolor: cornsilk;</p>
              
             <p class="source-code-pro">bordercolor: #fff8dc;</p>
             
@@ -591,68 +668,7 @@
                  
             </div>
         </article>
-        <article>
-                <div>
-                    <h3>Cascading Style Sheets</h3>
-                    <h4 id="css_card">CSS Fundamentals</h4>
-                    <p class="regular source-code-pro">The language used to describe the presentation of web content written in
-                        HTML. It describes how elements should be rendered on screen, on paper, or on other media.</p>
-                    <h4>CSS Standards</h4>
-                   
-                </div>
-            
-            
-                <div>
-                    <h3 id="selector">Selectors</h3>
-                    <ul>
-                        <li>The outer level wrappers of html, head and body are a place you can put rules that flow down to the
-                            whole
-                            page until the rule is over ridden by a more specific target.
-                        </li>
-                        <li>Universal Selector: Applies to all elements in the document. Common use is to reset the browsers user
-                            agent
-                            where it can conflict with your design <p>*{}</p>
-                            <p> * {
-                                margin: 0px;
-                                padding: 0px;
-                                box-sizing: border-box;
-                                }</p>
-                        </li>
-                        <li>Type Selector: Matches the element names. </li>
-                        <li>Class Selector: Matches an element whose class attribute has a value that matches the one specified
-                            after
-                            the period symbol. <p></p>
-                        </li>
-                        <li>ID Selector: Matches an element whose ID attribute has a value that matches the one specified after the
-                            hash
-                            symbol #.
-                            symbol. <p>#introduction {}</p>
-                        </li>
-                        <li>Child Selector: Matches an element that is a direct child of another
-                            <p>li>a {} - targets any &lta&gt elements that are children of an &ltli&gt, but not othe &lta&gt </p>
-                        </li>
-                        <li>Descendant Selector: Matches an element that is a descendant of another specified element, not just a
-                            direct
-                            child of that element.
-                            <p>p a {} - targets any &lta&gt element that sit inside a &ltp&gt element, even if there are other
-                                elements
-                                nested between them. </p>
-                        </li>
-                        <li>Adjacent Sibling Selector: Matches an element that is the next sibling of another.
-                            <p>h1+p {} - targets the first &ltp&gt element after any &lth1&gt but not other &ltp&gt elements. </p>
-                        </li>
-                        <li>General Sibling Selector: Matches an element that is a sibling of another.
-                            <p>h1~p {} - if you had two &ltp&gt elements that are siblings of a &lth1&gt this rile would apply to
-                                both.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 id="cascade"> Cascade and Inheritance</h3>
-                    
-                </div>
-                </article>
+        
     <article>
         <div> 
             <h3 id="sizing">Sizing</h3>

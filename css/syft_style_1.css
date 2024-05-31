@@ -92,11 +92,12 @@
 /* Default styling ruleset for standard type selector HTML elements */
 html {
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif,   ;
   color: var(--text-color);
   background-color: var(--background-color);
   margin: 2px;
   padding: 2px;
+ 
   font-size: 16px;
   font-family: var(--font);
   line-height: 1.5;
@@ -106,31 +107,14 @@ body {
   color: var(--body-color)  
 }
 
-/* rule set for unordered lists type elements */
-ul {
-  list-style: disk;
-}
 
-ul li {
-  list-style-position: inside;
-}
-
-ul li::marker { 
-  color: var(--amethyst);
-  font-size: 1.25em;
-}
-
-/* Rule set for oredered list type elements */
-ol {
-    list-style: decimal;
-}
 
 /* Rules set for header type elements */
 
  h1, h2, h3, h4 {
   padding: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: var(--font-heading), var(--font);
   font-weight: 600;
  }
@@ -148,11 +132,10 @@ h2 {
   font-size: 1.5rem;
   color: var(--silver);
   text-align: left;
-  padding-top: 0.5rem;
-  margin-top: 0.5rem;
+  padding-top: 0.rem;
+  margin-top: 0.rem;
   border-top: 0.25rem solid;
   font-size: 1.5rem;
-  grid-column: auto / span 3;
 
 }
 
@@ -182,21 +165,49 @@ p {
   margin-inline-end: 0px;
 }
 
-/* Ruleset for table type elements   */  
+/* Ruleset for table type elements. This ruleset originally from mdn  */  
 
-table {
-  border: 2px solid darkorchid;
-  width: 650px;
-  margin: 0 auto;
+Table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
-thead {
-  background-color: plum;
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
 }
 
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
 td {
-  border-top: 1px solid darkorchid;
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
 }
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
 
 /* Default rule set for button type element */
 button {
@@ -206,20 +217,16 @@ button {
   font-weight: 500;
   font-size: 15px;
 }
+/*rule set for links. Seperate rules required for nav links and main links */
 a {
-  
   color: var(--silver);
   cursor: pointer;
 }
 
-/* Position the navbar container inside the image */
- /* link styling, keep in order, styles built on top of another */
-
-/*
-a:link {
+main a:link {
   color: #27495d
 }
-
+/* Unused link decorations 
 a:visited {
   background-color: var(--floritine_clear);
   color: #a5c300;
@@ -238,8 +245,26 @@ a:active {
  background-color: var(--floritine_clear);
   color: #782b90;
 }
-/*
-/* Page nav using flexbox functions of CSS */
+ */
+ 
+ul {
+  list-style: disk ;
+}
+
+ul li {
+  list-style-position: inside;
+  list-style-type: disc;
+  line-height: 1.5
+}
+
+ul li::marker { 
+  color: var(--amethyst);
+  font-size: 1.25rem;
+} 
+ 
+ol {
+    list-style: decimal;
+}
 
 nav {
   width: 100%;
@@ -257,6 +282,8 @@ nav ul {
 
 nav li {
   float: left;
+  line-height: 1.5;
+  list-style-type: none;
 }
  
 nav li a {
@@ -271,6 +298,10 @@ nav li a:hover:not(.active) {
   background-color: #ddd;
   color: black;
 }
+/* Pseudo classes to simplify styling*/
+
+
+
 .active{
   background-color: var(--sapphire);
 }
@@ -282,7 +313,10 @@ nav li a:hover:not(.active) {
   padding-right: 15px;
   padding-left:15px;
 }
-
+.logo {
+  padding: 1rem;
+  border: 1rem 0 1rem 
+}
 .logo a{
   font-size: 40px;
   font-weight: 600;
@@ -299,6 +333,8 @@ nav li a:hover:not(.active) {
   font-weight: 600;
   color: var(--florentine);
   background: transparent;
+  padding: 1rem;
+  border: 1rem 0 1rem
  
 }
 
@@ -343,9 +379,9 @@ input[type=text]:focus {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    "header header aside"
-    "main main aside "
-    "footer footer footer";
+    "header header"
+    "main  aside "
+    "footer footer";
   border: 2px solid #a2a2a6;
   border-radius: 20px;
   padding: 10px;
@@ -401,6 +437,15 @@ article {
   color: var(--florentine);
   border-radius: .8rem;
 }
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
 /* Ruleset for color chart pacel */
 .color-container {
   width: 100%;
@@ -440,7 +485,23 @@ article {
   margin: 2em;
 
     }
- 
+ hr {
+  border: none;
+  border-top: 3px double var(--blackcut);
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+
 .font-panel {
   display: inline-block;
   width: 45%;
@@ -500,6 +561,15 @@ article {
   font-style: italic;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900*/
+
+.source-code-pro-600 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
 .source-code-pro {
   font-family: "Source Code Pro", monospace;
 }
@@ -514,12 +584,66 @@ article {
   font-family: "Source Code Pro" monospace;
   background-color: beige;
 }
+.swatchsilver {
+  background-color: var(--silver);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchsapphire {
+  background-color: var(--sapphire);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchamethyst {
+  background-color: var(--amethyst);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchflorentine {
+  background-color: var(--florentine);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchmidnightblue {
+  background-color: var(--midnight-blue);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchbluenile {
+  background-color: var(--blue-nile);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchblackcut {
+  background-color: var(--blackcut);
+  color: var(--white);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchgreen {
+  background-color: var(--green);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
+.swatchmauve {
+  background-color: var(--mauve);
+  color: var(--textcolor);
+  border: 4px solid #8ba0b7;
+  border-radius: .8rem;
+}
 
 
 /* Rule set for button style for flat style buttons xxxxjc need to change colors */
 .flat {
   background-color: var(--silver);
-  color: var(blackcut);
+  color: var(--textcolor);
   border: 4px solid #8ba0b7;
   border-radius: .8rem;
 }
