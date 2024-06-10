@@ -1,6 +1,40 @@
 :root {
-   
-    /* Syft colors*/
+/* Generic colors */
+    --white: White;
+    --lightest-gray: #FAFAFA;
+    --light-gray: LightGrey;
+    --dark-gray: #666666;
+    --darkest-gray: #333333;
+    --black: #333333;
+    --deep-black: #222222;
+    --primary: #4ca1f6;
+    --alert: #DF2020;
+
+    --border-color: rgba(0, 0, 0, .1);
+    --body-color: #212529;
+/* Black and white colors */
+/* Set some of colors to uses as variable names */
+    --text-color: var(--black);
+    --weak-text-color: var(--dark-gray);
+    --link-color: var(--primary);
+    --icon-color: var(--black);
+    --background-color: var(--white);
+    --hover-color: var(--light-gray);
+    --inverted-background-color: var(--dark-gray);
+    --inverted-text-color: var(--white);
+    --weak-border-color: var(--light-gray);
+    --border-color: var(--dark-gray);
+    --header-background-color: var(--primary);
+    --header-text-color: var(--white);
+    --card-background-color: var(--lightest-gray);
+    --toggle-background-off: var(--light-gray);
+    --toggle-background-on: var(--primary);
+    --button-background-color: var(--primary);
+    --button-border-color: var(--primary);
+    --button-text-color: var(--white);
+    --button-alert-color: var(--alert);
+
+/* Syft colors*/
     --silver:  #8ba0b7;
     --sapphire: #0072bc;
     --amethyst: #782b90;  
@@ -12,37 +46,27 @@
     --green: #a5c300;
     --blackcut: #000000;
 
-    --text-color: var(--black);
-    --weak-text-color: var(--dark-gray);
-    --link-color: var(--primary);
-    --icon-color: var(--black);
-    --background-color: var(--white);
-    --hover-color: var(--light-gray);
+/* root variables for some basic styles */
+    --border: 1px solid var(--light-grey);
+    --font: Montserrat, Helvetica, Arial, sans-serif;
+    --font-heading: "pluto";
+    
+    --gap: 2rem;
 
-    --inverted-background-color: var(--dark-gray);
-    --inverted-text-color: var(--white);
+   
 
-    --weak-border-color: var(--light-gray);
-    --border-color: var(--dark-gray);
 
-    --header-background-color: var(--primary);
-    --header-text-color: var(--white);
-
-    --card-background-color: var(--lightest-gray);
-    --toggle-background-off: var(--light-gray);
-    --toggle-background-on: var(--primary);
-
-    --button-background-color: var(--primary);
-    --button-border-color: var(--primary);
-    --button-text-color: var(--white);
-    --button-alert-color: var(--alert);
+  
     --button-loader-primary: url("../images/loader-white.svg");
     --button-loader-secondary: url("../images/loader-primary.svg");
 
     --flash-background-color: var(--primary);
     --flash-text-color: var(--white);
     --flash-alert-color: var(--alert);
-
+/* Shadow style for dropdown nav */
+    --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+/* legacy shadow style */
     --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     --inset-box-shadow: 0 1px 3px rgba(0, 0, 0, .14) inset;
 
@@ -55,12 +79,9 @@
     --inverted-ic-logo: url("../images/ic-logo-white.svg");
     --expand-image: url("../images/expand-black.svg");
     --white-expand-image: url("../images/expand-white.svg");
-}
 
-
-
-html {
-    accent-color: var(--primary);
+    --font: Montserrat, Helvetica, Arial, sans-serif;
+    --font-heading: "pluto";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,3 +116,36 @@ html {
     }
 }
 
+/* Private font files can be used for unique branding */
+@font-face {
+  font-family: "pluto";
+  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
+}
+@font-face {
+  font-family: "plutoBold";
+  font-weight: bold;
+  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+ 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+ 
+ 

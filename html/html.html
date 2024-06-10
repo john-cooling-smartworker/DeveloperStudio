@@ -258,86 +258,189 @@
  
         <h1>J.R. Cooling, Software Developer</h1>
 </header>
-<nav>
-    <!-- On page navigation menu -->
-        <ul>
-            <li><a href="../html/node.html">Node</a></li>
-            <li><a href="../html/sql.html">SQL</a></li>
-            <li><a href="../html/linux.html">Linux</a></li>
-            <li><a href="../html/security.html">Security</a></li>
-            <li><a href="../html/api.html">API</a></li>
-            <li><a href="../html/python.html">Python</a></li>
-        </ul>
-</nav>
-<!-- Full width page header -->
-
  
-<!--Introduce containg to split page left and right sections  -->
-<div class="container">
-<header>
-    <h1>Backend Development </h1>
-</header>
-<!-- Side column content   -->
-    <aside>
-        <h3 class="aside_head ">Backend  References</h3>
-        <article>
-        <!-- Reference links for HTML and CSS  -->
-        <article> 
-        <h3 id="htmlcss" class="aside_head ">External Links</h3>
-        <ul>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML - Structuring the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">HTML - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/html">HTML Sample Code (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://codeguide.co/#html"> HTML reference</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.html">CSS3 - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Javascript - Dynamic client-side scripting (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://codeguide.co/#css"> @mdo Code guide for CSS and HTML </a>
-            </li>  
-        </ul>
-        </article>
-    </aside>
-
-<!--the mainline section on the left of the page  -->
-    <main>
-   <h3 id="gitref" class="article_head">Node</h3>
-    <article> 
-         <img src="../images/Node.js-Architecture-1024x575.jpg" alt="Figure eight racetrack diagram of software development lifecycle" Title=
-        "sotware development lifecycle" width="1024" height="575"/>
-        <ul>
-            <li>Application</li>
-            <li>V8 Engines</li>
-            <li>Node API</li>
-            <li>V8 Engines</li>
-            <li>NIBUV</li>
-            
-            <li>..</li>
-        </ul>
-    </article>
-    </main>
- 
-  </div>
-   <footer>
-        <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub Repo</a> Last Updated: 2024-03-11</p>
+<!-- On page navigation menu to pages under the top level page-->
+<!-- xxxxjc convert to a drop down menu using js -->
+      <nav>
     
+          <ul>
+              <li><a class="active" href="../html/html.html">HTML</a></li>
+              <li><a href="../html/css.html">CSS</a></li>
+              <li><a href="..html/js.html">Javascript</a></li>
+          </ul>
+      </nav>
+  </header>
+
+<!-- Set the layout using a grid layout of a main column and smaller aside column on right -->
+<div class="container">
+<!-- This page header -->
+  <header>
+      <h1>HTML</h1>
+  </header>
+<!-- The Aside Sections -->
+  <aside>
+        <h3 class="aside_head ">HTML Elements</h3>
+            <article>
+                <p>Page Structure: &lthtml&gt, &lthead&gt, &ltbody&gt.</p>
+                <p>HTML5 Layout Elements: &ltheader&gt, &ltnav&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &lthgroup&gt, &ltfigure&gt, &ltfgcaption&gt, &ltdiv&gt, &ltspan&gt, &ltfooter&gt.</p>
+                <p>Typography: &lth1&gt ... &lth6&gt, &ltp&gt, &ltbr /&gt, &lthr /&gt,  &ltb&gt, &lti&gt, &ltsup&gt, &ltsub&gt, &ltstrong&gt, &ltem&gt, &lts&gt, &ltaddress&gt, &ltblockquote&gt, &ltabbr&gt...&ltacronym&gt,  &ltcite&gt...&ltdfn&gt, &ltdel&gt...&ltins&gt. </p>  
+                <p>Lists: &ltol&gt, &ul&gt, &ltli&gt, &ltdt&gt, &ltdt&gt...&ltdd&gt. </p>  
+                <p>Images: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+             <h3 class="aside_head ">HTML Attributes</h3>
+            <article>
+              <p>attributes to replace the elements below</p>
+                <p>Page Structure: &lthtml&gt, &lthead&gt, &ltbody&gt.</p>
+                <p>HTML5 Layout Elements: &ltheader&gt, &ltnav&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &lthgroup&gt, &ltfigure&gt, &ltfgcaption&gt, &ltdiv&gt, &ltspan&gt, &ltfooter&gt.</p>
+                <p>Typography: &lth1&gt ... &lth6&gt, &ltp&gt, &ltbr /&gt, &lthr /&gt,  &ltb&gt, &lti&gt, &ltsup&gt, &ltsub&gt, &ltstrong&gt, &ltem&gt, &lts&gt, &ltaddress&gt, &ltblockquote&gt, &ltabbr&gt...&ltacronym&gt,  &ltcite&gt...&ltdfn&gt, &ltdel&gt...&ltins&gt. </p>  
+                <p>Lists: &ltol&gt, &ul&gt, &ltli&gt, &ltdt&gt, &ltdt&gt...&ltdd&gt. </p>  
+                <p>Images: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+ 
+        <h3 id="samples" class="aside_head ">HTML/CSS Solutions Samples</h3>
+            <article>
+                <p>Input Validateion: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+
+              <h3 id="debugging class="aside_head ">Debugging</h3>
+            <article>
+                <p>Tricky Stuff</p>
+                 
+                 
+            </article>
+  </aside>
+
+<!-- The Main sections -->
+  <main >
+        <h3 class="article_head ">HTML Reference Sources</h3>
+
+<!-- Website Construction-->
+        <article>
+          <h3 class="aside_head ">Website Construction</h3>
+          <p>HTML is used to build websites. Here I look at how to construct the infrasturcture needed to support a website.</a>
+          </p> 
+          <p>How the web works? Mozilla is a great introduction. <a href="https://developer.mozilla.org/en-US/curriculum/core/web-standards/">MDN Web Standards </a>
+           </p> 
+          <img src="../images/Web-App-Architecture-1.png" alt="  " Title="Web Application Architecture Diagram" width="512" height="378"/>
+        </article>
+      
+<!--HTML Standards Sites  -->
+        <article> 
+
+          <h3 class="aside_head ">HTML Standards Site</h3>
+
+          <p>In 2019, the WHATWG and W3C signed an agreement to collaborate on a single version of HTML going forward: thisis the document.. <a href="https://html.spec.whatwg.org/#toc-semantics">HTML Living Standard</a>
+          </p> 
+
+          <p>The standard is long and can be a little dry. The best learning resources thats works thru the standard is probably Mozilla. <a href="https://developer.mozilla.org/en-US/curriculum/core/web-standards/">MDN Web Standards </a>
+          </p> 
+
+          <img src="../images/HTML Standards .jpeg" alt="HTML WATWG Standards Specification" Title="HTML WATWG Standards Specification" width="512" height="378"/>
+
+        </article>
+
+<!-- HTML Mozilla Reference Sites -->
+        <article>
+          <h3 class="aside_head ">HTML Mozilla Reference sites</h3>
+
+          <p>Mozilla provides many resources for the programmer.</p> 
+          <ul>
+            <li>
+              <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"> Mozilla Org, HTML Reference Section</a></p>
+            </li>
+            <li>
+              <p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozilla Org HTML Guide</a> Lots of guides in the form of courseware, a good way to find a quick refresher on topic you are struggling with.</p>
+            </li>
+             <li>
+              <p><a href="hhttps://developer.mozilla.org/en-US/curriculum/core/semantic-html/">Mozilla Org HTML5 Courseware </a> A comprehensive beginners course of HTML. Followup course on CSS is also available.</p>   
+           </ul> 
+       
+          <a href="https://twitter.com/mozdevnet"><i class="fa fa-twitter"></i>X</a>
+
+          <img src="../images/Mozilla .jpeg" alt="Mozilla Communities" Title=
+          "sotware development lifecycle" width="512" height="378"/>
+        </article>
+
+<!-- GitHub Reference-->
+        <article>
+          <h3 class="aside_head ">HTML GitHub Reference Sites</h3>
+      
+           <p>GitHub community is a peer contributor source of reference material.
+           </p> 
+           <ul>
+            <li>
+              <p><a href="https://github.com/bendc/frontend-guidelines">GitHub Front End Guidelines</a> A Few best practice tips from a contributor  
+              </p>
+            </li>
+            <li>
+             <p><a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">GitHub Awesome Cheet Sheets</a> Nicely brief chectsheet for HTML5. Also in the awesome range are cheatsheets for: CSS, Angularjs.js, ember.js, react.js, tailwind.js, vue.js.
+             </p>
+            </li>
+            <li>
+             <p><a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">GitHub Awesome Cheet Sheets</a> The Awesome Cheat Sheet collections also has quick guides for: Backend, Databases, Languages and Tools
+             </p>
+            </li>
+           </ul>
+           <p> 
+           </p> 
+           <a href="https://github.com/john-cooling-smartworker"> My GitHub Home</a>
+              <img src="../images/github-pages-1024x512.jpg" alt="GitHub" Title=
+            "GitHub Image" width="512" height="378"/>
+        </article>
+
+<!-- W3 Schools -->
+        <article>
+          <h3 class="aside_head ">HTML W<sup>3</sup> Schools Reference Sites</h3>
+      
+          <p>W<sup>3</sup> community is WWW authority site full of great information material.
+          </p> 
+          <ul>
+            <li>
+              <p><a href="hhttps://www.w3schools.com/html/default.asp">W<sup>3</sup>HTML Tutorial</a> A comprehensive HTML course. Concise and targetted to each topic. Check it for every question!! 
+              </p>
+            </li>
+
+            <li>
+             <p><a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp">UTF-8 Symbols to dress up your HTML text.</a> UTF symbols can be used direct in HTML as easier way than using ICONS in many cases. Here are just a few of them.<p>I will display &#x2600;</p> <p>I will display &#x264C;</p> <p>I will display &#x1F451;</p> <p>I will display &#x1F50D;</p><p>I will display &#128197;</p> <p>I will display &#128279;</p>
+             </p>
+            </li>
+
+            <li>
+             <p><a href="https://www.w3schools.com/tags/default.asp">W<sup>3</sup> HTML References</a> This a magnificent refernce library, cross referenced by alphbet, category, attributes, colors, events, methods and many more. Again if you have a question make this one of the first place to check!! 
+             </p>
+            </li>
+
+          </ul>
+            
+          <img src="../images/W3.png" alt="W3 Schools" Title="W3 Schools Image" width="512" height="378"/>
+        </article>
+  </main>
+
+  <!--div to close the grid container  -->
+</div>
+
+<footer>
+    <div class="lastdate">
+        <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub Repo</a> Last Updated: 2024-03-11</p>
+    </div>
 
     <hr />
         <small>
@@ -360,11 +463,9 @@
             <p class="text-right">Print Reference Cards</p>
         </small>
 
-    </footer>
- 
- 
-   <script src="../script/dropnav.js"></script> 
- 
-</div>
+
+</footer>
+<script src="../script/dropnav.js"></script>
+
 </body>
 </html>

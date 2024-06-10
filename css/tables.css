@@ -1,29 +1,43 @@
-.table-scroll-wrapper {
-    overflow-x: scroll;
+
+/* Ruleset for table type elements. This ruleset originally from mdn  */
+
+Table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
-table {
-    min-width: 0;
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
 }
 
-th, td {
-    padding: .75rem 1.5rem;
-    border-color: var(--weak-border-color);
-    border-width: 1px;
-    border-bottom-style: solid;
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
 }
 
-th {
-    font-weight: 500;
-    text-align: left;
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
 }
 
-thead th, thead td {
-    border-width: 2px;
+td:last-of-type {
+  text-align: center;
 }
 
-tfoot th, tfoot td {
-    border-width: 2px;
-    border-bottom-style: none;
-    border-top-style: solid;
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
 }

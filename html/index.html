@@ -1,54 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A portfolio app to promote an individual developer">
-    <meta name="theme-color" content="#0072bc"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SW Ref Cards</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Add font awesome icon library includes some trademarks-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Add Google Icons libray item -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Load Source Code Pro font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<!-- Load Monterrat forn for ordinary text font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
-   
-    <!-- Syft styling added last  -->
+    <!-- Reset browsers style back to clear -->
+    <link rel="stylesheet" media="all" href="../css/reset.css">
+     <!-- Standard styling rule set for colors maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/syft_theme.css">  
+    <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/tables.css">
+     <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/forms.css">
+    <!-- From Freecodecamp Responsive dropdown menu-->
+    <link rel="stylesheet" media="all" href="../css/dropnav.css">
+     <!-- Syft styling added last  -->
     <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
-</head>
+    <title>J.R.Cooling</title>
+  </head>
+  <body>
+    <header id="nav-menu" aria-label="navigation bar">
+      <div class="nav_container">
+<!-- Nav Strat Div -->
+        <div class="nav-start">
+          <a class="logo" href="../html/index.html">
+            <img
+              src="../images/Icon_65x65px.png"
+              width="35"
+              height="35"
+              alt="Inc Logo"
+            />
+          </a>
+          <nav class="menu">
+            <ul class="menu-bar">
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown1"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="browse"
+                >
+                  References <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
 
-<body>
-<!--Page header common to all pages with the top level navigation and search form  -->
-<header>
+                </button>
+                <div id="dropdown1" class="dropdown">
+                  <ul role="menu">
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">
+                                      important_devices
+                                      </span>
+                        
+                        <div>
+                           <span class="dropdown-link-title">Frontend Development</span>
+                            
+                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">
+                                      background_grid_small
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title"
+                            >Backend Development</span
+                          >
+                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">
+                                      tools_power_drill
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title">Development Tools</span>
+                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
+                       <span class="material-symbols-outlined">
+                                      design_services
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title">Design Style</span>
+                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
 
-    <nav class="navbar">
-        <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
+                  <ul role="menu">
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Browse by technology</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">
+                            html
+                            </span>
+                        HTML
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">
+                              css
+                              </span>
+                        CSS
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                       <span class="material-symbols-outlined">
+                                      javascript
+                                      </span>
+                        Javascript
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">
+                                      source_notes
+                                      </span>
+                        Git and HitHub
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">
+                                      developer_mode
+                                      </span>
+                        Visual Studio Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown2"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="discover"
+                >
+                  Discover
+                  <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                  <i class="bx" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown2" class="dropdown">
+                  <ul role="menu">
+                    <li>
+                      <span class="material-symbols-outlined">
+                                      browse
+                                      </span>
+                      <span class="dropdown-link-title">Browse Categories</span>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    brand_family
+                                    </span>
+                      <a class="dropdown-link" href="#branding">Branding</a>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    regular_expression
+                                    </span>
+                      <a class="dropdown-link" href="#illustrations"
+                        >Algorithms</a
+                      >
+                    </li>
+                  </ul>
+                  <ul role="menu">
+                    <li>
+                      <span class="material-symbols-outlined">
+                                    download_for_offline
+                                    </span>
+                      <span class="dropdown-link-title">Download</span>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    contact_page
+                                    </span>
+                      <a class="dropdown-link" href="#mac-windows"
+                        >J.R.Cooling Profile</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    finance_chip
+                                    </span>
+                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
+              <li><a class="nav-link" href="../html/press.html">Press</a></li>
+              <li><a class="nav-link" href="../html/profile.html">About</a></li>
+            </ul>
+          </nav>
+        </div>
 
-        <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="../html/frontend.html">Frontend</a></li>
-            <li><a href="../html/backend.html">Backend</a></li>  
-            <li><a href="../html/tools.html">Tools</a></li>  
-            <li><a href="../html/dev.html">End-to-End</a></li>
-            <li><a href="../html/devops.html">Devops</a></li>
-            <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#Press">Press</a></li>
-            <li><a href="#journal">Journal</a></li>
-    <!-- change contact text to be and icon pen in a box -->
-            <li><a href="#contact">Contact</a></li> 
-    <!-- search form inside the top of page header -->
-            <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
-        </ul>
-    </nav>
-</header>
+        <div><span class="material-symbols-outlined">home</span> 
+        </div>
+<!-- The nav end group  -->
+        <div class="nav-end">
+          <div class="right-container">
+            <form class="search" role="search">
+              <input type="search" name="search" placeholder="Search.." />
+              <p class="search-icon"><i  class="material-symbols-outlined">
+                                                search  </i>
+             </p>
+            </form>
+
+            <a href="#profile">
+              <img
+                src="../images/service-3.jpg"
+                width="35"
+                height="35"
+                alt="user image"
+              />
+            </a>
+            <button class="btn btn-primary">Login</button>
+          </div>
+<!-- Hamburger Button, hidden on gigger screen size -->
+          <button
+            id="hamburger"
+            aria-label="hamburger"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+          <i class="material-symbols-outlined" aria-hidden="true">
+                  menu
+            </i>
+          </button>
+        </div>
+      </div>
+    </header>
+ 
     <!-- Using a grid layout of a main column and smaller aside column -->
 <div class="container">
 
-    <header>
-        <h2>Project Portfolio</h2>
-    </header>
+<header>
+        <h1>J.R. Cooling, Software Developer</h1>
+</header>
 
     <aside>
         <h3 class="aside_head ">John Cooling Profile</h3>
@@ -81,64 +296,69 @@
                 <p>Buliding on the success of SmartWorker a disruptive concept was developed in 2014.  The Syft Platform was launced in 2015. Its an innovative recruitement application. Using AI technology to disassemble job requirements and candidate profiles. Using visualisation technology to present jobs and candidates in easy to compare formats. The app runs on the latest web site technology and is back ended by either Salesforce or Workday(next released).</p>
                 <p>The innovation required a Patent to be lodged</p>
             </article>
+    
+ 
+        <h3 id="press" class="aside_head ">John Cooling Press</h3>
+            <article>
+                <h4>Six second read sweet support</h4>
+                <p>Syft introduced the six second read for resumes</p>
+                <p>AI reads resumes and spits out meaningful information about a candidate</p>  
+                <p>Published. <a href="https://www.linkedin.com/in/johncooling/"><i class="fa fa-linkedin"></i></a></p>
+            </article>
+
+               <h3 id="blog" class="aside_head ">John Cooling Blog</h3>
+            <article>
+                <h4>Six second read sweet support</h4>
+                <p>Syft introduced the six second read for resumes</p>
+                <p>AI reads resumes and spits out meaningful information about a candidate</p>  
+                <p>Published. <a href="https://www.linkedin.com/in/johncooling/"><i class="fa-solid fa-blog"></i></a></p>
+            </article>
     </aside>
 
-   
- 
     <main >
+        <h3 class="article_head ">Reference Project</h3>
         <!-- first article-->
         <article>
-         <h3 class="aside_head ">Project Creative - Frontend Programming Reference</h3>
-          <img src="../images/frontend development.jpg" alt="Technologies of frontend development " Title="Frontend devlopment technologies" width="1024" height="756"/>
-         <p>The three core elements of frontend programming. Hypertext Markup Language, Cascading Style Sheets and Javascript. The project to study the three elements and produce an online reference for programming the frontend of sites and apps.
-         </p> 
-         
-        <p>The foundation of web content and structure. It can work on its own but really is most useful when used as part of team with CSS and JavaScript
-        </p>
-         <h4>Hypertext Markup language</h4>
-            <p>Come to grips with the fundamental parts of HTML. Your mastering of the syntax fundamentals depends on it. The HTML referernce card is a big help, prompting!
-            </p>
-            <h4>Cascading Style Sheets</h4>
-            <p >The language used to describe the presentation of web content written in HTML. It describes how elements should be rendered on screen, on paper, or on other media.</p>
-            <h4>JavaScript</h4>
-            <p >JavaScript is a lightweight interpreted programming language. It is best know as the scripting language for web pages.  </p>
-            <h4>Frontend Technical Tips</h4>
-            <p  >The techniques and processes for development of web sites and applications combine frontend tools in creative ways to achive great solutions.</p>
-    
-            <p> <a href="#top">Back to top</a> </p>
-         
+        <h3 class="aside_head ">Frontend Development</h3>
+        <p>Project to study the three core elements of frontend programming. HTML, CSS3 and Javascript and produce an online reference. <a href="../html/frontend.html">Go to the Frontend Programming Reference</a>
+        </p> 
+          <img src="../images/frontend development.jpg" alt="Technologies of frontend development " Title="Frontend devlopment technologies" width="512" height="512"/>
         </article>
       
     <!-- Second article -->
         <article> 
-        <h3 class="aside_head ">Project Engine - Backend Programming Reference Project</h2>
-         <p>Data and the API's to access it are a big part of the backend. Add on languages and platforms and you are talking a lot of stuff to know. The project to study the elements of the backend and produce an online reference for programming the backend.
+        <h3 class="aside_head ">Backend Development</h2>
+         <p>Data and the API's to access it are a big part of the backend. Add on languages and platforms and you are talking a lot of stuff to know. The project to study the elements of the backend and produce an online reference for programming the backend. <a href="../html/backend.html">Go to the Backend Programming Reference</a>
          </p> 
-         <img src="../images/back-end-roadmap.jpeg" alt="Roadmap of the path to backend development success" Title="Backend devlopment roadmap" width="768" height="896"/>
+         <img src="../images/back-end-roadmap.jpeg" alt="Roadmap of the path to backend development success" Title="Backend devlopment roadmap" width="512" height="512"/>
 
         </article>
         <!-- third article -->
         <article>
     
-        <h3 class="aside_head ">Project Best Practice - End-to-End Development Project</h3>
-         <p>From request for proposal all the way to produciton support softwware development best practise has been developed. Studing the best practise processes and produce an online reference for the end-to-end development process.
-         </p> 
+        <h3 class="aside_head ">Development Tools</h3>
+         <p>So many tools for programmers, which to pick?</p>
+        <blockquote>
+            <p>These are the tools I use. Once I learn a tool I stick with until I hit the frustration boundary. Only then do I upgrade to something more modern. Why donm't I keep up with the latest tools often? Simple answer is, switching costs! </p>
+        </blockquote>
+        
         <img src="../images/Software-Development-Life-Cycle-scaled.jpg" alt="Figure eight racetrack diagram of software development lifecycle" Title=
-        "sotware development lifecycle" width="1024" height="612"/>
+        "sotware development lifecycle" width="512" height="256"/>
         </article>
              
 
     <!-- forth article -->
     <article>
-        <h3 class="aside_head ">Project Plumbing - Development and Operations Project</h2>
+        <h3 class="aside_head ">Design Style</h3>
          <p><strong>Where to start?</strong> <br>
-            Devops covers all the processes from request for proposal all the way to production support. The "dev" part is the softwware development lifecycle best practise.The "ops" part the operations lifecycle best practise. Now this is a hugh amount to learn. The project is to study the best practise processes and produce an online reference for Devops.  
+            Capture your brand in its design style for the web
          </p> 
          <p><strong>Breakdown!! </strong><br>
-              Its too big to be a single project and there is a neat divide between the two. The "dev" part is the softwware development lifecycle best practise. It is covered in an earlier project "End-to-end Development Project"
+              What a process? Build a wireframe of the elements. Pick a color pallette. Photo up the images. Architect the used experince flows. Ride the merry go around of build and test and trial until exhausted. Publish and hope for the best! 
          </p> 
-          <img src="../images/DevOps-lifecycle-capabilities-1024x621.jpeg" alt="Figure eight racetrack diagram of devops processes" Title=
-        "devops process lifecycle" width="1024" height="612"/>
+         <a href="../html/devops.html"> Go to the DevOps Reference</a>
+          <img src="../images/design-style2.jpeg" alt="Figure eight racetrack diagram of devops processes" Title=
+        "devops process lifecycle" width="512" height="256"/>
     </article>
     </main>
 </div>
@@ -173,5 +393,7 @@
 </footer>
  
 
-</body>
+ 
+   <script src="../script/dropnav.js"></script>
+  </body>
 </html>

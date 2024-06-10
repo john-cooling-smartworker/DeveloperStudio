@@ -1,63 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SW Ref Cards</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-   <!-- <link rel="stylesheet" media="all" href="../css/bootstrap.css">-->
-    <link rel="stylesheet" media="all" href="../css/syft_style_1.css">
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Add font awesome icon library includes some trademarks-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Add Google Icons libray item -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Load Source Code Pro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<!-- Load Monterrat forn for ordinary text font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+    <!-- Reset browsers style back to clear -->
+    <link rel="stylesheet" media="all" href="../css/reset.css">
+     <!-- Standard styling rule set for colors maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/syft_theme.css">  
+    <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/tables.css">
+     <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/forms.css">
+    <!-- From Freecodecamp Responsive dropdown menu-->
+    <link rel="stylesheet" media="all" href="../css/dropnav.css">
+     <!-- Syft styling added last  -->
+    <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
+    <title>J.R.Cooling</title>
+  </head>
+  <body>
+    <header id="nav-menu" aria-label="navigation bar">
+      <div class="nav_container">
+<!-- Nav Strat Div -->
+        <div class="nav-start">
+          <a class="logo" href="../html/index.html">
+            <img
+              src="../images/Icon_65x65px.png"
+              width="35"
+              height="35"
+              alt="Inc Logo"
+            />
+          </a>
+          <nav class="menu">
+            <ul class="menu-bar">
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown1"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="browse"
+                >
+                  References <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
 
+                </button>
+                <div id="dropdown1" class="dropdown">
+                  <ul role="menu">
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">
+                                      important_devices
+                                      </span>
+                        
+                        <div>
+                           <span class="dropdown-link-title">Frontend Development</span>
+                            
+                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">
+                                      background_grid_small
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title"
+                            >Backend Development</span
+                          >
+                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">
+                                      tools_power_drill
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title">Development Tools</span>
+                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
+                       <span class="material-symbols-outlined">
+                                      design_services
+                                      </span>
+                        <div>
+                          <span class="dropdown-link-title">Design Style</span>
+                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
 
-<body>
-<header>
- <!-- search form inside the top of page header -->
-    <nav class="navbar">
-        <div class="logo"><a href="#home"><center>John Cooling Programming</center></a></div>
-            
-        <ul>
-            <li><a  href="../html/index.html">Home</a></li>
-             <li><a class="active" href="../html/frontend.html">Frontend</a></li>li>
-            <li><a href="../html/backend.html">Backend</a></li>  
-            <li><a href="../html/tools.html">Tools</a></li>  
-            <li><a href="../html/dev.html">End-to-End</a></li>
-            <li><a href="../html/devops.html">Devops</a></li>
-            <li><a href="../html/syft_style_guide-01.html">Style Guide</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#Press">Press</a></li>
-            <li><a href="#journal">Journal</a></li>
-            <li><a href="#contact">Contact</a></li> 
-          <!-- change contact text to be and icon pen in a box -->
-            <li style="float:right"><form> <input type="text" name="search" placeholder="Search.."> </form></li>
-        </ul>
+                  <ul role="menu">
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Browse by technology</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">
+                            html
+                            </span>
+                        HTML
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">
+                              css
+                              </span>
+                        CSS
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                       <span class="material-symbols-outlined">
+                                      javascript
+                                      </span>
+                        Javascript
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">
+                                      source_notes
+                                      </span>
+                        Git and HitHub
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">
+                                      developer_mode
+                                      </span>
+                        Visual Studio Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown2"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="discover"
+                >
+                  Discover
+                  <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
+                  <i class="bx" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown2" class="dropdown">
+                  <ul role="menu">
+                    <li>
+                      <span class="material-symbols-outlined">
+                                      browse
+                                      </span>
+                      <span class="dropdown-link-title">Browse Categories</span>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    brand_family
+                                    </span>
+                      <a class="dropdown-link" href="#branding">Branding</a>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    regular_expression
+                                    </span>
+                      <a class="dropdown-link" href="#illustrations"
+                        >Algorithms</a
+                      >
+                    </li>
+                  </ul>
+                  <ul role="menu">
+                    <li>
+                      <span class="material-symbols-outlined">
+                                    download_for_offline
+                                    </span>
+                      <span class="dropdown-link-title">Download</span>
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    contact_page
+                                    </span>
+                      <a class="dropdown-link" href="#mac-windows"
+                        >J.R.Cooling Profile</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                    finance_chip
+                                    </span>
+                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
+              <li><a class="nav-link" href="../html/press.html">Press</a></li>
+              <li><a class="nav-link" href="../html/profile.html">About</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div><span class="material-symbols-outlined">home</span> 
+        </div>
+<!-- The nav end group  -->
+        <div class="nav-end">
+          <div class="right-container">
+            <form class="search" role="search">
+              <input type="search" name="search" placeholder="Search.." />
+              <p class="search-icon"><i  class="material-symbols-outlined">
+                                                search  </i>
+             </p>
+            </form>
+
+            <a href="#profile">
+              <img
+                src="../images/service-3.jpg"
+                width="35"
+                height="35"
+                alt="user image"
+              />
+            </a>
+            <button class="btn btn-primary">Login</button>
+          </div>
+<!-- Hamburger Button, hidden on gigger screen size -->
+          <button
+            id="hamburger"
+            aria-label="hamburger"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+          <i class="material-symbols-outlined" aria-hidden="true">
+                  menu
+            </i>
+          </button>
+        </div>
+      </div>
  
-       <div class="menulogo"><a href="#home"><center>Frontend Programmer Reference</center></a></div> 
-    </nav>
+        <h1>J.R. Cooling, Software Developer</h1>
 </header>
+
 <nav>
     <!-- On page navigation menu -->
-    <hr />
         <ul>
             <li><a href="../html/html.html">HTML</a></li>
             <li><a href="../html/css.html">CSS</a></li>
-            <li><a href="../html/js.html">JavaScript</a></li>
+            <li><a href="../html/javascript.html">JavaScript</a></li>
         </ul>
 </nav>
 <!-- Start of two column display with left and right rows keeping in step-->
 <div class="container">
     <header>
-    <h2 >Frontend Reference Project</h2>
+    <h1 >Project Creative - Frontend Reference Project</h1>
     </header>
     <aside> 
     <h2>Frontend References</h2>
         <!-- Reference links for HTML and CSS  -->
         <article> 
-        <h3 id="htmlcss" class="aside_head "> <a href="#htmlref">External References</a> </h3>
+        <h3 id="htmlcss" class="aside_head ">External References </h3>
         <ul>
             <li>
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML - Structuring the web site (mdn)</a>
@@ -68,8 +287,11 @@
             <li>
                 <a href="https://github.com/mdn/learning-area/tree/main/html">HTML Sample Code (GitHub)</a>
             </li>
+             <li>
+                <a href="https://html.spec.whatwg.org/"> WHATWG HTML Living Standard</a>
+            </li>
             <li>
-                <a href="https://codeguide.co/#html"> HTML reference</a>
+            <a href="https://codeguide.co/#html">Mark Otto Code Guide for HTML and CSS</a>
             </li>
             <li>
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
@@ -83,14 +305,12 @@
             <li>
                 <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
             </li>
-            <li>
-                <a href="https://codeguide.co/#css"> @mdo Code guide for CSS and HTML </a>
-            </li>  
+           
         </ul>
         </article>
         <!-- Reference Links for Javascript -->
          <article> 
-        <h3 id="jsref" class="aside_head "> <a href="#jsref">Internal References</a> </h3>
+        <h3 id="jsref" class="aside_head ">  Internal References </h3>
         <ul>
              <li>
                 <a href="#can_i_use">Can I Use</a>
@@ -117,15 +337,17 @@
         </article>
         <!-- Page links to CSS Concepts -->
         <article> 
-            <h3 id="tools" class="aside_head "> <a href="https://developers.google.com/">Google Developer </a> </h3>
+            <h3 id="tools" class="aside_head ">Google  </h3>
             <ul>
+                <li>
+                    <a href="https://developers.google.com/">Google Developer </a>
+                </li>
                 <li>
                     <a href="https://developer.android.com/jetpack">Android Jetpack</a>
                 </li>
                 <li>
                     <a href="https://flutter.dev/">Flutter</a>
                 </li>
-                 
             </ul>
         </article>
         <!-- Page links to CSS sample code -->
@@ -158,67 +380,7 @@
   
 <!--End of container class on main-->
      
-<!-- Start of two column container with left and right rows keeping in step-->
-   
-    <h2 >CSS Concepts</h2>
-    <article>    
-        <h3 id="out_wrap" class="article_head">CSS Wrapper Layers</h3>
-            <ul>
-                <li>The outer level wrappers of html, head and body are a place you can put rules that flow down to the whole page until the rule is over ridden by a more specific target. 
-                </li>
-                <li>Universal Selector: Applies to all elements in the document. Common use is to reset the browsers user agent where it can conflict with your design <p>*{}</p><p> * {
-                    margin: 0px;
-                    padding: 0px;
-                    box-sizing: border-box;
-                    }</p></li>
-                <li>Type Selector: Matches the element names. </li>
-                <li>Class Selector: Matches an element whose class attribute has a value that matches the one specified after the period symbol. <p></p></li>
-                <li>ID Selector: Matches an element whose ID attribute has a value that matches the one specified after the hash symbol #.
-                    symbol. <p>#introduction {}</p>
-                </li>
-                <li>Child Selector: Matches an element that is a direct child of another 
-                    <p>li>a {} - targets any &lta&gt elements that are children of an &ltli&gt, but not othe &lta&gt </p>
-                </li>
-                <li>Descendant Selector: Matches an element that is a descendant of another specified element, not just a direct child of that element.
-                    <p>p a {} - targets any &lta&gt element that sit inside a &ltp&gt element, even if there are other elements nested between them. </p>
-                </li>
-                <li>Adjacent Sibling Selector: Matches an element that is the next sibling of another.
-                    <p>h1+p {} - targets the first &ltp&gt element after any &lth1&gt but not other &ltp&gt elements. </p>
-                </li>
-                <li>General Sibling Selector: Matches an element that is a sibling of another.
-                    <p>h1~p {} - if you had two &ltp&gt elements that are siblings of a &lth1&gt this rile would apply to both. </p>
-                </li>
-            </ul>
-        </article>
-    <article>  
-    <h3 id="basic_tools" class="article_head"> Grid </h3>
-    <ul>
-        <li>Grids divide the display area into a grid of rows and column to enable you to keep items aligned in columns and rows.  Grid items can span multiple columns and rows. 
-        </li>
-        <li>display: grid; <p>display is added to the selector that wraps around the outer of the grid.</p></li>
-        <li>grid-template-columns: 2fr 50% 1fr; <p>defines the number of columns and the size of each one. fr is special size feature for grids, it is fractio of the remaing space not consumer by specific size settings.</p>
-        </li>
-        <li>grid-template-columns: 2fr 50% 1fr; <p>defines the number of columns and the size of each one. fr is special size feature for grids, it is fractio of the remaing space not consumer by specific size settings.</p>
-        </li>
-        <li>Grid-template-rows: 25% 25% 25% 25%; <p>By default rows are sized to fit within the grid height</p> </li>
-        <li>Grid-template: 25% 25% 25% 25% / 2fr 50% 1fr; <p>Can be used to replace the previous 2 statements. Seperate the rows specification with a / from the columns specification</p>
-        </li>
-    </ul>
-    </article>  
-    <article>
-        <h3 id="basic_tools" class="article_head"> Lists  </h3>
-        <ul>
-            <li>UL the unordered list wrapper. </li>
-            <li>LI List item </li>
-           
-            <li> <a url="https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/">Reference for list marker:: </a></li>
-            <li>List marker and padding.
-                <p> ::marker {
-                     content ; 
-                    }</p>
-            </li>
-            </ul>
-    </article>
+
     </div> 
 </main>
 
@@ -229,7 +391,8 @@
         <hr />
     <p>© 2024</p>
 </footer>
-
+ 
+   <script src="../script/dropnav.js"></script>
 </body>
 
 </html>

@@ -2,112 +2,35 @@
   Rule set for Syft system style number 1 ~ syft_style_1.css .
 */
 
-/* Private font files can be used for unique branding */
-@font-face {
-  font-family: "pluto";
-  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
-}
-@font-face {
-  font-family: "plutoBold";
-  font-weight: bold;
-  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
-}
+/*
+Uses seperate files for theme, tables, forms, reset
+*/
 
-/* Theme style rules  */
-:root {
-  /* Syft colors*/
-  --silver:  #8ba0b7;
-  --sapphire: #0072bc;
-  --amethyst: #782b90;  
-  --florentine: #ffd100;  
-  --florentine_clear: #ffd100 opacity 30%;
-  --midnight-blue: #27495d;  
-  --blue-nile:  #75bee9;  
-  --mauve: #bd8cbf;
-  --green: #a5c300;
-  --blackcut: #000000;
-  --border-color: rgba(0, 0, 0, .1);
-  --body-color: #212529;
-  /* Generice colors */
-  --white: #FFFFFF;
-  --lightest-gray: #FAFAFA;
-  --light-gray: #EDEDED;
-  --dark-gray: #4D4D4D;
-  --darkest-gray: #454545;
-  --black: #333333;
-  --deep-black: #222222;
-  --primary: #196EC2;
-  --alert: #DF2020;
-  /* Set some of colors to uses as variable names */
-  --text-color: var(--black);
-  --weak-text-color: var(--dark-gray);
-  --link-color: var(--primary);
-  --icon-color: var(--black);
-  --background-color: var(--white);
-  --hover-color: var(--light-gray);
-  --inverted-background-color: var(--dark-gray);
-  --inverted-text-color: var(--white);
-  --weak-border-color: var(--light-gray);
-  --border-color: var(--dark-gray);
-  --header-background-color: var(--primary);
-  --header-text-color: var(--white);
-  --card-background-color: var(--lightest-gray);
-  --toggle-background-off: var(--light-gray);
-  --toggle-background-on: var(--primary);
-  --button-background-color: var(--primary);
-  --button-border-color: var(--primary);
-  --button-text-color: var(--white);
-  --button-alert-color: var(--alert);
-  --font: Montserrat, Helvetica, Arial, sans-serif;
-  --font-heading: "pluto";
-  --gap: 2rem;
-}
-/* Setup for use when dark mode is selected. will need additional work ro test */
-/* @media (prefers-color-scheme: dark) { 
-    :root {
-        --text-color: var(--white);
-        --weak-text-color: var(--light-gray);
-        --link-color: var(--white);
-        --icon-color: var(--white);
-        --hover-color: var(--darkest-gray);
-        --inverted-background-color: var(--deep-black);
-        --weak-border-color: var(--dark-gray);
-        --border-color: var(--light-gray);
-        --background-color: var(--black);
-        --button-border-color: var(--white);
-    }
-  }*/
-/* Setup to prepare for smaller screen viewing */
-@media screen and (max-width: 800px) {
-    :root {
-        --header-height: 4rem;
-        --body-padding: 1rem;
-    }  
-  }     
 /* Default setting for universal selector   */
 *{
   text-decoration: none;
+  box-sizing: border-box;
+
    }
 
 /* Default styling ruleset for standard type selector HTML elements */
 html {
-  font-size: 16px;
-  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif,   ;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  margin: 2px;
-  padding: 2px;
- 
-  font-size: 16px;
   font-family: var(--font);
   line-height: 1.5;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  accent-color: var(--primary);
+  /* Outer to inner is margin - border - padding */
+  margin: 4px 4px 4px 4px;
+  border: var(--border);
+  padding: 2px;
+
 }
 
 body {
-  color: var(--body-color)  
+  color: var(--body-color)
 }
-
-
 
 /* Rules set for header type elements */
 
@@ -119,136 +42,93 @@ body {
   font-weight: 600;
  }
 
-/* rules set for H1, One per page */ 
+/* rules set for H1, One per page */
 h1 {
   display: inline-flexbox;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--midnight-blue);
   text-align: center;
-} 
+}
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--silver);
   text-align: left;
   padding-top: 0.rem;
   margin-top: 0.rem;
   border-top: 0.25rem solid;
   font-size: 1.5rem;
-
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: var(--saphire);
-  text-align: left; 
+  text-align: left;
 }
 
 h4 {
-  font-size: 1.1rem;
-  color: var(--blue-nile);
+  font-size: 1.5rem;
   text-align: left;
 }
 
 h5 {
   color: var(--florentine);
-  text-align: left;   
-  font-size: 1rem; 
+  text-align: left;
+  font-size: 1.25rem;
   }
 
 p {
   display: block;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-/* Ruleset for table type elements. This ruleset originally from mdn  */  
-
-Table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
-
-caption {
-  caption-side: bottom;
-  padding: 10px;
-  font-weight: bold;
-}
-
-thead,
-tfoot {
-  background-color: rgb(228 240 245);
-}
-
-th,
-td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
-}
-
-td:last-of-type {
-  text-align: center;
-}
-
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
-}
-
-tfoot th {
-  text-align: right;
-}
-
-tfoot td {
-  font-weight: bold;
-}
 
 
 /* Default rule set for button type element */
 button {
-  height: 1.5rem;
+  height: 2rem;
   width: 8rem;
   cursor: pointer;
   font-weight: 500;
-  font-size: 15px;
+  border: none;
+  background-color: transparent;
 }
 /*rule set for links. Seperate rules required for nav links and main links */
 a {
-  color: var(--silver);
-  cursor: pointer;
-}
-
-main a:link {
-  color: #27495d
-}
-/* Unused link decorations 
-a:visited {
-  background-color: var(--floritine_clear);
-  color: #a5c300;
-}
-
-a:focus {
-  text-decoration: underline;
-}
-
-a:hover {
-  background-color: #ddd;
+  color: var(--link-color);
+  cursor: grab;
+  text-decoration: none;
+  font-size: 22px;
   color: black;
+}
+
+
+a:link, a:visited{
+  color: var(--link-color);
+   text-decoration: underline;
+}
+
+a:hover, a:focus{
+  background-color: #ddd;
+  color: #4CB6E1;
 }
 
 a:active {
  background-color: var(--floritine_clear);
   color: #782b90;
 }
- */
- 
+/* Add icon  */
+a[href^="http"] {
+  background: url("external-link-52.png") no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+
+
 ul {
-  list-style: disk ;
+  list-style: none ;
 }
 
 ul li {
@@ -257,26 +137,32 @@ ul li {
   line-height: 1.5
 }
 
-ul li::marker { 
+ul li::marker {
   color: var(--amethyst);
   font-size: 1.25rem;
-} 
- 
+}
+
 ol {
     list-style: decimal;
 }
 
 nav {
   width: 100%;
-  font-size: 17px; 
-  background-color: var(--midnight-blue);
+  font-size: 17px;
+  background-color: var(--background-color);
   font-family: var(--font-heading);
+  padding-right: 15px;
+  padding-left:15px;
+
+}
+
+
+button:hover, a:hover {
+  opacity: 0.7;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
@@ -285,42 +171,33 @@ nav li {
   line-height: 1.5;
   list-style-type: none;
 }
- 
+
 nav li a {
   display: block;
   padding: 14px 16px;
-  background-color: var(--blackcut);
+  /* background-color: var(--blackcut); */
   color: var(--white);
   text-align: center;
   font-size: 17px;
-} 
+}
 nav li a:hover:not(.active) {
   background-color: #ddd;
-  color: black;
+  color: #4CB6E1;
 }
+nav input.placeholder::before {content: "??";}
 /* Pseudo classes to simplify styling*/
 
 
-
-.active{
-  background-color: var(--sapphire);
-}
 /* The navbar */
 
-.navbar {
-  background-color: var(--midnight-blue);
-  font-family: var(--font-heading);
-  padding-right: 15px;
-  padding-left:15px;
-}
+
 .logo {
+  margin-right: 1.5rem;
   padding: 1rem;
-  border: 1rem 0 1rem 
+  border: var(--border);
 }
+
 .logo a{
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--florentine);
   background: transparent;
 
 }
@@ -334,55 +211,30 @@ nav li a:hover:not(.active) {
   color: var(--florentine);
   background: transparent;
   padding: 1rem;
-  border: 1rem 0 1rem
- 
+  border: var(--border);
+
 }
 
 .menulogo a:hover{
   color:antiquewhite;
 }
- 
-
-form.form-example {
-  display: table;
+.page-background {
+  background-image: url("../images/YoungStar.jpg");
 }
 
-div.form-example {
-  display: table-row;
-}
-/*space for search form and button */ 
- 
-input[type=text] {
-  width: 240px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('../images/searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-  width: 60%;
-}
 
 /* second container style  */
 /* first grid container used on index.html format container full width header section, one column aside and four column main */
 .container {
   display: grid;
-  gap: 10px;
+  gap: var(--gap);
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header"
     "main  aside "
     "footer footer";
-  border: 2px solid #a2a2a6;
+  border: var(--border);
   border-radius: 20px;
   padding: 10px;
   margin: 10px auto auto 5px;
@@ -392,6 +244,7 @@ input[type=text]:focus {
 /* default layout for HTML5 sections*/
 header {
   grid-area: header;
+
 }
 
 footer {
@@ -399,10 +252,11 @@ footer {
   gap: var(--gap);
   grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 3fr);
   background-color: var(--florentine);
-  border: 2px solid #a2a2a6;
+  border: var(--border);
   border-radius: 20px;
   padding: 15px;
   margin: 15px auto auto 5px;
+
 }
 
 aside {
@@ -412,7 +266,7 @@ aside {
 main {
   grid-area: main;
 }
-
+/* Rule Set for Article containers */
 article {
   display: grid;
   gap: var(--gap);
@@ -421,7 +275,7 @@ article {
   color: black;
   padding: 15px;
   margin: 15px auto;
-  border: 2px solid #a2a2a6;
+  border: var(--border);
   border-radius: 20px;
 
 }
@@ -436,16 +290,9 @@ article {
   background-color: var(--sapphire);
   color: var(--florentine);
   border-radius: .8rem;
-}
-article p::first-line {
-  font-size: 120%;
-  font-weight: bold;
+
 }
 
-article p:first-child {
-  font-size: 120%;
-  font-weight: bold;
-}
 /* Ruleset for color chart pacel */
 .color-container {
   width: 100%;
@@ -478,8 +325,8 @@ article p:first-child {
 }
 
 .col2-container {
-  display: grid; 
-  border: 0.25em solid var(--florentine); 
+  display: grid;
+  border: var(--border);
   max-width: 80em;
   padding: 2em;
   margin: 2em;
@@ -572,70 +419,72 @@ hr::after {
 }
 .source-code-pro {
   font-family: "Source Code Pro", monospace;
+    background-color: var(--blue-nile);
 }
 
 
 .lastdate {
-  font-family: monospace;
+  font-family: "Source Code Pro", monospace;
   font-style: italic;
 }
 
 .code {
   font-family: "Source Code Pro" monospace;
-  background-color: beige;
+   background-color: var(--blue-nile);
+
 }
 .swatchsilver {
   background-color: var(--silver);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+  border: var(--border);
   border-radius: .8rem;
 }
 .swatchsapphire {
   background-color: var(--sapphire);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchamethyst {
   background-color: var(--amethyst);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchflorentine {
   background-color: var(--florentine);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchmidnightblue {
   background-color: var(--midnight-blue);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchbluenile {
   background-color: var(--blue-nile);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchblackcut {
   background-color: var(--blackcut);
   color: var(--white);
-  border: 4px solid #8ba0b7;
+   border: var(--border);
   border-radius: .8rem;
 }
 .swatchgreen {
   background-color: var(--green);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+  border: var(--border);
   border-radius: .8rem;
 }
 .swatchmauve {
   background-color: var(--mauve);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+  border: var(--border);
   border-radius: .8rem;
 }
 
@@ -644,7 +493,7 @@ hr::after {
 .flat {
   background-color: var(--silver);
   color: var(--textcolor);
-  border: 4px solid #8ba0b7;
+  border: var(--border);
   border-radius: .8rem;
 }
 
@@ -657,6 +506,31 @@ hr::after {
 .flat:active {
   border-color: #fff;
 }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+/*
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}*/
+
 
 /* Navigation styles: includes main nav bar with optional dropdowns and responsive collapse. Bread Crumbs, inpage links (internal and external)  */
 

@@ -258,86 +258,118 @@
  
         <h1>J.R. Cooling, Software Developer</h1>
 </header>
-<nav>
-    <!-- On page navigation menu -->
-        <ul>
-            <li><a href="../html/node.html">Node</a></li>
-            <li><a href="../html/sql.html">SQL</a></li>
-            <li><a href="../html/linux.html">Linux</a></li>
-            <li><a href="../html/security.html">Security</a></li>
-            <li><a href="../html/api.html">API</a></li>
-            <li><a href="../html/python.html">Python</a></li>
-        </ul>
-</nav>
-<!-- Full width page header -->
 
- 
-<!--Introduce containg to split page left and right sections  -->
 <div class="container">
-<header>
-    <h1>Backend Development </h1>
-</header>
-<!-- Side column content   -->
-    <aside>
-        <h3 class="aside_head ">Backend  References</h3>
-        <article>
-        <!-- Reference links for HTML and CSS  -->
-        <article> 
-        <h3 id="htmlcss" class="aside_head ">External Links</h3>
-        <ul>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML - Structuring the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">HTML - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/html">HTML Sample Code (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://codeguide.co/#html"> HTML reference</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.html">CSS3 - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Javascript - Dynamic client-side scripting (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://codeguide.co/#css"> @mdo Code guide for CSS and HTML </a>
-            </li>  
-        </ul>
-        </article>
-    </aside>
+  <header><h1>Contact Forms</h1></header>
+  <aside>
+     <h2 class="aside_head">Contact the Author:</h2>
+    <article>
+   
 
-<!--the mainline section on the left of the page  -->
-    <main>
-   <h3 id="gitref" class="article_head">Node</h3>
-    <article> 
-         <img src="../images/Node.js-Architecture-1024x575.jpg" alt="Figure eight racetrack diagram of software development lifecycle" Title=
-        "sotware development lifecycle" width="1024" height="575"/>
-        <ul>
-            <li>Application</li>
-            <li>V8 Engines</li>
-            <li>Node API</li>
-            <li>V8 Engines</li>
-            <li>NIBUV</li>
-            
-            <li>..</li>
-        </ul>
+    <address>
+      <a href="mailto:john@cooling.name">john@cooling.name</a><br />
+      <a href="tel:+61413283377">+61 0413 283 377 </a>
+    </address>
+
     </article>
-    </main>
+  </aside>
+  <main>
+<section id="forms">
+        <h2 class="article_head">Sign In</h2>
+
+        <form action="#">
+          <fieldset>
+            <label>Login Email
+              <input type="login" required name="login">
+            </label>
+            <label>Login Password 
+              <input type="password" required name="passwordcheck">
+            </label>
+            <fieldset class="actions">
+
+                <button type="submit">Login</button>
+            </fieldset>
+          </fieldset>
+          <h2 class="article_head">Sign Up for Your Account</h2>
  
-  </div>
-   <footer>
+            <fieldset>
+                <label>
+                    First Name
+                    <input type="text" required name="firstname">
+                </label>
+                 <label>
+                    Last Name
+                    <input type="text" required name="latest">
+                </label>
+                 
+                <label>
+                    Phone
+                    <input type="tel" required name="phone">
+                </label>
+                <label>
+                    Type
+                    <select name="phone-type">
+                        <option value="" disabled selected hidden>Select one...</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset class="vertical">
+                <legend>Subscription</legend>
+                <label class="radio"><input type="radio" name="subscription" value="free">Free</label>
+                <label class="radio"><input type="radio" name="subscription" value="basic">Basic</label>
+                <label class="radio"><input type="radio" name="subscription" value="pro">Pro</label>
+            </fieldset>
+            <fieldset>
+                <label>
+                    Email
+                    <input type="email" required name="email">
+                </label>
+                <label>
+                    Password
+                    <input type="password" required name="password">
+                </label>
+                <label>
+                    Re-Enter Password
+                    <input type="password" required name="passwordcheck">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label class="checkbox">
+                    <input type="checkbox" name="terms-and-conditions">
+                    <span>I agree to the <a href="#">terms and conditions</a></span>
+                </label>
+            </fieldset>
+            <fieldset class="actions">
+                <button class="secondary" type="button">Cancel</button>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+
+    <h2 class="article_head">Send a Message</h2>
+        <form action="#">
+            <fieldset>
+                <label>
+                   Message
+                    <input type="text" name="message">
+                </label>
+                <button class="btn btn-primary" type="submit">Send Message</button>
+            </fieldset>
+        </form>
+    </section>
+
+</div>
+
+
+  
+</main>
+
+ <footer>
+    <div class="lastdate">
         <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub Repo</a> Last Updated: 2024-03-11</p>
-    
+    </div>
 
     <hr />
         <small>
@@ -360,11 +392,10 @@
             <p class="text-right">Print Reference Cards</p>
         </small>
 
-    </footer>
+
+</footer>
  
- 
-   <script src="../script/dropnav.js"></script> 
- 
+   <script src="../script/dropnav.js"></script>
 </div>
 </body>
 </html>
