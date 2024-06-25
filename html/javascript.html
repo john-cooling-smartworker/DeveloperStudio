@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- Load Source Code Pro font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-<!-- Load Monterrat forn for ordinary text font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+
     <!-- Reset browsers style back to clear -->
     <link rel="stylesheet" media="all" href="../css/reset.css">
      <!-- Standard styling rule set for colors maintained in its own file -->
@@ -220,7 +219,8 @@
           </nav>
         </div>
 
-        <div><span class="material-symbols-outlined">home</span> 
+       
+        <div><a href="../html/home.html"><i class="material-symbols-outlined">home</i> </a>
         </div>
 <!-- The nav end group  -->
         <div class="nav-end">
@@ -255,39 +255,446 @@
           </button>
         </div>
       </div>
- 
         <h1>J.R. Cooling, Software Developer</h1>
-</header>
+    </header>
+<!-- On page navigation menu -->
 <nav>
-    <!-- On page navigation menu -->
-        <ul>
-            <li><a href="../html/html.html">HTML</a></li>
-            <li><a href="../html/css.html">CSS</a></li>
-            <li><a class="active" href="../html/javascript.html">Javascript</a></li>
-        </ul>
+
+    <ul>
+        <li><a href="../html/html.html">HTML</a></li>
+        <li><a href="../html/css.html">CSS</a></li>
+        <li><a class="active" href="../html/javascript.html">Javascript</a></li>
+    </ul>
 </nav>
-        <header>
-            <div class="body-text">
-                <h1>JavaScript</h1>
-            </div>
-            <h2>Frequently used commands, techniques and tools for programmers.</h2>
-            <div class="lastdate">
-                <p>Created by <a class="link-primary" href="#">@jrc</a> - V1.0.1 - <a class="link-primary" href="#">GitHub
-                        repo</a> Last Updated: 2024-03-11</p>
-            </div>
-            <p>The style guide for this site is <a href="../html/syft_style_guide-01.html">Syft Style 01</a></p>
-            <hr />
-        </header>
-        <img src="../images/Software-Development-Life-Cycle-scaled.jpg" alt="Figure eight racetrack diagram of devops processes Title=
-        'software development lifecycle" width="1024" height="612"/>
-        
-        <article class="refcard">
-           <hgroup> 
-            <h1>Chrome Dev Tools</h1>
-            <p>DevTools lets you edit pages on-the-fly and diagnose problems quickly, which helps you build better websites, faster.</p>
-            <div class="lastdate">
-                <p>Last Updated: 2024-03-03</p>
-                </div>
+<!-- Body Page Header -->
+<header>
+    <div class="body-text">
+        <h1>JavaScript</h1>
+    </div>
+    <img src="../images/javascript.webp" alt="Javascript logo image" Title=
+    "Javascript logo image" width="768" height="300" />
+</header>
+
+<!-- Setup container for the body of page -->
+<div class="container">
+  <aside>
+        <h3 class="aside_head ">JavaScript Elements</h3>
+            <article>
+                <p>Page Structure: &lthtml&gt, &lthead&gt, &ltbody&gt.</p>
+                <p>HTML5 Layout Elements: &ltheader&gt, &ltnav&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &lthgroup&gt, &ltfigure&gt, &ltfgcaption&gt, &ltdiv&gt, &ltspan&gt, &ltfooter&gt.</p>
+                <p>Typography: &lth1&gt ... &lth6&gt, &ltp&gt, &ltbr /&gt, &lthr /&gt,  &ltb&gt, &lti&gt, &ltsup&gt, &ltsub&gt, &ltstrong&gt, &ltem&gt, &lts&gt, &ltaddress&gt, &ltblockquote&gt, &ltabbr&gt...&ltacronym&gt,  &ltcite&gt...&ltdfn&gt, &ltdel&gt...&ltins&gt. </p>  
+                <p>Lists: &ltol&gt, &ul&gt, &ltli&gt, &ltdt&gt, &ltdt&gt...&ltdd&gt. </p>  
+                <p>Images: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+             <h3 class="aside_head ">HTML Attributes</h3>
+            <article>
+              <p>attributes to replace the elements below</p>
+                <p>Page Structure: &lthtml&gt, &lthead&gt, &ltbody&gt.</p>
+                <p>HTML5 Layout Elements: &ltheader&gt, &ltnav&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &lthgroup&gt, &ltfigure&gt, &ltfgcaption&gt, &ltdiv&gt, &ltspan&gt, &ltfooter&gt.</p>
+                <p>Typography: &lth1&gt ... &lth6&gt, &ltp&gt, &ltbr /&gt, &lthr /&gt,  &ltb&gt, &lti&gt, &ltsup&gt, &ltsub&gt, &ltstrong&gt, &ltem&gt, &lts&gt, &ltaddress&gt, &ltblockquote&gt, &ltabbr&gt...&ltacronym&gt,  &ltcite&gt...&ltdfn&gt, &ltdel&gt...&ltins&gt. </p>  
+                <p>Lists: &ltol&gt, &ul&gt, &ltli&gt, &ltdt&gt, &ltdt&gt...&ltdd&gt. </p>  
+                <p>Images: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+ 
+        <h3 id="samples" class="aside_head ">HTML/CSS Solutions Samples</h3>
+            <article>
+                <p>Input Validateion: &ltimg&gt</p>
+                <p>Links: &lta&gt</p>
+                <p>Meta: &ltmeta&gt, &lttitle&gt.</p>
+                <p>Scripts: &ltscript&gt</p> 
+                <p>Multi Media: &ltvideo&gt, &ltsource&gt, &ltaudio&gt</p> 
+                <p>Tables: &lttable&gt, &lttr&gt, &lttd&gt, &ltth&gt, &ltcolspan&gt, &ltrowspan&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt.</p>
+                <p>Forms: &ltform&gt, &ltinput&gt, &lttextarea&gt, &ltselect&gt, &ltoption&gt, &ltbutton&gt, &ltlabel&gt, &ltfieldset&gt, &ltlegend&gt.</p>
+            </article>
+
+              <h3 id="debugging" class="aside_head">External References</h3>
+            <article>
+                <p><a href="#standardjs.com/rules.html">Javascript Standard</a>. </p>
+
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">mdn JS tutorials and reference</a>. </p>
+
+                <p><a href="https://docs.npmjs.com/">npm Library</a> Open source library of java script code sharing by millions of developers. </p>
+            </article>
+  </aside>
+
+  <main>
+    <article>
+    <h2 class="article_head">Introduction to JavaScript</h2>
+
+    <h3 id="the-console">The Console</h3>
+    <p>Console displays important information.</p>
+    <p class="source-code-pro">console.log(5)</code></p>
+<!-- Where to keep your javascript files -->
+    <h3 id="javascript-files">Javascript files</h3>
+    <p>JS files have a .js suffix to identify them browsers, editors and other application so they know what to expect to have to process</p>
+
+<h3 id="the-semicolons">the semicolons ;</h3>
+
+<p><code>;</code> are not mandatory but can make code more readable</p>
+
+<h2 id="comments-in-your-code">comments in your code</h2>
+
+<p><code>// single line comment</code></p>
+
+<p><code>console.log(5) // log 5 to console</code></p>
+
+<p><code>/* multi line comment or a comment imbedded in a line */</code></p>
+
+<h2 id="data-types-check">Data Types. Check</h2>
+
+<p><a href="https://www.codecademy.com/resources/docs/javascript/data-types?page_ref=catalog">Code Academy Doco</a></p>
+
+<ul>
+<li><p>Number</p></li>
+<li><p>BigInt</p></li>
+<li><p>Boolean</p></li>
+<li><p>String</p></li>
+<li><p>Null</p></li>
+<li><p>Undefined</p></li>
+<li><p>Symbol</p></li>
+<li><p>Object</p>
+
+<pre><code>var age = 32;                                   // number
+var name = &quot;John&quot;;                              // string
+var fullname = {first:&quot;John&quot;, last:&quot;Johntoo&quot;};   //object
+var isTrue = false;                            // boolean
+var fruits = [&quot;Apple&quot;, &quot;Banana&quot;]                 // array
+var x = null;                                    // null
+</code></pre></li>
+</ul>
+
+<h2 id="singles-or-double-quotes">Singles <code>'</code> or Double quotes <code>”</code></h2>
+
+<p>Either is fine but be careful of the punctuation in the text you are using. If there is an apostrophe wrap string in <code>”</code> If there is quoted dialog wrap the string in <code>'</code></p>
+
+<h2 id="maths-operators">Maths Operators</h2>
+
+<ul>
+<li><ul>
+<li>Addition +</li>
+</ul></li>
+<li><ul>
+<li>Subtraction -</li>
+</ul></li>
+<li><ul>
+<li>Multiplication *</li>
+</ul></li>
+<li>/ Division /</li>
+<li>%c Modulo % (the remainder)</li>
+</ul>
+
+<h2 id="math-methods">Math Methods</h2>
+
+<pre><code>var pi = Math.PI; // 3.141592653589793
+Math.round(3.5)   // rounds to nearest integer
+Math.ceil(2.4)    // rounds up to nearest integer
+Math.floor(4.     // rounds down to nearest integer
+Math.trunc(4.2)   // returns integer part of number
+Math.sign(-4)     // returns -1 when x is negative, 0 if x is null and 1 if x is positive
+Math.pow(2, 3)    // x to the power of y (2^3)
+Math.sqrt(64)     // square root
+Math.abs(-5)   // returns absolute/positive value of number
+Math.sin(90 * Math.PI / 180)// the sine of the angle x
+Math.cos(0 * Math.PI / 180) // the cosine of the angle x 
+Math.min(0, 65, 231, -90, 3) // lowest value in list
+Math.max(0, 65, 231, -90, 3) // highest value in list
+Math.random()     // a random number between 0 and 1 
+Math.floor(Math.random() * 5) + 1; // random integer between 1 and 5
+Math.log(2)      // natural logarithm of x
+Math.log2(8)     // base 2 logarithm of x
+Math.log10(1000) // base 10 logarithm of x
+</code></pre>
+
+<h3 id="assignment-operators">Assignment operators</h3>
+
+<ul>
+<li>+= add the value on the right of the operator to the variable on the left of the operator</li>
+<li>-= see above</li>
+<li>*= see above</li>
+<li>/= see above</li>
+</ul>
+
+<p><code>let w = 5</code>. </p>
+
+<p><code>w += 6 // makes w 11</code></p>
+
+<h3 id="increment-decrement-operators">Increment Decrement Operators</h3>
+
+<ul>
+<li>++ // increase variable by 1</li>
+<li>-- // decrease variable by 1</li>
+</ul>
+
+<h2 id="comparison-operators">Comparison Operators</h2>
+
+<p>Here is a list of some handy comparison operators and their syntax:</p>
+
+<ul>
+<li>&lt; Less than: &lt;</li>
+<li><blockquote>
+<p>Greater than: &gt;</p>
+</blockquote></li>
+<li>&lt;= Less than or equal to: &lt;=</li>
+<li><blockquote>
+<p>= Greater than or equal to: &gt;=</p>
+</blockquote></li>
+<li>=== Is equal to: ===</li>
+<li>!== Is not equal to: !==</li>
+</ul>
+
+<h2 id="logical-operators">Logical Operators</h2>
+
+<p>There are three logical operators:</p>
+
+<ul>
+<li>the and operator (&amp;&amp;)</li>
+<li>the or operator (||)</li>
+<li>the not operator, otherwise known as the bang operator (!)</li>
+</ul>
+
+<h3 id="string-interpolation">String Interpolation</h3>
+
+<p>We can insert, or interpolate, variables into strings using template literals. Check out the following example where a template literal is used to log strings together:</p>
+
+<p><code>const myPet = 'armadillo';</code>. </p>
+
+<p><code>console.log(\</code>I own a pet ${myPet}. <code>); // Output: I own a pet armadillo.</code></p>
+
+<ul>
+<li>template literals are wrapped in backticks ```</li>
+<li>Inside the template literal you can have a place holder ${variableName} where the value of variableName will be inserted.</li>
+</ul>
+
+<h2 id="string-concatenation">String Concatenation</h2>
+
+<ul>
+<li>Concatenation <code>+</code></li>
+</ul>
+
+<p><code>console.log(“hello “ + “Lulu”)</code></p>
+
+<h2 id="string-methods">String Methods</h2>
+
+<pre><code>&quot;Hello&quot;.charAt(4)                // o
+&quot;Hello&quot;.concat(&quot; &quot;, &quot;world&quot;)     // Hello world
+&quot;Hello&quot;.includes(&quot;a&quot;)            // false
+&quot;Hello&quot;.match(/[A-Z]/g)          //['H']
+&quot;Hello&quot;.repeat(3)                // HelloHelloHello
+&quot;Hello&quot;.startsWith(&quot;H&quot;)          // true
+&quot;Hello&quot;.endsWith(&quot;o&quot;)            // true
+&quot;Hello&quot;.indexOf(&quot;l&quot;)             // 2  
+&quot;Hello&quot;.lastIndexOf(&quot;l&quot;)         // 3
+&quot;Hello&quot;.replace(&quot;ello&quot;, &quot;i&quot;)     // Hi
+&quot;Hello&quot;.search(&quot;e&quot;)              // 1
+&quot;Hello&quot;.padStart(6, &quot;!&quot;)         // !Hello
+&quot;Hello&quot;.padEnd(6, &quot;!&quot;)           // Hello!
+&quot;Hello&quot;.slice(1,3)               // el
+&quot;Hello&quot;.split(&quot; &quot;)               // ['Hello']
+&quot;Hello&quot;.substring(2,5)           // llo
+&quot;Hello&quot;.toLowerCase()            // hello
+&quot;Hello&quot;.toUpperCase()            // HELLO
+&quot; Hello &quot;.trim()                 // Hello
+&quot; Hello &quot;.trimStart()            // &quot;Hello &quot;
+&quot; Hello &quot;.trimEnd()              // &quot; Hello&quot;
+</code></pre>
+
+<h2 id="variables">Variables</h2>
+
+<p>Names for stored data. A container for a value.
+Variable can be defined as just a name and no initial value assigned. It will have a default value of <code>undefined</code></p>
+
+<h3 id="var">var</h3>
+
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">original keyword</a> to define a variable.</p>
+
+<h3 id="let">let</h3>
+
+<p>Same as var, but new part of ES6</p>
+
+<h3 id="const">const</h3>
+
+<p>A variable with a fixed and constant value. Cannot be reassigned another value.</p>
+
+<h3 id="typeof-operator">typeof Operator</h3>
+
+<p>Keep track of the type of variable. </p>
+
+<p><code>console.log(typeof variableName) //returns the type of variable</code></p>
+
+<h2 id="keywords">Keywords</h2>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">Small number of keywords are reserved</a> You can’t use them as variable names.</p>
+
+<h2 id="properties">Properties</h2>
+
+<p><code>console.log(“wonder how long this sentences is:.length)</code>
+The <code>.length</code> operation get the length property for the sentence.</p>
+
+<h2 id="methods">Methods</h2>
+
+<p>In addition to properties all data types have access to specific methods.</p>
+
+<p>We call or use these methods by appending and instance with:</p>
+
+<ul>
+<li>the dot (.) operator</li>
+<li>the name of the method</li>
+<li>opening and closing parentheses</li>
+</ul>
+
+<p><code>console.log(“ CamelCasE”.toUpperCase());</code></p>
+
+<h2 id="objects">Objects</h2>
+
+<p>JS has objects ex <code>console</code> this is referred to as a built-in object.</p>
+
+<p>Builtin objects have their own custom properties and methods we can use! Eg .log method for the colsole object</p>
+
+<h2 id="modules">Modules</h2>
+
+<p>providing mechanisms for splitting JavaScript programs up into separate modules that can be imported when needed.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">Module Syntax Rules</a></p>
+
+<h2 id="conditional-statements">Conditional Statements</h2>
+
+<h3 id="ifelse">if...else</h3>
+
+<p>The if...else statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement in the optional else clause will be executed.</p>
+
+<p>So which values are falsy— or evaluate to false when checked as a condition? The list of falsy values includes:</p>
+
+<ul>
+<li>0</li>
+<li>Empty strings like &quot;&quot; or ''</li>
+<li>null which represent when there is no value at all</li>
+<li>undefined which represent when a declared variable lacks a value</li>
+<li>NaN, or Not a Number</li>
+</ul>
+
+<h3 id="short-curcuit-evaluation">Short-curcuit evaluation</h3>
+
+<p>Conditional tests are evaluated left to right,
+<code>let username = '';</code>
+<code>let defaultName = username || 'Stranger';</code>.
+<code>console.log(defaultName); // Prints: Stranger</code>
+Because || or statements check the left-hand condition first, the variable defaultName will be assigned the actual value of username if it is truthy, and it will be assigned the value of 'Stranger' if username is falsy. This concept is also referred to as short-circuit evaluation.</p>
+
+<h3 id="ternary-evaluation-operator">Ternary evaluation operator</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Ternary_conditional_operator">Wikipedia explanation of ternary conditional operator</a> </p>
+
+<p><code>?</code> and <code>:</code> are shorthand for <code>if</code> and <code>else</code>. </p>
+
+<p>Using short-hand syntax, we can use a ternary operator to simplify an if...else statement.<br/>
+<code>isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');</code></p>
+
+<h3 id="else-if-statements">Else If Statements</h3>
+
+<p>The JS version of the <strong>case statement</strong> using <code>elseif</code>. </p>
+
+<p>We can add more conditions to our if...else with an else if statement.<br/>
+The else if statement allows for more than two possible outcomes. You can add as many else if statements as you’d like, to make more complex conditionals! </p>
+
+<pre><code>function tipCalculator(quality,total) {
+  if (quality === 'bad') {
+return tip = total * 0.05;
+  } else
+if (quality === 'ok') {
+return tip = total * 0.15;
+} else
+  if (quality === 'good') {
+  return tip = total * 0.20;
+  } else
+    if (quality === 'excellent') {
+    return tip = total * 0.30;
+   } else {
+    return total * 0.18;
+    }
+}
+</code></pre>
+
+<p>The <strong>switch keyword</strong>. provides an alternative syntax that is easier to read and write. A switch statement looks like this: <code>switch</code> and <code>case</code> and <code>:</code> and <code>break</code> and <code>default</code></p>
+
+<pre><code>let groceryItem = 'papaya';
+switch (groceryItem) {
+case 'tomato':
+console.log('Tomatoes are $0.49');
+break;
+  case 'lime':
+console.log('Limes are $1.49');
+break;
+  case 'papaya':
+console.log('Papayas are $1.29');
+break;
+  default:
+console.log('Invalid item');
+break; // dont think this is right to be here
+    }
+
+function toEmoticon(str1){
+  switch (str1) {
+    case 'shrug': return '|_{&quot;}_|';
+    break;
+    case 'smiley face':   return ':)';
+    break;
+    case 'frowny face':   return':(';
+    break;
+    case 'winky face':   return ';)';
+    break;
+    case 'heart':   return '&lt;3';
+    break;
+    default:  return '|_(* ~ *)_|';
+  }
+}
+</code></pre>
+
+<h3 id="random-numbers">Random Numbers</h3>
+
+<p>Simplest random number generator. </p>
+
+<pre><code>let raceNumber = Math.floor(Math.random() * 1000);
+// Will generate a random number between 0 and 1000. 
+</code></pre>
+
+<h2 id="scope">Scope</h2>
+
+<p>Before we talk more about scope, we first need to talk about blocks.</p>
+
+<p>We’ve seen blocks used before in functions and if statements. A block is the code found inside a set of curly braces <code>{}</code>. Blocks help us group one or more statements together and serve as an important structural marker for our code.</p>
+
+<p>Inside a function can access <strong>global variables</strong> as well as its own local variables.
+Scope is the context in which our variables are declared. We think about scope in relation to <strong>blocks</strong> because variables can exist either outside of or within these blocks.</p>
+
+<p>In global scope, variables are declared outside of blocks. These variables are called global variables. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
+When you declare global variables, they go to the <strong>global namespace</strong>. The global namespace allows the variables to be accessible from anywhere in the program. These variables remain there until the program finishes which means our global namespace can fill up really quickly.<br/>
+ <span class="wikilink" title="My Drive: SmartWorker Markets Concept Design &amp; Architecture Ver 1.2 (Converted).md">SmartWorker Markets Concept Design &amp; Architecture Ver 1.2 (Converted)</span></p>
+
+<h2 id="debugging-error-messages">Debugging &amp; Error Messages</h2>
+
+<p>Here are three common error types:</p>
+
+<ul>
+<li>SyntaxError: This error will be thrown when a typo creates invalid code — code that cannot be interpreted by the compiler. When this error is thrown, scan your code to make sure you properly opened and closed all brackets, braces, and parentheses and that you didn’t include any invalid semicolons.</li>
+<li>ReferenceError: This error will be thrown if you try to use a variable that does not exist. When this error is thrown, make sure all variables are properly declared.</li>
+<li>TypeError: This error will be thrown if you attempt to perform an operation on a value of the wrong type. For example, if we tried to use a string method on a number, it would throw a TypeError.</li>
+</ul>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">More error detail of all 7 types</a></p>
+</body>
+</html>
+
             </hgroup>
            <section>
             <h2>Elements Panel</h2>
@@ -304,6 +711,8 @@
 
             </section>
         </article>
+    </main>
+</div>
         <footer>
     <div class="lastdate">
         <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub Repo</a> Last Updated: 2024-03-11</p>

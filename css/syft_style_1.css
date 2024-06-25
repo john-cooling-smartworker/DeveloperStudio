@@ -180,7 +180,13 @@ nav li a {
   text-align: center;
   font-size: 17px;
 }
+ 
 nav li a:hover:not(.active) {
+  background-color: #ddd;
+  color: #4CB6E1;
+}
+
+nav li a:active {
   background-color: #ddd;
   color: #4CB6E1;
 }
@@ -288,7 +294,7 @@ article {
 /* Rule set for an aside article header */
 .aside_head {
   background-color: var(--sapphire);
-  color: var(--florentine);
+  color: var(--inverted-text-color);
   border-radius: .8rem;
 
 }
@@ -419,7 +425,7 @@ hr::after {
 }
 .source-code-pro {
   font-family: "Source Code Pro", monospace;
-    background-color: var(--blue-nile);
+    background-color: var(--code-background-color);
 }
 
 

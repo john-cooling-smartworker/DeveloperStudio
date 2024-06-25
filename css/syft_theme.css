@@ -33,6 +33,7 @@
     --button-border-color: var(--primary);
     --button-text-color: var(--white);
     --button-alert-color: var(--alert);
+    --code-background-color: var(--lightest-gray);
 
 /* Syft colors*/
     --silver:  #8ba0b7;
@@ -48,7 +49,7 @@
 
 /* root variables for some basic styles */
     --border: 1px solid var(--light-grey);
-    --font: Montserrat, Helvetica, Arial, sans-serif;
+    --font: system-ui, "Segoe UI", Roboto,"Helvetica Neue",Arial,sans-serif 
     --font-heading: "pluto";
     
     --gap: 2rem;
