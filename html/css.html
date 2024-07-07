@@ -22,268 +22,478 @@
     <link rel="stylesheet" media="all" href="../css/dropnav.css">
      <!-- Syft styling added last  -->
     <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
-    <title>J.R.Cooling</title>
+    <title>DeDeSt</title>
   </head>
   <body>
-    <header id="nav-menu" aria-label="navigation bar">
-      <div class="nav_container">
-<!-- Nav Strat Div -->
-        <div class="nav-start">
-          <a class="logo" href="../html/index.html">
-            <img
-              src="../images/Icon_65x65px.png"
-              width="35"
-              height="35"
-              alt="Inc Logo"
-            />
-          </a>
-          <nav class="menu">
-            <ul class="menu-bar">
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown1"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="browse"
-                >
-                  References <span class="material-symbols-outlined">
-                            arrow_drop_down
-                            </span>
+<!-- Starting with the navigation menu, using mega menus for important topics  -->
+  <nav id="nav-menu" aria-label="navigation bar">
+<!-- container for the whole navigation menu,  -->
+  <div class="nav_container">
+<!-- Leading Icon for the site brand -->
+      <div class="nav-start">
+        <a class="logo" href="../html/index.html">
+          <img
+            src="../images/Icon_65x65px.png"
+            width="35"
+            height="35"
+            alt="Logo"
+          />
+        </a>
+      </div>
+<!-- Menu bar for site -->
+      <nav class="menu">
+<!--First element header for developer mega menu  -->
+        <ul class="menu-bar">
+          <li>
+            <button class="nav-link dropdown-btn"
+                          data-dropdown="dropdown1"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          aria-label="browse"
+            >
+              Developer <span class="material-symbols-outlined">arrow_drop_down</span>
+            </button>
+<!-- mega menu for developer -->
+            <div id="dropdown1" class="dropdown">
+              <ul role="menu">
+                  <li class="dropdown-title">
+                    <span class="dropdown-link-title">Developer Subjects</span>
+                  </li>
+<!-- menu for frontend development -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/frontend.html">
+                      <span class="material-symbols-outlined">important_devices </span>
+                      <div>
+                        <span class="dropdown-link-title">Frontend Development</span>    
+                        <p class="dropdown-link-p">HTML, CSS and Javascript</p>
+                      </div>
+                    </a>
+                  </li>
+<!--Menu for backend development  -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/backend.html">
+                      <span class="material-symbols-outlined"> background_grid_small</span>
+                      <div>
+                        <span class="dropdown-link-title">Backend Development</span>
+                        <p class="dropdown-link-p">Node, SQL,  Security, API, Python</p>
+                      </div>
+                    </a>
+                  </li>
+<!-- Menu item for development tools -->
+                <li role="menuitem">
+                  <a class="dropdown-link" href="../html/tools.html">
+                    <span class="material-symbols-outlined">tools_power_drill</span>
+                    <div>
+                      <span class="dropdown-link-title">Development Tools</span>
+                      <p class="dropdown-link-p">Git and GitHub, VSCode, Google Developer, Terminal, Linux </p>
+                    </div>
+                  </a>
+                </li>
+<!-- Menu item for computer science -->
+                <li role="menuitem">
+                <a class="dropdown-link" href="../html/tools.html">
+                  <span class="material-symbols-outlined">computer</span>
+                  <div>
+                    <span class="dropdown-link-title">Computer Science</span>
+                    <p class="dropdown-link-p">Algorithms, Data Structures, Artificial Intelligence</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+<!-- Second column of Developer menu item -->
+        <ul role="menu">
+          <li class="dropdown-title">
+            <span class="dropdown-link-title">Hot Topics</span>
+          </li>
+<!-- menu item for html -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        HTML
+            </a>
+          </li>
+<!--menu item for css  -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/css.html">
+                    <span class="material-symbols-outlined">css</span>
+                                CSS
+            </a>
+          </li>
+<!-- menu item for javascript -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/javascript.html">
+             <span class="material-symbols-outlined">javascript</span>
+              Javascript
+            </a>
+          </li>
+<!-- menu item for git github -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/gitandgithub.html">
+              <span class="material-symbols-outlined">source_notes</span>
+              GitHub
+            </a>
+          </li>
+<!-- menu item for vscode -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/vscode.html">
+              <span class="material-symbols-outlined">developer_mode</span>
+              VS Code
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+<!--End of developer mega menu drop down  -->
 
-                </button>
-                <div id="dropdown1" class="dropdown">
+<!-- Header element for designer mega menu  -->
+<!--First element header for designer mega menu  -->
+    <ul class="menu-bar">
+        <li>
+          <button class="nav-link dropdown-btn"
+                        data-dropdown="dropdown2"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-label="browse"
+          >
+            Designer <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for designer -->
+                <div id="dropdown2" class="dropdown">
                   <ul role="menu">
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Designer Subjects</span>
+                    </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/frontend.html">
-                        <span class="material-symbols-outlined">
-                                      important_devices
-                                      </span>
-                        
+                        <span class="material-symbols-outlined">important_devices</span>
                         <div>
-                           <span class="dropdown-link-title">Frontend Development</span>
+                           <span class="dropdown-link-title">Design Styles</span>
                             
-                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
+                          <p class="dropdown-link-p">Color, size, latout</p>
                         </div>
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/backend.html">
-                        <span class="material-symbols-outlined">
-                                      background_grid_small
-                                      </span>
+                        <span class="material-symbols-outlined">background_grid_small</span>
                         <div>
-                          <span class="dropdown-link-title"
-                            >Backend Development</span
-                          >
-                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
+                          <span class="dropdown-link-title">
+                            Branding</span>
+                          <p class="dropdown-link-p">Message, Audiance, Channel</p>
                         </div>
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/tools.html">
-                        <span class="material-symbols-outlined">
-                                      tools_power_drill
-                                      </span>
+                        <span class="material-symbols-outlined">tools_power_drill</span>
                         <div>
-                          <span class="dropdown-link-title">Development Tools</span>
-                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
+                          <span class="dropdown-link-title">SEO</span>
+                          <p class="dropdown-link-p">Intrinsic, Google, Facebook, X, TicTok, Socials </p>
                         </div>
                       </a>
                     </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
-                       <span class="material-symbols-outlined">
-                                      design_services
-                                      </span>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
                         <div>
-                          <span class="dropdown-link-title">Design Style</span>
-                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
+                          <span class="dropdown-link-title">Coumputer Science</span>
+                          <p class="dropdown-link-p">Analytics</p>
                         </div>
                       </a>
                     </li>
+                    
                   </ul>
-
+<!-- Second column of menu items for designer -->
                   <ul role="menu">
                     <li class="dropdown-title">
-                      <span class="dropdown-link-title">Browse by technology</span>
+                      <span class="dropdown-link-title">Hot Topics</span>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/html.html">
-             <span class="material-symbols-outlined">
-                            html
-                            </span>
-                        HTML
+                        <span class="material-symbols-outlined">html</span>
+                                    Yoast
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/css.html">
-                              <span class="material-symbols-outlined">
-                              css
-                              </span>
-                        CSS
+                              <span class="material-symbols-outlined">css</span>
+                                          Target Market
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/javascript.html">
-                       <span class="material-symbols-outlined">
-                                      javascript
-                                      </span>
-                        Javascript
+                       <span class="material-symbols-outlined">javascript</span>
+                                   Javascript
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/gitandgithub.html">
-                        <span class="material-symbols-outlined">
-                                      source_notes
-                                      </span>
-                        Git and HitHub
+                        <span class="material-symbols-outlined">source_notes</span>
+                                    GitHub
                       </a>
                     </li>
+<!-- Keywords items -->
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/vscode.html">
-                        <span class="material-symbols-outlined">
-                                      developer_mode
-                                      </span>
-                        Visual Studio Code
+                        <span class="material-symbols-outlined">developer_mode</span>
+                                               Keywords
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown2"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="discover"
-                >
-                  Discover
-                  <span class="material-symbols-outlined">
-                            arrow_drop_down
-                            </span>
-                  <i class="bx" aria-hidden="true"></i>
-                </button>
-                <div id="dropdown2" class="dropdown">
+<!-- Mega Heading for Projects  -->
+    <ul class="menu-bar">
+        <li>
+          <button
+            class="nav-link dropdown-btn"
+            data-dropdown="dropdown3"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="browse"
+          >
+            Projects <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for projects -->
+                <div id="dropdown3" class="dropdown">
                   <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">
-                                      browse
-                                      </span>
-                      <span class="dropdown-link-title">Browse Categories</span>
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Projects</span>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    brand_family
-                                    </span>
-                      <a class="dropdown-link" href="#branding">Branding</a>
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">important_devices</span>
+                        <div>
+                           <span class="dropdown-link-title">CSS/HTML Focused Projects</span>
+                            
+                          <p class="dropdown-link-p">Navigation, Layout Grid and Flex, </p>
+                        </div>
+                      </a>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    regular_expression
-                                    </span>
-                      <a class="dropdown-link" href="#illustrations"
-                        >Algorithms</a
-                      >
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">background_grid_small</span>
+                        <div>
+                          <span class="dropdown-link-title">Javascript Projects</span>
+                          <p class="dropdown-link-p">Document, </p>
+                        </div>
+                      </a>
                     </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">tools_power_drill</span>
+                        <div>
+                          <span class="dropdown-link-title">Data Projects</span>
+                          <p class="dropdown-link-p">Stocks database, </p>
+                        </div>
+                      </a>
+                    </li>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
+                            
+                        <div>
+                          <span class="dropdown-link-title">Artificial Intelligence Projects</span>
+                          <p class="dropdown-link-p">DDS800 Syft Recruiting, DDS100 Acacia Stock Picker, DDS400 Portfolio Tuner</p>
+                        </div>
+                      </a>
+                    </li>
+                    
                   </ul>
+<!-- Second column of menu items for designer -->
                   <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">
-                                    download_for_offline
-                                    </span>
-                      <span class="dropdown-link-title">Download</span>
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Hot Projects</span>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    contact_page
-                                    </span>
-                      <a class="dropdown-link" href="#mac-windows"
-                        >J.R.Cooling Profile</a
-                      >
+                      <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        Stock price range
+                      </a>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    finance_chip
-                                    </span>
-                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">css</span>
+                              Audio Books Collection
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                          <span class="material-symbols-outlined">javascript</span>
+                          Walker for Fun
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">source_notes</span>
+                        RPG
+                      </a>
+                    </li>
+<!-- Keywords items -->
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">developer_mode</span>
+                        Keywords
+                      </a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
-              <li><a class="nav-link" href="../html/press.html">Press</a></li>
-              <li><a class="nav-link" href="../html/profile.html">About</a></li>
-            </ul>
-          </nav>
-        </div>
 
-       
-        <div><a href="../html/home.html"><i class="material-symbols-outlined">home</i> </a>
-        </div>
+<!-- One click menu items -->
+      <li><a class="nav-link" href="../html/press.html">Press</a></li>
+      <l class="nav-link" href="../html/profile.html">About</a></li>
+    </ul>
+  </nav>
+
 <!-- The nav end group  -->
-        <div class="nav-end">
-          <div class="right-container">
-            <form class="search" role="search">
-              <input type="search" name="search" placeholder="Search.." />
-              <p class="search-icon"><i  class="material-symbols-outlined">
-                                                search  </i>
-             </p>
-            </form>
-
-            <a href="#profile">
-              <img
-                src="../images/service-3.jpg"
-                width="35"
-                height="35"
-                alt="user image"
-              />
-            </a>
-            <button class="btn btn-primary">Login</button>
-          </div>
-<!-- Hamburger Button, hidden on gigger screen size -->
-          <button
-            id="hamburger"
-            aria-label="hamburger"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-          <i class="material-symbols-outlined" aria-hidden="true">
-                  menu
-            </i>
-          </button>
+      <nav class="nav-end">
+        <div class="right-container">
+                <!-- <form class="search" role="search"> -->
+                  <!-- <input type="search" name="search" placeholder="Search.." /> -->
+                  <!-- <p class="search-icon"><i  class="material-symbols-outlined"> -->
+                                                    <!-- search  </i> -->
+                 <!-- </p> -->
+                <!-- </form> -->
+              
+        <div><a href="../html/home.html">
+            <i class="material-symbols-outlined">labs</i></a>
         </div>
+<!    -- Hamburger Button, hidden on gigger screen size -->
+        <button
+                id="hamburger"
+                aria-label="hamburger"
+                aria-haspopup="true"
+                aria-expanded="false"
+          >
+              <i class="material-symbols-outlined" aria-hidden="true">menu</i>
+        </button>
       </div>
- 
-        <h1>J.R. Cooling, Software Developer</h1>
-</header>
-
+    </nav>
+</div>
+<!-- On page navigation menu -->
 <nav>
-    <!-- On page navigation menu -->
         <ul>
+            <li ><a href="../html/frontend.html">Frontend</a></li>
             <li><a href="../html/html.html">HTML</a></li>
-            <li><a class="active" href="../html/css.html">CSS</a></li>
-            <li><a href="../html/javascript.html">JavaScript</a></li>
+            <li class="active"><a href="../html/css.html">CSS</a></li>
+            <li><a href="../html/javascript.html">Javascript</a></li>
         </ul>
 </nav>
 
-<!-- Page content starts here -->
-<div class="container">
+<main> 
+ 
+<div class="grid-container">
     <header>
-        <h1>Cascading Style Sheets</h1>
-         <p>CSS is a tangled web of techniques developed over time that clash with each other. It's a religious battlefield</p>
-         <p>CSS provides style to the contents of a HTML page. CSS contains selectors that specify the HTML elements to which the style should be applied.</p>
+    <h1 >Cascading Style Sheets </h1>
     </header>
 
-    <!-- Start of two column display with left and right rows keeping in step-->
-    <aside>
-        <h2>CSS References</h2>
-        <article>
-            <h3 id="htmlcss" class="aside_head" >
-                <a href="#htmlref" >External References</a>
-            </h3>
+    <!-- Card one of five  -->
+<div class="reference-grid">
+<article class="reference grid-col-span-2 flow sw-bg-101 quote  ">
+  <div class="flex"> 
+    <div>
+        <img src="../images/service-3.jpg"alt="user image"/>
+    </div>  
+  </div>
+
+  <div>
+    <h2 class="name sw-hdr-101">How to add style to HTML Documents.</h2>
+    <p class="position sw-sub-101">Adding Style Sheets, Fonts, Icons.</p>
+  </div>
+    <p class="sw-txt-101">CSS provides style to the contents of a HTML page. Style can be included in the HTML page but more common is to use external Style Sheet</p> 
+   <h2 id="#stylesheets" class=" name sw-hdr-101">Stylesheets: External, Internal, Multiple </h2>
+        <p class="sw-txt-101">StyleSheets are usually external to the HTML document and are linked in within the <span class="sw-txt-102 code"> &lthead&gt </span> section. It is common for there to be multiple CSS files. They are added one after another in the <span class="code sw-txt-102">&lt head &gt</span> section. When styling in the different style sheets clash; eg <span class="code sw-txt-102" >&lth1&gt</span> styling is in all files, the styling is applied in the order the files are defined. The means the last  <span class="code sw-txt-102"> &lt h1 &gt</span> tag found in the last file will override earlier tags. Typical syntax is:</p>
+        <p class="code sw-txt-102">&ltlink rel="styleSheet" href="example.css" /&gt</p>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">MDN - Style Sheet Reference></a></p>
+        <p class="sw-txt-101" >CSS files are often kept in a "/ccs" or "/style" director as part of the overall site directory structure. This is preferred to including CSS styling in the html file because it is easier see, and control when it's a seperate file</p>
+       
+
+        <h2 class="name sw-sub-101" id="font">Fonts</h2>
+        <p class="sw-txt-101" >Fonts and Icons are loadeed in two ways:</p>
+        <p class="sw-txt-101">1. Added in the StyleSheet. The @font-face CSS at-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.</p>
+        <p class="code">@font-face {
+                                 font-family: "pluto";
+                src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
+                                                }</p>
+        <p class="sw-txt-101">2. Added in the HTML document. As a link in the &lthead&gt section </p>
+        <p class="code">&ltlink href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" /&gt;</p>
+        <p>Google is a source for fonts and icons with global availability at good performance.</p>
+        <p><a href="https://fonts.google.com/">Google Fonts and Icons</a></p>
+        <p><a href=https://developers.google.com/fonts/docs/material_symbols/>Google Material Icons Guide</a></p>
+
+    </article>
+ <!--CSS card 2  -->
+<article class="reference flow sw-bg-102 quote  ">
+  <div class="flex"> 
+    <div>
+        <img src="../images/service-3.jpg"alt="user image"/>
+    </div>  
+  </div>
+    <div>
+    <h2 class="name sw-hdr-102">CSS</h2>
+    <p class="position sw-sub-102">Create the layout and style</p>
+    </div>    
+      <h3 id="htmlref" class="sw-sub-102">CSS3</h3>
+
+      <p class="sw-txt-102">CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+       
+    </article>
+
+<!-- Javascript card 3  -->
+    <article class="reference flow sw-bg-103 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+        </div>
+        <div>
+          <h2 class="name sw-hdr-103">Javascript</h2>
+          <p class="position sw-sub-103">Add dynamic features to the site</p>
+        </div>
+          <p class="sw-txt-103">Javascript is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.</p>
+          <div>
+          <h2 class="name sw-hdr-104">JS Platforms </h2>
+          <p class="position sw-sub-104">Frameworks and Libraries</p>
+      </div>
             <ul>
+                <li>
+                    <a href="https://react.dev/">React </a>
+                </li>
+                <li>
+                    <a href="https://jquery.com/">jQuery</a>
+                </li>
+                <li>
+                    <a href="https://flutter.dev/">Chart.js</a>
+                </li>
+                <li>
+                    <a href="https://d3js.org/">D3.js</a>
+                </li>
+                <li>
+                    <a href="https://underscorejs.org/">Underscore.js</a>
+                </li>
+                 <li>
+                    <a href="https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview">Polymer</a>
+                </li>
+            </ul>
+    </article>
+
+ 
+     
+<!-- Reference links for HTML and CSS card 4 -->
+    <article class="reference flow sw-bg-104 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+      </div>
+      <div>
+          <h2 class="name sw-hdr-104">CSS External Reference Sites</h2>
+          <p class="position sw-sub-104">Top referernce site for CSS</p>
+      </div>
+
+      <ul>
                 <li>
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
             </li>
@@ -308,16 +518,47 @@
              <li>
                 <a href="https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/">CSS - Selectors - Cheat Sheet for Class, Name Child Selector List></a></li>
             </ul>
-        </article>
 
-         <article>
-        <h3 id="jsref" class="aside_head "> <a href="#jsref">CSS Element Styling Fundamentals  </a> </h3>
+     <div>
+          <h2 class="name sw-hdr-104">Google </h2>
+          <p class="position sw-sub-104">Google developer links</p>
+      </div>
+            <ul>
+                <li>
+                    <a href="https://m3.material.io/">Google Material Design </a>
+                </li>
+                <li>
+                    <a href="https://fonts.google.com/icons">Google Icons</a>
+                </li>
+                <li>
+                    <a href="https://www.figma.com/community">Figma </a>
+                </li>
+            </ul>
+    </article>
+ 
+            
+ 
+
+ 
+ <!-- onsite links for HTML and CSS card 5 -->
+   <!-- Styling fundamentals card 5-->
+    < <article class="reference flow sw-bg-105 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+      </div>
+      <div>
+          <h2 class="name sw-hdr-105">CSS Element Styling Fundamentals</h2>
+          <p class="position sw-sub-105">Fast jump to just the infor you want to know</p>
+      </div>
+        
         <ul>
              <li>
                 <a href="#stylesheets">Stylesheets: external, internal, multiple.</a>
             </li>
              <li>
-                <a href="#selectors">Selectors, Cascade and Inheritance</a>
+                <a href="../html/css_selectors.html">Selectors, Cascade and Inheritance</a>
             </li>
             <li>
                 <a href="#color">Color</a>
@@ -352,6 +593,27 @@
 
         </ul>
         </article>
+        
+        <!-- Page links to CSS sample code -->
+           </div>
+ 
+    </div> 
+</main>
+<!-- xxxxjc end of copyin  -->
+
+ 
+ 
+
+
+
+
+
+ 
+      
+         
+ 
+
+    
       <!-- CSS concepts  -->
         <article>
                 <h3 class="aside_head ">
@@ -384,339 +646,13 @@
 
 <!-- Start of main body -->
 <main>
-    <!-- Addig styles to HTML documents -->
-    <article>
-        <h2 id="#stylesheets" class="article_head">Stylesheets: External, Internal, Multiple </h2>
-        <p>How to add style to HTML Documents</p>
-        <p>Style is added to HTML primariarly by StyleSheets. Other external style sources are FONTS and ICONS. </p>
-        <h3 id="fontfamily">StyleSheets</h3>
-        <p>StyleSheets are external to HTML document and are linked in within the &lthead&gt section. It is common to define multiple CSS files, one after another in the &lt head &gt section. When styling in the files clash eg &lth1&gt styling is in all files, the styling is applied in the order the files are defined.  The last  &lt h1 &gt tag found in the last file will override earlier tags. Typical syntax is:</p>
-        <p class="source-code-pro">&ltlink rel="styleSheet" href="example.css" /&gt</p>
+<!-- Adding styles to HTML documents  card 1 -->
+<div class="reference-grid">
 
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">MDN - Style Sheet Reference></a></p>
-        <p>CSS files are often kept in a "ccs" or "style" director as part of the site. This is preferred to including CSS styling in the html file because it is easier see, and control when it's a seperate file</p>
-        <p>CSS links are defined in the &lt head &gt section of the html page.  </p>
-
-        <h3 id="font">Fonts</h3>
-        <p>Fonts and Icons are loadeed in two ways:</p>
-        <p>Added in the StyleSheet. The @font-face CSS at-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.</p>
-        <p class="source-code-pro">@font-face {
-                                 font-family: "pluto";
-                src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
-                                                }</p>
-        <p>Added in the HTML document. As a link in the &lthead&gt section </p>
-        <p class="source-code-pro">&ltlink href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" /&gt;</p>
-        <p>Google is a source for fonts and icons with global availability at good performance.</p>
-        <p><a href="https://fonts.google.com/">Google Fonts and Icons</a></p>
-        <p><a href=https://developers.google.com/fonts/docs/material_symbols/>Google Material Icons Guide</a></p>
-
-    </article>
 
     <!-- Selectors -->
-    <article>
-    <h2 id="selectors"class="article_head">CSS Selectors, Cascade, Specificity, Inheritance</h2>
-    <p>Selectors marry up HTML elements with CSS rule sets. </p>
+   
 
-<!-- Common selectors table reference -->
-    <table>
-      <caption>
-        Common selectors
-      </caption>
-      <thead>
-        <tr>
-          <th scope="col">Selector</th>
-          <th scope="col">HTML Syntax</th>
-          <th scope="col">CSS Syntax</th>
-          <th scope="col">Usage Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Unversal</th>
-          <td class="source-code-pro">Not Applicable</td>
-          <td class="source-code-pro">*</td>
-          <td>Applies to whole document. </td>
-        </tr>
-        <tr>
-          <th scope="row">Type</th>
-          <td class="source-code-pro">h1 h2 h3 p div ul li etc.</td>
-          <td class="source-code-pro"> h1, h2, h3 {...}</td>
-          <td>Matches element names</td>
-        </tr>
-         <tr>
-          <th scope="row">Class</th>
-          <td class="source-code-pro"> class=“className”></td>
-          <td class="source-code-pro"> .classname {...}</td>
-          <td>Matches an element whose class attribute has matching value</td>
-        </tr>
-        <tr>
-          <th scope="row">Id</th>
-          <td class="source-code-pro"> id=“identifiername”></td>
-          <td class="source-code-pro"> #identifiername {...}</td>
-          <td>Matches an element whose Id attribute has matching value</td>
-        </tr>
-        <tr>
-          <th scope="row">Child</th>
-          <td class="source-code-pro"> ul  li</td>
-          <td class="source-code-pro"> ul > li {...}</td>
-          <td>Matches an element that is a direct child of another</td>
-        </tr>
-         <tr>
-          <th scope="row">Descendant </th>
-          <td class="source-code-pro"> ul  li</td>
-          <td class="source-code-pro"> ul  li {...}</td>
-          <td>Matches an element that is a descendant of another(not just a direct child)</td>
-        </tr>
-         <tr>
-          <th scope="row">Adjacent Sibling </th>
-          <td class="source-code-pro"> h1 p</td>
-          <td class="source-code-pro"> h1+p {...}</td>
-          <td>Matches an element that is the next sibling of another. Targets the first &ltp&gt element after any &lth1&gt element(but not other &ltp&gt elements.)</td>
-        </tr>
-          <tr>
-          <th scope="row">General Sibling </th>
-          <td class="source-code-pro"> h1 p</td>
-          <td class="source-code-pro"> h1~p {...}</td>
-          <td>Matches an element that is a sibling of another. Although it does not have to be the directly preceeding element. If you had two  &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both of them.</td>
-        </tr>
-
-      </tbody>
-      <tfoot>
-        <tr>
-          <th scope="row" colspan="2">Concept Notes</th>
-          <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
-        </tr>
-      </tfoot>
-    </table>
-    <!-- Attribute selectors table reference -->
-    <table>
-      <caption>
-        <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute Selectors</a></h3>
-      </caption>
-      <thead>
-        <tr>
-          <th scope="col">Selector</th>
-          <th scope="col">General Syntax</th>
-          <th scope="col">Example</th>
-          <th scope="col">Usage Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Existance</th>
-          <td class="source-code-pro">element[attribute]</td>
-          <td class="source-code-pro">a[attr] {
-                property: value;
-                        }</td>
-          <td>In the example, a elements with the attr attribute name are selected, regardless of the value of attr.</td>
-        </tr>
-        <tr>
-          <th scope="row">Equality</th>
-          <td class="source-code-pro">element[attribute="value"]</td>
-          <td class="source-code-pro"> a[attr="1"] {
-                     property: value;
-                                                    }</td>
-          <td>This code matches a elements where the attr attribute name has an exact value of 1.</td>
-        </tr>
-         <tr>
-          <th scope="row">Space</th>
-          <td class="source-code-pro"> element[attribute~= "value"]</td>
-          <td class="source-code-pro"> a[attr~= "free"] {
-                                         property: value;}</td>
-          <td>For example, if you wanted to select a elements that have an attr attribute name with a value that contains the word free, you would use this code. The code would match an attr attribute with a value of free that contains different kinds of whitespace.</td>
-        </tr>
-        <tr>
-          <th scope="row">Prefix</th>
-          <td class="source-code-pro">element[attribute^="value"]</td>
-          <td class="source-code-pro"> a[attr^="www"] {
-                 property: value;                     }           </td>
-          <td>The code selects any a elements where the attr attribute name has a value that starts with www.</td>
-        </tr>
-        <tr>
-          <th scope="row">Substring</th>
-          <td class="source-code-pro"> element[attribute*="value"]</td>
-          <td class="source-code-pro"> a[attr*="free"] {
-                                        property:value;}</td>
-          <td>For example, if you wanted to select a elements that have an attr attribute with a value that contains the string free, you would use this code.The code selects a elements with an attr attribute name when the string free is present in the attribute's value - even as a substring (a substring is a word inside another word).</td>
-        </tr>
-         <tr>
-          <th scope="row">Suffix </th>
-          <td class="source-code-pro">element[attribute$="value"]</td>
-          <td class="source-code-pro">a[attr$=".com"] {
-                                      property: value;}</td>
-          <td>For example, if you wanted to select a elements that have an attr attribute name with a value that ends with .com, you would use this code.  </td>
-        </tr>
-
-
-      </tbody>
-      <tfoot>
-        <tr>
-          <th scope="row" colspan="2">Concept Notes</th>
-          <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <h2 class="article_head">Grouping CSS Selectors</h2>
-        <p>With the grouping selector, you can target and style more than one element at once.</p>
-        <p>To use the grouping selector, use a comma, , to group and separate the different elements you want to select.For example, here is how you would target multiple elements such as divs, ps, and spans all at once and apply the same styles to each of them:</p>
-        <p class="source-code-pro">div, p, span {
-            property: value;}</p>
-        <p>The code above matches all div, p, and span elements on the page, and those three elements will share the same styling.</p>
-    <h2 id="selectors" class="article_head">Targeted Grouping using Combinators</h2>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">mdn-Web Docs CSS - Combinators</a></p>
-        <p>Combinators, combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.</p>
-        <p> Essentially, you can combine two simple selectors in a way that explains the relationship between those CSS selectors. Combinators are a type of selector that specifies and describes the relationship between the two selectors.
-
-        <ul>There are four types of combinators:
-
-        <li>The descendant combinator.</li>
-        <li>The direct child combinator.</li>
-        <li>The general sibling combinator.</li>
-        <li>The adjacent sibling combinator</li>
-        </ul>
-
-        <h3>Combinator examples</h3>
-        <table>
-            <caption>
-              <param><a href=https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/#attribute>Combinators help from Freecodecamp.org.</a></p>
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Combinator</th>
-                <th scope="col">General Syntax</th>
-                <th scope="col">Example</th>
-                <th scope="col">Usage Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Descendant</th>
-                <td class="source-code-pro">div p {
-                    property: style;}</td>
-                <td class="source-code-pro"> </td>
-                <td>In the example, only the two paragraphs inside the div get styled. Other child elements and the paragraph outside the div do not get styled.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Direct Child</th>
-                  <td class="source-code-pro">div > a  {
-                                              property: value;}</td>
-                  <td class="source-code-pro"> </td>
-                  <td>There is a div which is the parent element. Inside the parent element, there are two a elements which are the direct children of the div.There is also another a element inside a p element. The p element is a child of the div, but the a element inside the paragraph is not a direct child of the div.
-
-                    <p>So, to access only the a elements that are direct children of div, you would use this code</p></td>
-                </tr>
-                 <tr>
-                  <th scope="row">General Sibling</th>
-                  <td class="source-code-pro"> div ~ p {
-                                                property: value;}</td>
-                  <td class="source-code-pro"> </td>
-                  <td>It styles even the p element that does not come directly after the div element, such as the p that follows the h3 element. It does so because it still comes after div. <p>So, thats after in the DOM not just inside the div</p></td>
-                </tr>
-                <tr>
-                  <th scope="row">Adjacent Sibling</th>
-                  <td class="source-code-pro">div + p {
-                                         property: value;}</td>
-                  <td class="source-code-pro">     </td>
-                  <td>Although the p element that follows the h3 element is a sibling of the div element, it is not a direct sibling like the p element that comes before the h3.<p>So, to target only the p element that comes directly after the div, you would do the this.</p></td>
-                </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row" colspan="2">Concept Notes</th>
-                <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
-              </tr>
-            </tfoot>
-        </table>
-<!-- Psuedo class selectors -->
- <h2 id="selectors" class="article_head">Targeted Styling Using an Elements Specific State </h2>
-        <h3>Pseudo Class Selectors</h3>
-        <p>A pseudo-class is a selector that selects elements that are in a specific state.</p>
-        <p> e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.</p>
-        <p><b>Pseudo-classes are keywords that start with a colon. For example, :hover is a pseudo-class.</b></p>
-        <ul>
-            Selectors based on link state information
-            <li> The :link selector applies styling when the element has not been visited before:
-            </li>
-            <li>The :visited selector applies when the element has been visited before in the current browser:
-            </li>
-            <li>The :hover selector applies when the mouse pointer hovers over an element:
-            </li>
-            <li>The :focus selector applies when a user has tabbed onto an element:
-            </li>
-            <li>The :active selector applies when the element is selected after being clicked on and after holding down a mouse button:
-            </li>
-        </ul>
-         <ul>
-            Selectors for input
-            <li> The :focus selector you saw earlier for links is used for inputs as well:
-            </li>
-            <li>The :required selector selects inputs that are required. Inputs that are required have the required attribute.
-            </li>
-            <li>The :checked selector selects checkboxes or radio buttons that have been checked:
-            </li>
-            <li>The :disabled selector selects inputs that are disabled. Disabled inputs have the disabled attribute. Many browsers style disabled inputs with a faded-out gray color by default:
-            </li>
-        </ul>
-         <ul>
-            Selectors for position
-            <li> The first child selector, :first-child, selects the first element, which will be the first child inside the parent container.
-            </li>
-            <li>The last child selector, :last-child, selects the last element, which will be the last child inside the parent container.
-            </li>
-            <li>The :nth-child() selector selects a child element inside a container based on its position in a group of siblings.It takes an integer as an argument and selects an element based on the given value. The :nth-child() selector is helpful when you want to select elements based on an expression, such as selecting even or odd elements:
-            </li>
-            <li>The first of type selector, :first-of-type, selects elements that are the first of that specific type in the parent container.
-            </li>
-            <li>The last of type selector, :last-of-type, selects elements that are the last of that specific type in the parent container.
-            </li>
-        </ul>
-
-
-
-        <h3>Pseudo-elements Selectors</h4>
-            <p>Pseudo-element selectors are used for styling a specific part of an element - you can use them to insert new content or change the look of a specific section of the content.</p>
-
-            <p>For example, you can use a pseudo-element to style the first letter or the first line of an element differently. You can also use pseudo-elements to add new content before or after the selected element.</p>
-
-            <p>In contrast to pseudo-classes that are preceded by a : character, pseudo-elements are preceded by a :: character.</p>
-
-            <p>The :: character is followed by a keyword that allows you to style a specific part of the selected element.</p>
-        <p>The general syntaxc looks like this:</p>
-        <p class="source-code-pro">element::pseudo-element-selector { property:value;}
-        </p>
-  <ul>
-            Common Pseudo-Element Selectors
-            <li> You can use the ::before pseudo-element to insert content before an element: It is often used to add cosmetic content to an element with the content property. It is inline by default.
-            </li>
-            <li>And you can use the ::after pseudo-element to insert content at the end of an element:
-            </li>
-            <li>You can also use the ::first-letter pseudo-element to select the first letter of a paragraph, which is helpful when you want to style the first letter in a certain way:
-            </li>
-            <li>And you can use the ::first-line pseudo-element to select the first line of a paragraph:
-            </li>
-
-            </li>
-        </ul>
-
-        <p class="source-code-pro">article p::first-line {
-                                     font-size: 120%;
-                                     font-weight: bold;}</p>
-
-    <h2 id="selectors" class="article_head">Cascade, Specificity, Inheritance </h2>
-
-
-        <p>Cascade and the closely-related concept of specificity are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.</p>
-
-        <p>Also significant here is the concept of inheritance, which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect..</p>
-        <p>Stylesheets cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.</p>
-        <p>ID use ID attribute to unique style a single element. Any particular ID can only be used once per page. use #id-name in css and id=’id-nam,e’ in html overrides styles of types and classes</p>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">MDN reference for Cascade and Inheritance </a></p>
-        <h3>Cascade Layers </h3>
-        <p>An advanced topic about precedence </p>
-        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers">CSS - Cascade Layers</a></p>
-
-    </article>
 
         <!--Text Styling  -->
     <article>
@@ -728,30 +664,30 @@
         <p><a href="https://fonts.google.com/">Google Fonts and Icons</a></p>
         <p><a href=https://developers.google.com/fonts/docs/material_symbols/>Google Material Icons Guide</a></p>
         <h4>Font Syntax</h4>
-        <p class="source-code-pro-600">There are many properties related to the font, such as the face, weight, style, etc. These
+        <p class="code">There are many properties related to the font, such as the face, weight, style, etc. These
         properties allow you to change the style or complete look of your text.</p>
         <p>
         Font-Family, if first font doesn't exists other ones will be declared serial wise </p>
-        <p cls="source-code-pro-600">
+        <p cls="code">
         font-mily: "Segoe UI", Tahoma, sans-serif; /* You can declare multiple fonts. */</p>
         <p> Font-Style </p>
-         <p class="source-code-pro-600">
+         <p class="code">
          font-style: italic;
 
          <p> Font-Variant </p>
-             <p class="source-code-pro">
+             <p class="code">
          font-variant: small-caps;</p>
 
          <p> Font-Weight </p>
-             <p class="source-code-pro">
+             <p class="code">
          font-weight: bold;</p>
-         <p class="source-code-pro">
+         <p class="code">
              bold | normal | lighter (one font weight lighter than elements parent value.) | bolder | 1 (lightest) 1000 (boldest) 400 is equal to normal,700 is equal to bold</p>
          <p>
              NOTE not all fonts can take a numeric font-weight
          </p>
          <p> Font-Size <a href="#sizing"> Check out the Concept Section on Sizing for detailed discussion on Font box-sizing</a></p>
-             <p class="source-code-pro">
+             <p class="code">
          font-size: larger;</p>
     </article>
 
@@ -759,32 +695,32 @@
     <article>
         <h2 class="article_head" id="background"> Borders and Background   </h3>
 
-            <p class="source-code-pro">As the name suggests, these properties are related to background, i.e., you can change the color,
+            <p class="code">As the name suggests, these properties are related to background, i.e., you can change the color,
             image, position, size, etc., of the document.</p>
             <h3>Background Syntax</h3>
             <ul>
                 <li>Applies to all tags with id 'wrapper' ex: <p>&ltdiv id="wrapper"&gt ... &lt/div&gt */</p>
-                <p class="source-code-pro">{</p>
-                <p class="source-code-pro">background-image: url("Path");</p>
+                <p class="code">{</p>
+                <p class="code">background-image: url("Path");</p>
 
 
-                <p class="source-code-pro">background-position: right top;</p>
+                <p class="code">background-position: right top;</p>
 
 
-                <p class="source-code-pro">background-size: cover;</p>
+                <p class="code">background-size: cover;</p>
 
 
-                <p class="source-code-pro">background-repeat: no-repeat;</p>
+                <p class="code">background-repeat: no-repeat;</p>
 
 
-                <p class="source-code-pro">background-attachment: scroll;</p>
+                <p class="code">background-attachment: scroll;</p>
 
 
-                <p class="source-code-pro">background-color: fuchsia;</p>
+                <p class="code">background-color: fuchsia;</p>
 
                 </p>
                 <p>CSS defines shorthand properties for background using these properties</p>
-                <p class="source-code-pro">background: color image repeat attachment position;
+                <p class="code">background: color image repeat attachment position;
                 }</p>
 
                 </li>
@@ -795,12 +731,12 @@
             <p>Border is part of the Box Model and its properties are also used to change the style, radius, color, etc., of buttons or other items of the document.</p>
             <h3>Border Syntax</h3>
             <p>You can also select multiple items defined within a class selector</p>
-        <p class="source-code-pro">.container { ... }</p>
-                <p class="source-code-pro">border-width: 5px;</p>
-                <p class="source-code-pro">border-style: solid;</p>
-                <p class="source-code-pro">border-color: aqua;</p>
-                <p class="source-code-pro">border-radius: 15px;</p>
-                <p class="source-code-pro">border: width style color;</p>
+        <p class="code">.container { ... }</p>
+                <p class="code">border-width: 5px;</p>
+                <p class="code">border-style: solid;</p>
+                <p class="code">border-color: aqua;</p>
+                <p class="code">border-radius: 15px;</p>
+                <p class="code">border: width style color;</p>
                 border, the thickness and style of the border. width, style and color settings available
                 p {
                 border: solid coral;
@@ -820,20 +756,20 @@
             <P>Color Contrast Rules. <a href="https://webaim.org/articles/contrast/"> Understanding WCAG 2 Contrast and Color Requirements</a></p>
 
             <h3>Color Syntax</h3>
-            <p class="source-code-pro-600">p, span, .text </p>
-            <p class="source-code-pro-600">{</p>
+            <p class="code">p, span, .text </p>
+            <p class="code">{</p>
 
-            <p class="source-code-pro-600">bordercolor: cornsilk;</p>
+            <p class="code">bordercolor: cornsilk;</p>
 
-            <p class="source-code-pro">bordercolor: #fff8dc;</p>
+            <p class="code">bordercolor: #fff8dc;</p>
 
-            <p class="source-code-pro">bordercolor: rgba(255, 248, 220, 1);</p>
+            <p class="code">bordercolor: rgba(255, 248, 220, 1);</p>
 
-            <p class="source-code-pro">bordercolor: hsl(48, 100%, 93%);</p>
+            <p class="code">bordercolor: hsl(48, 100%, 93%);</p>
 
-            <p class="source-code-pro">bordercolor var(--silver);</p>
-            <p class="source-code-pro">borderopacity: 1;</p>
-            <p class="source-code-pro">}</p>
+            <p class="code">bordercolor var(--silver);</p>
+            <p class="code">borderopacity: 1;</p>
+            <p class="code">}</p>
 
             <h3>Opacity <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"> CSS Properity useful incombination with other CSS Properties</a></h3>
             <p>is a measure of how transparent an element is. 0% to 100% expressed as a decimal 0.0 to 1.0
@@ -953,7 +889,7 @@
                 min-height:
                 max-height:
                  <p>Center content</p>
-                <p  class="source-code-pro"> margin: 0 auto;</p>
+                <p  class="code"> margin: 0 auto;</p>
                 </li>
                 <li>padding, the space between content area and border. Every edge can have a different value.
                 padding-bottom: 10px;
@@ -1097,13 +1033,13 @@
                 <h4>Scaling images and video</h4>
                 <p>Many websites contain a variety of different media, like images and videos. When a website contains such media, it’s
                 important to make sure that it is scaled proportionally so that users can correctly view it.</p>
-                <p class="source-code-pro">.container {
+                <p class="code">.container {
                 width: 50%;
                 height: 200px;
                 overflow: hidden;
                 }
                 </p>
-                <p class="source-code-pro">
+                <p class="code">
                 .container img {
                 max-width: 100%;
                 height: auto;
@@ -1123,7 +1059,7 @@
                 Reversing these two properties and values will also achieve the same result.</p>
                 <h4>Scaling Background Images</h4>
                 <p>Background images of HTML elements can also be scaled responsively using CSS properties.</p>
-                <p class="source-code-pro">body {
+                <p class="code">body {
                 background-image: url('#');
                 background-repeat: no-repeat;
                 background-position: center;
@@ -1154,7 +1090,7 @@
             </p>
             <h4>@media queries</h4>
             <p>CSS uses media queries to adapt a website’s content to different screen sizes. With media queries, CSS can detect the size of the current screen and apply different CSS styles depending on the width of the screen.</p>
-            <p class="source-code-pro">@media only screen and (max-width: 480px) {
+            <p class="code">@media only screen and (max-width: 480px) {
             body {
             font-size: 12px;
             }
@@ -1184,7 +1120,7 @@
 
             By using multiple widths and heights, a range can be set for a media query.
             </p>
-            <p class="source-code-pro">@media only screen and (min-width: 320px) and (max-width: 480px) {
+            <p class="code">@media only screen and (min-width: 320px) and (max-width: 480px) {
             /* ruleset for 320px - 480px */
             }
             </p>
@@ -1195,7 +1131,7 @@
             <div>
             <h3 id="media">Media Query</h3>
         
-            <p class="source-code-pro">
+            <p class="code">
                 @media only screen and (min-width: 320px) {
                 /* ruleset for >= 320px */
                 }
@@ -1216,7 +1152,7 @@
 
             <p>To target by resolution, we can use the min-resolution and max-resolution media features. These media features accept a resolution value in either dots per inch (dpi) or dots per centimeter (dpc). Learn more about resolution measurements here.
             </p>
-            <p class="source-code-pro">
+            <p class="code">
                 @media only screen and (min-resolution: 300dpi) {
                 /* CSS for high resolution screens */
                 }
@@ -1233,7 +1169,7 @@
             <p>We know how to use media queries to apply CSS rules based on screen size and resolution, but how do we determine what queries to set?
 
             The points at which media queries are set are called breakpoints. Breakpoints are the screen sizes at which your web page does not appear properly. For example, if we want to target tablets that are in landscape orientation, we can create the following breakpoint:</p>
-            <p class="source-code-pro">@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            <p class="code">@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
             /* CSS ruleset */
             }</p>
             <p>The example above creates a screen size range the size of a tablet in landscape mode and also identifies the

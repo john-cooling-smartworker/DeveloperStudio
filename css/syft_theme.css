@@ -1,39 +1,94 @@
 :root {
-/* Generic colors */
-    --white: White;
-    --lightest-gray: #FAFAFA;
-    --light-gray: LightGrey;
+/* Base color pallette */
+    --light-red: #C22727;
+    --dark-red: #990001;
+    --black: #131313;
+    --white: #fff;
+    --white-smoke: #f5f5f5;
+    --dark-blue: #062A77;
+    --light-blue: #0053AF;
+    --red-gray: #ded2cf;
+    --lightest-gray: #eeeeee;
+    --light-gray: #cccccc;
+    --mid-gray: #999999;
     --dark-gray: #666666;
     --darkest-gray: #333333;
-    --black: #333333;
-    --deep-black: #222222;
-    --primary: #4ca1f6;
-    --alert: #DF2020;
 
-    --border-color: rgba(0, 0, 0, .1);
+   
     --body-color: #212529;
-/* Black and white colors */
-/* Set some of colors to uses as variable names */
+/* Card Color scheme for swiss style */
+--sw-bg-100: 359.5 100% 25%;
+--sw-bg-101:var(--white-smoke);
+--sw-bg-102:var(--lightest-gray);
+--sw-bg-103:var(--red-gray);
+--sw-bg-104:var(--black);
+--sw-txt-100:var(--white);
+--sw-txt-101:var(--black);
+--sw-txt-102:var(--black);
+--sw-txt-103:var(--black);
+--sw-txt-104:var(--white);
+--sw-head-100: var(--white-smoke);
+--sw-head-101: 0 0% 0%;
+--sw-head-102:var(--dark-blue);
+--sw-head-103:var(--dark-blue);
+--sw-head-104:var(--white-smoke);
+--sw-sub-100: 0 100% 98.2% ;
+--sw-sub-101: 0  0% 20%;
+--sw-sub-102:var(--light-blue);
+--sw-sub-103:var(--light-blue);
+--sw-sub-104:var(--lightest-gray);
+/* grid colors */
+  --clr-primary-400: 359.5 100% 25%;
+  --clr-secondary-400: 217 19% 35%;
+  --clr-secondary-500: 219 29% 14%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 210 46% 95%;
+  --clr-neutral-300: 0 0% 81%;
+
+  /*  font weights */
+  --fw-400: 500;
+  --fw-700: 600;
+
+/* font sizes */
+
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+
+/* Light Mode Color Scheme using a Swiss Pallette red-black-white-blue*/
+
+ 
+    --background-color: var(--white);    
     --text-color: var(--black);
     --weak-text-color: var(--dark-gray);
-    --link-color: var(--primary);
-    --icon-color: var(--black);
-    --background-color: var(--white);
-    --hover-color: var(--light-gray);
+    --link-color: var(--light-blue);
+    --icon-color: var(--dark-blue);
+    --hover-color: var(--dark-blue);
+    --menu-background: var(--red-gray);
+    --heading: var(--black)
+/* xxxxjc thuse below still to be verified as needed and styled */
     --inverted-background-color: var(--dark-gray);
     --inverted-text-color: var(--white);
     --weak-border-color: var(--light-gray);
     --border-color: var(--dark-gray);
-    --header-background-color: var(--primary);
+    --header-background-color: var(--light-blue);
     --header-text-color: var(--white);
     --card-background-color: var(--lightest-gray);
     --toggle-background-off: var(--light-gray);
-    --toggle-background-on: var(--primary);
-    --button-background-color: var(--primary);
-    --button-border-color: var(--primary);
+    --toggle-background-on: var(--light-blue);
+
+    --button-background-color: var(--light-blue);
+    --button-border-color: var(--light-blue);
     --button-text-color: var(--white);
-    --button-alert-color: var(--alert);
+    --button-alert-color: var(--light-red);
     --code-background-color: var(--lightest-gray);
+
+    /* Dark Mode Color Scheme using a Swiss Pallette red-black-white-blue */
+    --dark-background-color: var(--black);    
+    --dark-text-color: var(--white);
+    --dark-weak-text-color: var(--lightest-gray);
+    --dark-heading: var(--white)
+
 
 /* Syft colors*/
     --silver:  #8ba0b7;
@@ -48,8 +103,8 @@
     --blackcut: #000000;
 
 /* root variables for some basic styles */
-    --border: 1px solid var(--light-grey);
-    --font: system-ui, "Segoe UI", Roboto,"Helvetica Neue",Arial,sans-serif 
+    --border: 1px solid var(--border-color);
+    --font: system-ui, "Segoe UI", Roboto,"Helvetica Neue",Arial,sans-serif; 
     --font-heading: "pluto";
     
     --gap: 2rem;
@@ -61,9 +116,9 @@
     --button-loader-primary: url("../images/loader-white.svg");
     --button-loader-secondary: url("../images/loader-primary.svg");
 
-    --flash-background-color: var(--primary);
+    --flash-background-color: var(--light-blue);
     --flash-text-color: var(--white);
-    --flash-alert-color: var(--alert);
+    --flash-alert-color: var(--light-red);
 /* Shadow style for dropdown nav */
     --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -87,17 +142,20 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-color: var(--white);
-        --weak-text-color: var(--light-gray);
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+        --weak-text-color: var(--dark-weak-text-color) ;
+        --heading: var(--dark-heading);
+
         --link-color: var(--white);
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
 
-        --inverted-background-color: var(--deep-black);
+        --inverted-background-color: var(--dark-red);
 
         --weak-border-color: var(--dark-gray);
         --border-color: var(--light-gray);
-        --background-color: var(--black);
+     
         --button-border-color: var(--white);
 
         --button-loader-secondary: url("../images/loader-white.svg");

@@ -1,0 +1,761 @@
+ <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Add font awesome icon library includes some trademarks-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Add Google Icons libray item -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Load Source Code Pro font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Reset browsers style back to clear -->
+    <link rel="stylesheet" media="all" href="../css/reset.css">
+     <!-- Standard styling rule set for colors maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/syft_theme.css">  
+    <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/tables.css">
+     <!-- Standard styling rule set for tables maintained in its own file -->
+    <link rel="stylesheet" media="all" href="../css/forms.css">
+    <!-- From Freecodecamp Responsive dropdown menu-->
+    <link rel="stylesheet" media="all" href="../css/dropnav.css">
+     <!-- Syft styling added last  -->
+    <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
+    <title>DeDeSt</title>
+  </head>
+  <body>
+<!-- Starting with the navigation menu, using mega menus for important topics  -->
+  <nav id="nav-menu" aria-label="navigation bar">
+<!-- container for the whole navigation menu,  -->
+  <div class="nav_container">
+<!-- Leading Icon for the site brand -->
+      <div class="nav-start">
+        <a class="logo" href="../html/index.html">
+          <img
+            src="../images/Icon_65x65px.png"
+            width="35"
+            height="35"
+            alt="Logo"
+          />
+        </a>
+      </div>
+<!-- Menu bar for site -->
+      <nav class="menu">
+<!--First element header for developer mega menu  -->
+        <ul class="menu-bar">
+          <li>
+            <button class="nav-link dropdown-btn"
+                          data-dropdown="dropdown1"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          aria-label="browse"
+            >
+              Developer <span class="material-symbols-outlined">arrow_drop_down</span>
+            </button>
+<!-- mega menu for developer -->
+            <div id="dropdown1" class="dropdown">
+              <ul role="menu">
+                  <li class="dropdown-title">
+                    <span class="dropdown-link-title">Developer Subjects</span>
+                  </li>
+<!-- menu for frontend development -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/frontend.html">
+                      <span class="material-symbols-outlined">important_devices </span>
+                      <div>
+                        <span class="dropdown-link-title">Frontend Development</span>    
+                        <p class="dropdown-link-p">HTML, CSS and Javascript</p>
+                      </div>
+                    </a>
+                  </li>
+<!--Menu for backend development  -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/backend.html">
+                      <span class="material-symbols-outlined"> background_grid_small</span>
+                      <div>
+                        <span class="dropdown-link-title">Backend Development</span>
+                        <p class="dropdown-link-p">Node, SQL,  Security, API, Python</p>
+                      </div>
+                    </a>
+                  </li>
+<!-- Menu item for development tools -->
+                <li role="menuitem">
+                  <a class="dropdown-link" href="../html/tools.html">
+                    <span class="material-symbols-outlined">tools_power_drill</span>
+                    <div>
+                      <span class="dropdown-link-title">Development Tools</span>
+                      <p class="dropdown-link-p">Git and GitHub, VSCode, Google Developer, Terminal, Linux </p>
+                    </div>
+                  </a>
+                </li>
+<!-- Menu item for computer science -->
+                <li role="menuitem">
+                <a class="dropdown-link" href="../html/tools.html">
+                  <span class="material-symbols-outlined">computer</span>
+                  <div>
+                    <span class="dropdown-link-title">Computer Science</span>
+                    <p class="dropdown-link-p">Algorithms, Data Structures, Artificial Intelligence</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+<!-- Second column of Developer menu item -->
+        <ul role="menu">
+          <li class="dropdown-title">
+            <span class="dropdown-link-title">Hot Topics</span>
+          </li>
+<!-- menu item for html -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        HTML
+            </a>
+          </li>
+<!--menu item for css  -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/css.html">
+                    <span class="material-symbols-outlined">css</span>
+                                CSS
+            </a>
+          </li>
+<!-- menu item for javascript -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/javascript.html">
+             <span class="material-symbols-outlined">javascript</span>
+              Javascript
+            </a>
+          </li>
+<!-- menu item for git github -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/gitandgithub.html">
+              <span class="material-symbols-outlined">source_notes</span>
+              GitHub
+            </a>
+          </li>
+<!-- menu item for vscode -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/vscode.html">
+              <span class="material-symbols-outlined">developer_mode</span>
+              VS Code
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+<!--End of developer mega menu drop down  -->
+
+<!-- Header element for designer mega menu  -->
+<!--First element header for designer mega menu  -->
+    <ul class="menu-bar">
+        <li>
+          <button class="nav-link dropdown-btn"
+                        data-dropdown="dropdown2"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-label="browse"
+          >
+            Designer <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for designer -->
+                <div id="dropdown2" class="dropdown">
+                  <ul role="menu">
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Designer Subjects</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">important_devices</span>
+                        <div>
+                           <span class="dropdown-link-title">Design Styles</span>
+                            
+                          <p class="dropdown-link-p">Color, size, latout</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">background_grid_small</span>
+                        <div>
+                          <span class="dropdown-link-title">
+                            Branding</span>
+                          <p class="dropdown-link-p">Message, Audiance, Channel</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">tools_power_drill</span>
+                        <div>
+                          <span class="dropdown-link-title">SEO</span>
+                          <p class="dropdown-link-p">Intrinsic, Google, Facebook, X, TicTok, Socials </p>
+                        </div>
+                      </a>
+                    </li>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
+                        <div>
+                          <span class="dropdown-link-title">Coumputer Science</span>
+                          <p class="dropdown-link-p">Analytics</p>
+                        </div>
+                      </a>
+                    </li>
+                    
+                  </ul>
+<!-- Second column of menu items for designer -->
+                  <ul role="menu">
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Hot Topics</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/html.html">
+                        <span class="material-symbols-outlined">html</span>
+                                    Yoast
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">css</span>
+                                          Target Market
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                       <span class="material-symbols-outlined">javascript</span>
+                                   Javascript
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">source_notes</span>
+                                    GitHub
+                      </a>
+                    </li>
+<!-- Keywords items -->
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">developer_mode</span>
+                                               Keywords
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+<!-- Mega Heading for Projects  -->
+    <ul class="menu-bar">
+        <li>
+          <button
+            class="nav-link dropdown-btn"
+            data-dropdown="dropdown3"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="browse"
+          >
+            Projects <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for projects -->
+                <div id="dropdown3" class="dropdown">
+                  <ul role="menu">
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Projects</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">important_devices</span>
+                        <div>
+                           <span class="dropdown-link-title">CSS/HTML Focused Projects</span>
+                            
+                          <p class="dropdown-link-p">Navigation, Layout Grid and Flex, </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">background_grid_small</span>
+                        <div>
+                          <span class="dropdown-link-title">Javascript Projects</span>
+                          <p class="dropdown-link-p">Document, </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">tools_power_drill</span>
+                        <div>
+                          <span class="dropdown-link-title">Data Projects</span>
+                          <p class="dropdown-link-p">Stocks database, </p>
+                        </div>
+                      </a>
+                    </li>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
+                            
+                        <div>
+                          <span class="dropdown-link-title">Artificial Intelligence Projects</span>
+                          <p class="dropdown-link-p">DDS800 Syft Recruiting, DDS100 Acacia Stock Picker, DDS400 Portfolio Tuner</p>
+                        </div>
+                      </a>
+                    </li>
+                    
+                  </ul>
+<!-- Second column of menu items for designer -->
+                  <ul role="menu">
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Hot Projects</span>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        Stock price range
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">css</span>
+                              Audio Books Collection
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                          <span class="material-symbols-outlined">javascript</span>
+                          Walker for Fun
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">source_notes</span>
+                        RPG
+                      </a>
+                    </li>
+<!-- Keywords items -->
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">developer_mode</span>
+                        Keywords
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+<!-- One click menu items -->
+      <li><a class="nav-link" href="../html/press.html">Press</a></li>
+      <l class="nav-link" href="../html/profile.html">About</a></li>
+    </ul>
+  </nav>
+
+<!-- The nav end group  -->
+      <nav class="nav-end">
+        <div class="right-container">
+                <!-- <form class="search" role="search"> -->
+                  <!-- <input type="search" name="search" placeholder="Search.." /> -->
+                  <!-- <p class="search-icon"><i  class="material-symbols-outlined"> -->
+                                                    <!-- search  </i> -->
+                 <!-- </p> -->
+                <!-- </form> -->
+              
+        <div><a href="../html/home.html">
+            <i class="material-symbols-outlined">labs</i></a>
+        </div>
+<!    -- Hamburger Button, hidden on gigger screen size -->
+        <button
+                id="hamburger"
+                aria-label="hamburger"
+                aria-haspopup="true"
+                aria-expanded="false"
+          >
+              <i class="material-symbols-outlined" aria-hidden="true">menu</i>
+        </button>
+      </div>
+    </nav>
+</div>
+<!-- On page navigation menu -->
+<nav>
+        <ul>
+            <li ><a href="../html/frontend.html">Frontend</a></li>
+            <li ><a href="../html/css.html">CSS</a></li>
+            <li class="active" ><a href="../html/css_selectors.html">CSS Selectors</a></li>
+        </ul>
+</nav>
+
+<main> 
+ 
+<div class="grid-container">
+    <header>
+    <h1 >CSS Selectors, Cascade and Inheritance </h1>
+    </header>
+
+     
+ <!-- onsite links for HTML and CSS card 5 -->
+   <!-- Styling fundamentals card 5-->
+     
+        
+        <!-- Page links to CSS sample code -->
+           </div>
+ 
+    </div> 
+</main>
+<!-- xxxxjc end of copyin  -->
+
+        
+
+<!-- Start of main body -->
+<main>
+    <!-- Addig styles to HTML documents -->
+    <article>
+        
+
+    <!-- Selectors -->
+    <article>
+    <h2 id="selectors"class="sw-hdr-103">CSS Selectors, Cascade, Specificity, Inheritance</h2>
+    <p>Selectors marry up HTML elements with CSS rule sets. </p>
+
+<!-- Common selectors table reference -->
+    <table>
+      <caption>
+        Common selectors
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Selector</th>
+          <th scope="col">HTML Syntax</th>
+          <th scope="col">CSS Syntax</th>
+          <th scope="col">Usage Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Unversal</th>
+          <td class="code">Not Applicable</td>
+          <td class="code">*</td>
+          <td>Applies to whole document. </td>
+        </tr>
+        <tr>
+          <th scope="row">Type</th>
+          <td class="code">h1 h2 h3 p div ul li etc.</td>
+          <td class="code"> h1, h2, h3 {...}</td>
+          <td>Matches element names</td>
+        </tr>
+         <tr>
+          <th scope="row">Class</th>
+          <td class="code"> class=“className”></td>
+          <td class="code"> .classname {...}</td>
+          <td>Matches an element whose class attribute has matching value</td>
+        </tr>
+        <tr>
+          <th scope="row">Id</th>
+          <td class="code"> id=“identifiername”></td>
+          <td class="code"> #identifiername {...}</td>
+          <td>Matches an element whose Id attribute has matching value</td>
+        </tr>
+        <tr>
+          <th scope="row">Child</th>
+          <td class="code"> ul  li</td>
+          <td class="code"> ul > li {...}</td>
+          <td>Matches an element that is a direct child of another</td>
+        </tr>
+         <tr>
+          <th scope="row">Descendant </th>
+          <td class="code"> ul  li</td>
+          <td class="code"> ul  li {...}</td>
+          <td>Matches an element that is a descendant of another(not just a direct child)</td>
+        </tr>
+         <tr>
+          <th scope="row">Adjacent Sibling </th>
+          <td class="code"> h1 p</td>
+          <td class="code"> h1+p {...}</td>
+          <td>Matches an element that is the next sibling of another. Targets the first &ltp&gt element after any &lth1&gt element(but not other &ltp&gt elements.)</td>
+        </tr>
+          <tr>
+          <th scope="row">General Sibling </th>
+          <td class="code"> h1 p</td>
+          <td class="code"> h1~p {...}</td>
+          <td>Matches an element that is a sibling of another. Although it does not have to be the directly preceeding element. If you had two  &ltp&gt elements that are siblings of an &lth1&gt element, this rule would apply to both of them.</td>
+        </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Concept Notes</th>
+          <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- Attribute selectors table reference -->
+    <table>
+      <caption>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute Selectors</a></h3>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Selector</th>
+          <th scope="col">General Syntax</th>
+          <th scope="col">Example</th>
+          <th scope="col">Usage Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Existance</th>
+          <td class="code">element[attribute]</td>
+          <td class="code">a[attr] {
+                property: value;
+                        }</td>
+          <td>In the example, a elements with the attr attribute name are selected, regardless of the value of attr.</td>
+        </tr>
+        <tr>
+          <th scope="row">Equality</th>
+          <td class="code">element[attribute="value"]</td>
+          <td class="code"> a[attr="1"] {
+                     property: value;
+                                                    }</td>
+          <td>This code matches a elements where the attr attribute name has an exact value of 1.</td>
+        </tr>
+         <tr>
+          <th scope="row">Space</th>
+          <td class="code"> element[attribute~= "value"]</td>
+          <td class="code"> a[attr~= "free"] {
+                                         property: value;}</td>
+          <td>For example, if you wanted to select a elements that have an attr attribute name with a value that contains the word free, you would use this code. The code would match an attr attribute with a value of free that contains different kinds of whitespace.</td>
+        </tr>
+        <tr>
+          <th scope="row">Prefix</th>
+          <td class="code">element[attribute^="value"]</td>
+          <td class="code"> a[attr^="www"] {
+                 property: value;                     }           </td>
+          <td>The code selects any a elements where the attr attribute name has a value that starts with www.</td>
+        </tr>
+        <tr>
+          <th scope="row">Substring</th>
+          <td class="code"> element[attribute*="value"]</td>
+          <td class="code"> a[attr*="free"] {
+                                        property:value;}</td>
+          <td>For example, if you wanted to select a elements that have an attr attribute with a value that contains the string free, you would use this code.The code selects a elements with an attr attribute name when the string free is present in the attribute's value - even as a substring (a substring is a word inside another word).</td>
+        </tr>
+         <tr>
+          <th scope="row">Suffix </th>
+          <td class="code">element[attribute$="value"]</td>
+          <td class="code">a[attr$=".com"] {
+                                      property: value;}</td>
+          <td>For example, if you wanted to select a elements that have an attr attribute name with a value that ends with .com, you would use this code.  </td>
+        </tr>
+
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Concept Notes</th>
+          <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2 class="sw-hdr-103">Grouping CSS Selectors</h2>
+        <p>With the grouping selector, you can target and style more than one element at once.</p>
+        <p>To use the grouping selector, use a comma, , to group and separate the different elements you want to select.For example, here is how you would target multiple elements such as divs, ps, and spans all at once and apply the same styles to each of them:</p>
+        <p class="code">div, p, span {
+            property: value;}</p>
+        <p>The code above matches all div, p, and span elements on the page, and those three elements will share the same styling.</p>
+    <h2 id="selectors" class="sw-hdr-103">Targeted Grouping using Combinators</h2>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">mdn-Web Docs CSS - Combinators</a></p>
+        <p>Combinators, combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.</p>
+        <p> Essentially, you can combine two simple selectors in a way that explains the relationship between those CSS selectors. Combinators are a type of selector that specifies and describes the relationship between the two selectors.
+
+        <ul>There are four types of combinators:
+
+        <li>The descendant combinator.</li>
+        <li>The direct child combinator.</li>
+        <li>The general sibling combinator.</li>
+        <li>The adjacent sibling combinator</li>
+        </ul>
+
+        <h3>Combinator examples</h3>
+        <table>
+            <caption>
+              <param><a href=https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/#attribute>Combinators help from Freecodecamp.org.</a></p>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Combinator</th>
+                <th scope="col">General Syntax</th>
+                <th scope="col">Example</th>
+                <th scope="col">Usage Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Descendant</th>
+                <td class="code">div p {
+                    property: style;}</td>
+                <td class="code"> </td>
+                <td>In the example, only the two paragraphs inside the div get styled. Other child elements and the paragraph outside the div do not get styled.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Direct Child</th>
+                  <td class="code">div > a  {
+                                              property: value;}</td>
+                  <td class="code"> </td>
+                  <td>There is a div which is the parent element. Inside the parent element, there are two a elements which are the direct children of the div.There is also another a element inside a p element. The p element is a child of the div, but the a element inside the paragraph is not a direct child of the div.
+
+                    <p>So, to access only the a elements that are direct children of div, you would use this code</p></td>
+                </tr>
+                 <tr>
+                  <th scope="row">General Sibling</th>
+                  <td class="code"> div ~ p {
+                                                property: value;}</td>
+                  <td class="code"> </td>
+                  <td>It styles even the p element that does not come directly after the div element, such as the p that follows the h3 element. It does so because it still comes after div. <p>So, thats after in the DOM not just inside the div</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Adjacent Sibling</th>
+                  <td class="code">div + p {
+                                         property: value;}</td>
+                  <td class="code">     </td>
+                  <td>Although the p element that follows the h3 element is a sibling of the div element, it is not a direct sibling like the p element that comes before the h3.<p>So, to target only the p element that comes directly after the div, you would do the this.</p></td>
+                </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Concept Notes</th>
+                <td colspan="2">jlkfghlohgljgshslhglsjhgslkdfhg</td>
+              </tr>
+            </tfoot>
+        </table>
+<!-- Psuedo class selectors -->
+ <h2 id="selectors" class="sw-hdr-103">Targeted Styling Using an Elements Specific State </h2>
+        <h3 class="sw-sub-103">Pseudo Class Selectors</h3>
+        <p>A pseudo-class is a selector that selects elements that are in a specific state.</p>
+        <p> e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.</p>
+        <p><b>Pseudo-classes are keywords that start with a colon. For example, :hover is a pseudo-class.</b></p>
+        <ul>
+            Selectors based on link state information
+            <li> The :link selector applies styling when the element has not been visited before:
+            </li>
+            <li>The :visited selector applies when the element has been visited before in the current browser:
+            </li>
+            <li>The :hover selector applies when the mouse pointer hovers over an element:
+            </li>
+            <li>The :focus selector applies when a user has tabbed onto an element:
+            </li>
+            <li>The :active selector applies when the element is selected after being clicked on and after holding down a mouse button:
+            </li>
+        </ul>
+         <ul>
+            Selectors for input
+            <li> The :focus selector you saw earlier for links is used for inputs as well:
+            </li>
+            <li>The :required selector selects inputs that are required. Inputs that are required have the required attribute.
+            </li>
+            <li>The :checked selector selects checkboxes or radio buttons that have been checked:
+            </li>
+            <li>The :disabled selector selects inputs that are disabled. Disabled inputs have the disabled attribute. Many browsers style disabled inputs with a faded-out gray color by default:
+            </li>
+        </ul>
+         <ul>
+            Selectors for position
+            <li> The first child selector, :first-child, selects the first element, which will be the first child inside the parent container.
+            </li>
+            <li>The last child selector, :last-child, selects the last element, which will be the last child inside the parent container.
+            </li>
+            <li>The :nth-child() selector selects a child element inside a container based on its position in a group of siblings.It takes an integer as an argument and selects an element based on the given value. The :nth-child() selector is helpful when you want to select elements based on an expression, such as selecting even or odd elements:
+            </li>
+            <li>The first of type selector, :first-of-type, selects elements that are the first of that specific type in the parent container.
+            </li>
+            <li>The last of type selector, :last-of-type, selects elements that are the last of that specific type in the parent container.
+            </li>
+        </ul>
+
+
+
+        <h3 class="sw-sub-103">Pseudo-elements Selectors</h4>
+            <p>Pseudo-element selectors are used for styling a specific part of an element - you can use them to insert new content or change the look of a specific section of the content.</p>
+
+            <p>For example, you can use a pseudo-element to style the first letter or the first line of an element differently. You can also use pseudo-elements to add new content before or after the selected element.</p>
+
+            <p>In contrast to pseudo-classes that are preceded by a : character, pseudo-elements are preceded by a :: character.</p>
+
+            <p>The :: character is followed by a keyword that allows you to style a specific part of the selected element.</p>
+        <p>The general syntaxc looks like this:</p>
+        <p class="code">element::pseudo-element-selector { property:value;}
+        </p>
+  <ul>
+            Common Pseudo-Element Selectors
+            <li> You can use the ::before pseudo-element to insert content before an element: It is often used to add cosmetic content to an element with the content property. It is inline by default.
+            </li>
+            <li>And you can use the ::after pseudo-element to insert content at the end of an element:
+            </li>
+            <li>You can also use the ::first-letter pseudo-element to select the first letter of a paragraph, which is helpful when you want to style the first letter in a certain way:
+            </li>
+            <li>And you can use the ::first-line pseudo-element to select the first line of a paragraph:
+            </li>
+
+            </li>
+        </ul>
+
+        <p class="code">article p::first-line {
+                                     font-size: 120%;
+                                     font-weight: bold;}</p>
+
+    <h2 id="selectors" class="sw-hdr-103">Cascade, Specificity, Inheritance </h2>
+
+
+        <p>Cascade and the closely-related concept of specificity are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.</p>
+
+        <p>Also significant here is the concept of inheritance, which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect..</p>
+        <p>Stylesheets cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.</p>
+        <p>ID use ID attribute to unique style a single element. Any particular ID can only be used once per page. use #id-name in css and id=’id-nam,e’ in html overrides styles of types and classes</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">MDN reference for Cascade and Inheritance </a></p>
+        <h3 class="sw-sub-101">Cascade Layers </h3>
+        <p>An advanced topic about precedence </p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers">CSS - Cascade Layers</a></p>
+
+    </article>
+
+</main>
+
+
+    <footer>
+        <div class="lastdate">
+            <p>Created by <a class="link-primary" href="#">@jrc</a> - V1.0.1 - <a class="link-primary" href="#">GitHub
+                    repo</a> Last Updated: 2024-03-11</p>
+        </div>
+        <p>The style guide for this site is <a href="../html/syft_style_guide-01.html">Syft Style 01</a></p>
+        <hr />
+
+        <!-- first column -->
+        <div>
+            <small>
+                <p>© 2024</p>
+            </small>
+        </div>
+
+        <!-- second column -->
+        <div>
+            <ul>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Support Forum</a>
+                </li>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- third column -->
+        <div>
+            <small>
+                <p>Print Reference Cards</p>
+            </small>
+        </div>
+
+    </footer>
+     
+   <script src="../script/dropnav.js"></script>
+</body>
+
+</html>

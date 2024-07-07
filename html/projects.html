@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +11,7 @@
     <!-- Load Source Code Pro font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
+  
     <!-- Reset browsers style back to clear -->
     <link rel="stylesheet" media="all" href="../css/reset.css">
      <!-- Standard styling rule set for colors maintained in its own file -->
@@ -22,12 +24,13 @@
     <link rel="stylesheet" media="all" href="../css/dropnav.css">
      <!-- Syft styling added last  -->
     <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
-    <title>J.R.Cooling</title>
+    <title>Developer Studio</title>
   </head>
   <body>
+
     <header id="nav-menu" aria-label="navigation bar">
       <div class="nav_container">
-<!-- Nav Strat Div -->
+<!-- Nav Start Div -->
         <div class="nav-start">
           <a class="logo" href="../html/index.html">
             <img
@@ -47,17 +50,26 @@
                   aria-expanded="false"
                   aria-label="browse"
                 >
-                  References <span class="material-symbols-outlined">arrow_drop_down</span>
+                  Development <span class="material-symbols-outlined">
+                            arrow_drop_down
+                            </span>
 
                 </button>
                 <div id="dropdown1" class="dropdown">
                   <ul role="menu">
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Main Subjects</span>
+                    </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/frontend.html">
-                        <span class="material-symbols-outlined">important_devices</span>
+                        <span class="material-symbols-outlined">
+                                      important_devices
+                                      </span>
+                        
                         <div>
                            <span class="dropdown-link-title">Frontend Development</span>
-                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
+                            
+                          <p class="dropdown-link-p">HTML, CSS and Javascript</p>
                         </div>
                       </a>
                     </li>
@@ -67,10 +79,9 @@
                                       background_grid_small
                                       </span>
                         <div>
-                          <span class="dropdown-link-title"
-                            >Backend Development</span
-                          >
-                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
+                          <span class="dropdown-link-title">
+                            Backend Development</span>
+                          <p class="dropdown-link-p">Node, SQL,  Security, API, Python</p>
                         </div>
                       </a>
                     </li>
@@ -80,27 +91,18 @@
                                       tools_power_drill
                                       </span>
                         <div>
-                          <span class="dropdown-link-title">Development Tools</span>
-                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
+                          <span class="dropdown-link-title">
+                            Development Tools</span>
+                          <p class="dropdown-link-p">Git and GitHub, VSCode, Google Developer, Terminal, Linux </p>
                         </div>
                       </a>
                     </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
-                       <span class="material-symbols-outlined">
-                                      design_services
-                                      </span>
-                        <div>
-                          <span class="dropdown-link-title">Design Style</span>
-                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
-                        </div>
-                      </a>
-                    </li>
+                    
                   </ul>
 
                   <ul role="menu">
                     <li class="dropdown-title">
-                      <span class="dropdown-link-title">Browse by technology</span>
+                      <span class="dropdown-link-title">Top Topics</span>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/html.html">
@@ -131,7 +133,7 @@
                         <span class="material-symbols-outlined">
                                       source_notes
                                       </span>
-                        Git and HitHub
+                        GitHub
                       </a>
                     </li>
                     <li role="menuitem">
@@ -139,7 +141,7 @@
                         <span class="material-symbols-outlined">
                                       developer_mode
                                       </span>
-                        Visual Studio Code
+                        VS Code
                       </a>
                     </li>
                   </ul>
@@ -153,7 +155,7 @@
                   aria-expanded="false"
                   aria-label="discover"
                 >
-                  Discover
+                  Design
                   <span class="material-symbols-outlined">
                             arrow_drop_down
                             </span>
@@ -161,51 +163,80 @@
                 </button>
                 <div id="dropdown2" class="dropdown">
                   <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">browse</span>
-                      <span class="dropdown-link-title">Browse Categories</span>
+                  <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                      browse
+                                      </span>
+                      <span class="dropdown-link-title">
+                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">Design Styles</a></span>
                     </li>
+                   
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">brand_family</span>
+                      <span class="material-symbols-outlined">
+                                    brand_family
+                                    </span>
                       <a class="dropdown-link" href="#branding">Branding</a>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">regular_expression</span>
+                      <span class="material-symbols-outlined">
+                                    regular_expression
+                                    </span>
                       <a class="dropdown-link" href="#illustrations"
                         >Algorithms</a
+                      >
+                    </li>
+                    <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                              analytics
+                      </span>
+                      <a class="dropdown-link" href="#illustrations"
+                        >Data Structures</a
+                      >
+                    </li>
+                     <li role="menuitem">
+                      <span class="material-symbols-outlined">
+                                   psychology_alt
+                                    </span>
+                                    <span class="material-symbols-outlined">
+
+</span>
+                      <a class="dropdown-link" href="#illustrations"
+                        >Artificial Intelligence</a
                       >
                     </li>
                   </ul>
                   <ul role="menu">
                     <li>
-                      <span class="material-symbols-outlined">download_for_offline</span>
+                      <span class="material-symbols-outlined">
+                                    download_for_offline
+                                    </span>
                       <span class="dropdown-link-title">Download</span>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">contact_page</span>
+                      <span class="material-symbols-outlined">
+                                    contact_page
+                                    </span>
                       <a class="dropdown-link" href="#mac-windows"
-                        >J.R.Cooling Profile</a
+                        >Profile</a
                       >
                     </li>
                     <li role="menuitem">
                       <span class="material-symbols-outlined">
                                     finance_chip
                                     </span>
-                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
+                      <a class="dropdown-link" href="#linux">Services</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
+              <li><a class="nav-link href="../html/projects.html">Projects</a></li>
               <li><a class="nav-link" href="../html/press.html">Press</a></li>
               <li><a class="nav-link" href="../html/profile.html">About</a></li>
             </ul>
           </nav>
         </div>
-
-     
-        <div><a href="../html/home.html"><i class="material-symbols-outlined">home</i> </a>
-        </div>
+       
+  
 <!-- The nav end group  -->
         <div class="nav-end">
           <div class="right-container">
@@ -215,17 +246,13 @@
                                                 search  </i>
              </p>
             </form>
-
-            <a href="#profile">
-              <img
-                src="../images/service-3.jpg"
-                width="35"
-                height="35"
-                alt="user image"
-              />
-            </a>
-            <button class="btn btn-primary">Login</button>
-          </div>
+<!-- link to experiment page to try out stuff for play -->
+            <div><a href="../html/home.html">
+            <i class="material-symbols-outlined">
+                              labs</i>
+                        </a>
+              </div>
+      
 <!-- Hamburger Button, hidden on gigger screen size -->
           <button
             id="hamburger"
@@ -239,118 +266,77 @@
           </button>
         </div>
       </div>
- 
-        <h1>J.R. Cooling, Software Developer</h1>
-</header>
 
+    </header>
+ 
+<!-- Using a grid layout of a main column and smaller aside column -->
 <div class="container">
-  <header><h1>Contact Forms</h1></header>
-  <aside>
-     <h2 class="aside_head">Contact the Author:</h2>
+<header>
+        <h1>Developer Designer Studio</h1>
+</header>
+    <main >
+        <h3 class="article_head ">Projects</h3>
+        <!-- first article-->
+        <article>
+        <h3 class="aside_head ">Frontend Development</h3>
+        <p>Project to study the three core elements of frontend programming. HTML, CSS3 and Javascript and produce an online reference. <a href="../html/frontend.html">Go to the Frontend Programming Reference</a>
+        </p> 
+          <img src="../images/frontend development.jpg" alt="Technologies of frontend development " Title="Frontend devlopment technologies" width="512" height="512"/>
+        </article>
+      
+    <!-- Second article -->
+        <article> 
+        <h3 class="aside_head ">Backend Development</h2>
+         <p>Data and the API's to access it are a big part of the backend. Add on languages and platforms and you are talking a lot of stuff to know. The project to study the elements of the backend and produce an online reference for programming the backend. <a href="../html/backend.html">Go to the Backend Programming Reference</a>
+         </p> 
+         <img src="../images/back-end-roadmap.jpeg" alt="Roadmap of the path to backend development success" Title="Backend devlopment roadmap" width="512" height="512"/>
+
+        </article>
+        <!-- third article -->
+        <article>
+    
+        <h3 class="aside_head ">Development Tools</h3>
+         <p>So many tools for programmers, which to pick?</p>
+        <blockquote>
+            <p>These are the tools I use. Once I learn a tool I stick with until I hit the frustration boundary. Only then do I upgrade to something more modern. Why donm't I keep up with the latest tools often? Simple answer is, switching costs! </p>
+        </blockquote>
+        
+        <img src="../images/Software-Development-Life-Cycle-scaled.jpg" alt="Figure eight racetrack diagram of software development lifecycle" Title=
+        "sotware development lifecycle" width="512" height="256"/>
+        </article>
+             
+
+    <!-- forth article -->
     <article>
-   
-
-    <address>
-      <a href="mailto:john@cooling.name">john@cooling.name</a><br />
-      <a href="tel:+61413283377">+61 0413 283 377 </a>
-    </address>
-
+        <h3 class="aside_head ">Design Style</h3>
+         <p><strong>Where to start?</strong> <br>
+            Capture your brand in its design style for the web
+         </p> 
+         <p><strong>Breakdown!! </strong><br>
+              What a process? Build a wireframe of the elements. Pick a color pallette. Photo up the images. Architect the used experince flows. Ride the merry go around of build and test and trial until exhausted. Publish and hope for the best! 
+         </p> 
+         <a href="../html/devops.html"> Go to the DevOps Reference</a>
+          <img src="../images/design-style2.jpeg" alt="Figure eight racetrack diagram of devops processes" Title=
+        "devops process lifecycle" width="512" height="256"/>
     </article>
-  </aside>
-  <main>
-<section id="forms">
-        <h2 class="article_head">Sign In</h2>
-
-        <form action="#">
-          <fieldset>
-            <label>Login Email
-              <input type="login" required name="login">
-            </label>
-            <label>Login Password 
-              <input type="password" required name="passwordcheck">
-            </label>
-            <fieldset class="actions">
-
-                <button type="submit">Login</button>
-            </fieldset>
-          </fieldset>
-          <h2 class="article_head">Sign Up for Your Account</h2>
- 
-            <fieldset>
-                <label>
-                    First Name
-                    <input type="text" required name="firstname">
-                </label>
-                 <label>
-                    Last Name
-                    <input type="text" required name="latest">
-                </label>
-                 
-                <label>
-                    Phone
-                    <input type="tel" required name="phone">
-                </label>
-                <label>
-                    Type
-                    <select name="phone-type">
-                        <option value="" disabled selected hidden>Select one...</option>
-                        <option value="mobile">Mobile</option>
-                        <option value="home">Home</option>
-                        <option value="work">Work</option>
-                    </select>
-                </label>
-            </fieldset>
-            <fieldset class="vertical">
-                <legend>Subscription</legend>
-                <label class="radio"><input type="radio" name="subscription" value="free">Free</label>
-                <label class="radio"><input type="radio" name="subscription" value="basic">Basic</label>
-                <label class="radio"><input type="radio" name="subscription" value="pro">Pro</label>
-            </fieldset>
-            <fieldset>
-                <label>
-                    Email
-                    <input type="email" required name="email">
-                </label>
-                <label>
-                    Password
-                    <input type="password" required name="password">
-                </label>
-                <label>
-                    Re-Enter Password
-                    <input type="password" required name="passwordcheck">
-                </label>
-            </fieldset>
-            <fieldset>
-                <label class="checkbox">
-                    <input type="checkbox" name="terms-and-conditions">
-                    <span>I agree to the <a href="#">terms and conditions</a></span>
-                </label>
-            </fieldset>
-            <fieldset class="actions">
-                <button class="secondary" type="button">Cancel</button>
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-
-    <h2 class="article_head">Send a Message</h2>
-        <form action="#">
-            <fieldset>
-                <label>
-                   Message
-                    <input type="text" name="message">
-                </label>
-                <button class="btn btn-primary" type="submit">Send Message</button>
-            </fieldset>
-        </form>
-    </section>
-
+    </main>
 </div>
+  <h3 class="article_head ">Education and Training</h3>
+        <!-- first article-->
+        <article>
+        <h3 class="aside_head ">Developer Roadmaps</h3>
+        <p>Roadmap.sh is a community effort to create roadmaps, guides and other educational content to help guide developers in picking up a path and guide their learnings. <a href="https://roadmap.sh/">Go to the external roadmap site </a>
+        </p> 
+          <img src="../images/Roadmap_full_stack.png" alt="Roadmap full stack development " Title="Roadmap full stack" width="512" height="512"/>
+        </article>
+         <article>
+        <h3 class="aside_head ">Developer Roadmaps</h3>
+        <p>This community will help you learn to code and get a developer job. <a href="https://www.freecodecamp.org/learn">Go to the external freecodecamp site </a>
+        </p> 
+          <img src="../images/Freecodecamp.png" alt="Freemcodecamp organisation " Title="Freecodecamp full stack training" width="512" height="512"/>
+        </article>
 
-
-  
-</main>
-
- <footer>
+<footer>
     <div class="lastdate">
         <p>Created by <a href="#"> @jrc</a> - V1.0.1 - <a ref="#"> GitHub Repo</a> Last Updated: 2024-03-11</p>
     </div>
@@ -379,7 +365,8 @@
 
 </footer>
  
+
+ 
    <script src="../script/dropnav.js"></script>
-</div>
-</body>
+  </body>
 </html>

@@ -3,35 +3,6 @@
     box-sizing: border-box
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.25rem;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
-    margin-top: 2rem;
-}
-
-p {
-    line-height: 1.5;
-}
-
-a, a:visited {
-    color: var(--link-color);
-}
-
 p:not(:last-child), ul:not(:last-child) , ol:not(:last-child) {
     margin-bottom: 1rem;
 }

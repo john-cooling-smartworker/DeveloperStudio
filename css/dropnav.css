@@ -1,3 +1,88 @@
+/* Old nav styling */
+nav {
+  width: 100%;
+  font-size: 17px;
+  background-color: var(--background-color);
+  font-family: var(--font-heading);
+  padding-right: 15px;
+  padding-left:15px;
+
+}
+
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+nav li a {
+  display: block;
+  padding: 14px 16px;
+  /* background-color: var(--blackcut); */
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+}
+
+nav li a:hover:not(.active) {
+  background-color: var(--menu-background);
+  color: var(--hover-color);
+}
+
+nav li a:active {
+  background-color: #ddd;
+  color: #4CB6E1;
+}
+nav input.placeholder::before {content: "??";}
+/* Pseudo classes to simplify styling*/
+
+
+/* The navbar */
+.nav-link{
+  color: var(--link-color);
+}
+
+.logo {
+  /* margin-right: 1.5rem; */
+   margin: auto;
+
+  border: var(--border);
+
+}
+
+.logo a{
+  background: transparent;
+
+}
+.logo a:hover{
+  color:antiquewhite;
+}
+
+.menulogo a{
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--florentine);
+  background: transparent;
+  padding: 1rem;
+  border: var(--border);
+
+}
+
+.menulogo a:hover{
+  color:antiquewhite;
+}
+/* End old menu styling */
+
 /* Drop nav styles */
 
 .btn {
@@ -20,8 +105,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1600px;
-  margin: 0 auto;
-  column-gap: 2rem;
+  gap: var(--gap);
   height: 90px;
   padding: 1.2rem 3rem;
 }
@@ -118,7 +202,7 @@
 
 .dropdown-link-p {
   font-size: 0.8rem;
-  color: var(--light-grey);
+  color: var(--text-color);
 }
 /* Add styling to the search input button and profile image and hide the hamburger for desktops */
 .right-container {

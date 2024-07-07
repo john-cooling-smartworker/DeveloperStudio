@@ -29,15 +29,25 @@ html {
 }
 
 body {
-  color: var(--body-color)
+
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-weight: var(--fw-400);
+  color: var(--body-color);
+  background-color: hsl(var(--clr-neutral-200));
+  line-height: 1.5;
+  text-rendering: auto;
 }
+
 
 /* Rules set for header type elements */
 
- h1, h2, h3, h4 {
+ h1, h2, h3, h4, h5 {
   padding: 1rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--heading);
   font-family: var(--font-heading), var(--font);
   font-weight: 600;
  }
@@ -47,23 +57,19 @@ h1 {
   display: inline-flexbox;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--midnight-blue);
   text-align: center;
 }
 
 h2 {
   font-size: 2.5rem;
-  color: var(--silver);
   text-align: left;
-  padding-top: 0.rem;
-  margin-top: 0.rem;
+  padding-top: 0rem;
+  margin-top: 0rem;
   border-top: 0.25rem solid;
-  font-size: 1.5rem;
 }
 
 h3 {
   font-size: 2rem;
-  color: var(--saphire);
   text-align: left;
 }
 
@@ -73,18 +79,21 @@ h4 {
 }
 
 h5 {
-  color: var(--florentine);
   text-align: left;
   font-size: 1.25rem;
   }
 
+h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
+    margin-top: 2rem;
+}
+
 p {
+  color: var(--text-color);
   display: block;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  line-height: 1.5;
 }
-
-
 
 /* Default rule set for button type element */
 button {
@@ -95,15 +104,14 @@ button {
   border: none;
   background-color: transparent;
 }
+
 /*rule set for links. Seperate rules required for nav links and main links */
 a {
   color: var(--link-color);
   cursor: grab;
   text-decoration: none;
   font-size: 22px;
-  color: black;
 }
-
 
 a:link, a:visited{
   color: var(--link-color);
@@ -111,13 +119,13 @@ a:link, a:visited{
 }
 
 a:hover, a:focus{
-  background-color: #ddd;
-  color: #4CB6E1;
+  background-color: var(--light-gray);
+  color: var(--hover-color);
 }
 
-a:active {
- background-color: var(--floritine_clear);
-  color: #782b90;
+.active{
+  background-color: var(--red-gray);
+  color:var(--white);
 }
 /* Add icon  */
 a[href^="http"] {
@@ -126,14 +134,13 @@ a[href^="http"] {
   padding-right: 19px;
 }
 
-
 ul {
   list-style: none ;
 }
 
 ul li {
   list-style-position: inside;
-  list-style-type: disc;
+  list-style-type: none;
   line-height: 1.5
 }
 
@@ -146,111 +153,44 @@ ol {
     list-style: decimal;
 }
 
-nav {
-  width: 100%;
-  font-size: 17px;
-  background-color: var(--background-color);
-  font-family: var(--font-heading);
-  padding-right: 15px;
-  padding-left:15px;
-
+/* Style tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  list-style: none;
+  
 }
-
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-nav ul {
-  list-style-type: none;
-  overflow: hidden;
-}
-
-nav li {
-  float: left;
-  line-height: 1.5;
-  list-style-type: none;
-}
-
-nav li a {
-  display: block;
-  padding: 14px 16px;
-  /* background-color: var(--blackcut); */
-  color: var(--white);
-  text-align: center;
-  font-size: 17px;
-}
- 
-nav li a:hover:not(.active) {
-  background-color: #ddd;
-  color: #4CB6E1;
-}
-
-nav li a:active {
-  background-color: #ddd;
-  color: #4CB6E1;
-}
-nav input.placeholder::before {content: "??";}
-/* Pseudo classes to simplify styling*/
-
-
-/* The navbar */
-
-
-.logo {
-  margin-right: 1.5rem;
-  padding: 1rem;
+.tag {
+  background-color: var(--red-gray);
+  color: var(--text-color);
   border: var(--border);
-}
-
-.logo a{
-  background: transparent;
-
-}
-.logo a:hover{
-  color:antiquewhite;
-}
-
-.menulogo a{
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--florentine);
-  background: transparent;
-  padding: 1rem;
-  border: var(--border);
-
-}
-
-.menulogo a:hover{
-  color:antiquewhite;
-}
-.page-background {
-  background-image: url("../images/YoungStar.jpg");
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
 }
 
 
-/* second container style  */
 /* first grid container used on index.html format container full width header section, one column aside and four column main */
-.container {
+/* .container {
   display: grid;
   gap: var(--gap);
   grid-template-columns: 2fr 1fr;
+   grid-template-columns: repeat(autofit, minmax(300px, 1fr)) 
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header"
     "main  aside "
     "footer footer";
   border: var(--border);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   margin: 10px auto auto 5px;
 
-}
+} */
 
 /* default layout for HTML5 sections*/
-header {
+/* header {
   grid-area: header;
-
 }
 
 footer {
@@ -272,73 +212,34 @@ aside {
 main {
   grid-area: main;
 }
-/* Rule Set for Article containers */
-article {
+/* Rule Set for Article containers 
+ article { 
   display: grid;
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 2fr);
-  background-color: var(--lightest-gray);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 100%), 1fr);
+  background-color: var(--white-smoke);
   color: black;
   padding: 15px;
   margin: 15px auto;
   border: var(--border);
-  border-radius: 20px;
+  border-radius: 10px;
+} */
 
-}
 /* Ruleset for article header */
 .article_head {
   background-color: var(--blackcut);
   color: var(--lightest-gray);
   border-radius: .8rem;
 }
+
 /* Rule set for an aside article header */
 .aside_head {
   background-color: var(--sapphire);
   color: var(--inverted-text-color);
   border-radius: .8rem;
-
 }
 
-/* Ruleset for color chart pacel */
-.color-container {
-  width: 100%;
-}
-
-.color-panel {
-  display: inline-block;
-  width: 32%;
-  text-align: center;
-  margin: 20px auto;
-  min-height: 100px;
-}
-
-/* third contain style */
-
-.text-container {
-  width: 100%;
-}
-
-.text-panel {
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  margin: 20px 20px;
-}
-
-.col2-header {
-  grid-column: 1 / 3;
-  text-align: center;
-}
-
-.col2-container {
-  display: grid;
-  border: var(--border);
-  max-width: 80em;
-  padding: 2em;
-  margin: 2em;
-
-    }
- hr {
+hr {
   border: none;
   border-top: 3px double var(--blackcut);
   color: #333;
@@ -364,46 +265,9 @@ hr::after {
   font-size: 20px;
   text-decoration: underline;
 }
-/* fifth container style*/
-.syntax-container {
-  width: 100%;
-}
-
-.syntax-panel {
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  margin: 20px 20px;
-}
-
-.syntax-panel {
-  display: inline-block;
-  width: 45%;
-}
-
-.syntax-label {
-  font-size: 20px;
-  text-decoration: underline;
-}
-
-
 
 .inline_list {
   display: inline-block;
-}
-
-/* text font styling  */
-/* xxxxjc need to add media query to reduce font size for smaller screens when I find out how to do that*/
-.syft-masthead-title {
-  margin-bottom: 1rem;
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: .9;
-  color: inherit;
-}
-
-.regular {
-  font-style: normal;
 }
 
 .bold {
@@ -416,29 +280,18 @@ hr::after {
 
 /* <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 200 to 900*/
-
-.source-code-pro-600 {
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: normal;
+.code {
+  font-family: "Source Code Pro" monospace;
+  background-color: var(--code-background-color);
+  font-weight: 600;
   font-style: normal;
 }
-.source-code-pro {
-  font-family: "Source Code Pro", monospace;
-    background-color: var(--code-background-color);
-}
-
 
 .lastdate {
   font-family: "Source Code Pro", monospace;
   font-style: italic;
 }
-
-.code {
-  font-family: "Source Code Pro" monospace;
-   background-color: var(--blue-nile);
-
-}
+/* color swatchs used on color card for style sheets */
 .swatchsilver {
   background-color: var(--silver);
   color: var(--textcolor);
@@ -494,7 +347,6 @@ hr::after {
   border-radius: .8rem;
 }
 
-
 /* Rule set for button style for flat style buttons xxxxjc need to change colors */
 .flat {
   background-color: var(--silver);
@@ -512,12 +364,7 @@ hr::after {
 .flat:active {
   border-color: #fff;
 }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
+
 
 .title {
   color: grey;
@@ -538,7 +385,288 @@ button {
 }*/
 
 
-/* Navigation styles: includes main nav bar with optional dropdowns and responsive collapse. Bread Crumbs, inpage links (internal and external)  */
+/* code for grids lesson from KEvin Pwell  */
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 
 
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Set core body defaults */
+
+
+h1,
+h2,
+h3 {
+  font-weight: var(--fw-700);
+}
+
+/* utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+/* color scheme for card one */
+.sw-bg-101 {
+  background: hsl(var(--sw-bg-100));
+}
+.sw-txt-101 {
+  color: var(--sw-txt-100);
+}
+.sw-hdr-101 {
+  color: var(--sw-head-100);
+}
+.sw-sub-101 {
+  color: hsl(var(--sw-sub-100));
+}
+
+/* color scheme for card two */
+.sw-bg-102 {
+  background: var(--sw-bg-101);
+}
+.sw-txt-102 {
+  color: var(--sw-txt-101);
+}
+.sw-hdr-102 {
+  color: hsl(var(--sw-head-101));
+}
+.sw-sub-102 {
+  color: hsl(var(--sw-sub-101));
+}
+
+
+/* color scheme for card three */
+.sw-bg-103 {
+  background: var(--sw-bg-102);
+}
+.sw-txt-103 {
+  color: var(--sw-txt-102);
+}
+.sw-hdr-103 {
+  color: var(--sw-head-102);
+}
+.sw-sub-103 {
+  color: var(--sw-sub-102);
+}
+
+/* color scheme for card four */
+.sw-bg-104 {
+  background: var(--sw-bg-103);
+}
+.sw-txt-104 {
+  color: var(--sw-txt-103);
+}
+.sw-hdr-104 {
+  color: var(--sw-head-103);
+}
+.sw-sub-104 {
+  color: var(--sw-sub-103);
+}
+
+/* color scheme for card five */
+.sw-bg-105 {
+  background: var(--sw-bg-104);
+}
+.sw-txt-105 {
+  color: var(--sw-txt-104);
+}
+.sw-hdr-105 {
+  color: var(--sw-head-104);
+}
+.sw-sub-105 {
+  color: var(--sw-sub-104);
+}
+.bg-primary-400 {
+  background: hsl(var(--clr-primary-400));
+}
+.bg-secondary-400 {
+  background: hsl(var(--clr-secondary-400));
+}
+.bg-secondary-500 {
+  background: hsl(var(--clr-secondary-500));
+}
+
+.bg-neutral-100 {
+  background: hsl(var(--clr-neutral-100));
+}
+
+.text-neutral-100 {
+  color: hsl(var(--clr-neutral-100));
+}
+.text-secondary-400 {
+  color: hsl(var(--clr-secondary-400));
+}
+.border-primary-400 {
+  border: 2px solid #a775f1;
+}
+
+/* components */
+.reference-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+   'one'
+   'two'
+   'three'
+   'four'
+   'five';
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.reference {
+  font-size: var(--fs-400);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.reference:nth-child(1) {
+  grid-area: one;
+}
+.reference:nth-child(2) {
+  grid-area: two;
+}
+.reference:nth-child(3) {
+  grid-area: three;
+}
+.reference:nth-child(4) {
+  grid-area: four;
+}
+.reference:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+  .reference-grid {
+      grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .reference-grid {
+    grid-template-areas:
+     'one one'
+     'two five'
+     'three five'
+     'four four';
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .reference-grid {
+      grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .reference-grid {
+      grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+
+.reference.quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.reference img {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.reference .picture {
+  width: 300px;
+  height: 300px;
+}
+
+.reference .name {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1;
+}
+
+.reference .position {
+  font-size: var(--fs-300);
+  opacity: 0.5;
+}
+
+/* .reference > p:first-of-type {
+  font-size: var(--fs-500);
+  line-height: 1.2;
+}
+
+.reference > p:last-of-type {
+  opacity: 0.7;
+} */

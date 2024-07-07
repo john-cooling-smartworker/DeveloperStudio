@@ -22,295 +22,528 @@
     <link rel="stylesheet" media="all" href="../css/dropnav.css">
      <!-- Syft styling added last  -->
     <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
-    <title>J.R.Cooling</title>
+    <title>DeDeSt</title>
   </head>
   <body>
-    <header id="nav-menu" aria-label="navigation bar">
-      <div class="nav_container">
-<!-- Nav Strat Div -->
-        <div class="nav-start">
-          <a class="logo" href="../html/index.html">
-            <img
-              src="../images/Icon_65x65px.png"
-              width="35"
-              height="35"
-              alt="Inc Logo"
-            />
-          </a>
-          <nav class="menu">
-            <ul class="menu-bar">
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown1"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="browse"
-                >
-                  References <span class="material-symbols-outlined">
-                            arrow_drop_down
-                            </span>
+<!-- Starting with the navigation menu, using mega menus for important topics  -->
+  <nav id="nav-menu" aria-label="navigation bar">
+<!-- container for the whole navigation menu,  -->
+  <div class="nav_container">
+<!-- Leading Icon for the site brand -->
+      <div class="nav-start">
+        <a class="logo" href="../html/index.html">
+          <img
+            src="../images/Icon_65x65px.png"
+            width="35"
+            height="35"
+            alt="Logo"
+          />
+        </a>
+      </div>
+<!-- Menu bar for site -->
+      <nav class="menu">
+<!--First element header for developer mega menu  -->
+        <ul class="menu-bar">
+          <li>
+            <button class="nav-link dropdown-btn"
+                          data-dropdown="dropdown1"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          aria-label="browse"
+            >
+              Developer <span class="material-symbols-outlined">arrow_drop_down</span>
+            </button>
+<!-- mega menu for developer -->
+            <div id="dropdown1" class="dropdown">
+              <ul role="menu">
+                  <li class="dropdown-title">
+                    <span class="dropdown-link-title">Developer Subjects</span>
+                  </li>
+<!-- menu for frontend development -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/frontend.html">
+                      <span class="material-symbols-outlined">important_devices </span>
+                      <div>
+                        <span class="dropdown-link-title">Frontend Development</span>    
+                        <p class="dropdown-link-p">HTML, CSS and Javascript</p>
+                      </div>
+                    </a>
+                  </li>
+<!--Menu for backend development  -->
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="../html/backend.html">
+                      <span class="material-symbols-outlined"> background_grid_small</span>
+                      <div>
+                        <span class="dropdown-link-title">Backend Development</span>
+                        <p class="dropdown-link-p">Node, SQL,  Security, API, Python</p>
+                      </div>
+                    </a>
+                  </li>
+<!-- Menu item for development tools -->
+                <li role="menuitem">
+                  <a class="dropdown-link" href="../html/tools.html">
+                    <span class="material-symbols-outlined">tools_power_drill</span>
+                    <div>
+                      <span class="dropdown-link-title">Development Tools</span>
+                      <p class="dropdown-link-p">Git and GitHub, VSCode, Google Developer, Terminal, Linux </p>
+                    </div>
+                  </a>
+                </li>
+<!-- Menu item for computer science -->
+                <li role="menuitem">
+                <a class="dropdown-link" href="../html/tools.html">
+                  <span class="material-symbols-outlined">computer</span>
+                  <div>
+                    <span class="dropdown-link-title">Computer Science</span>
+                    <p class="dropdown-link-p">Algorithms, Data Structures, Artificial Intelligence</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+<!-- Second column of Developer menu item -->
+        <ul role="menu">
+          <li class="dropdown-title">
+            <span class="dropdown-link-title">Hot Topics</span>
+          </li>
+<!-- menu item for html -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        HTML
+            </a>
+          </li>
+<!--menu item for css  -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/css.html">
+                    <span class="material-symbols-outlined">css</span>
+                                CSS
+            </a>
+          </li>
+<!-- menu item for javascript -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/javascript.html">
+             <span class="material-symbols-outlined">javascript</span>
+              Javascript
+            </a>
+          </li>
+<!-- menu item for git github -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/gitandgithub.html">
+              <span class="material-symbols-outlined">source_notes</span>
+              GitHub
+            </a>
+          </li>
+<!-- menu item for vscode -->
+          <li role="menuitem">
+            <a class="dropdown-link" href="../html/vscode.html">
+              <span class="material-symbols-outlined">developer_mode</span>
+              VS Code
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+<!--End of developer mega menu drop down  -->
 
-                </button>
-                <div id="dropdown1" class="dropdown">
+<!-- Header element for designer mega menu  -->
+<!--First element header for designer mega menu  -->
+    <ul class="menu-bar">
+        <li>
+          <button class="nav-link dropdown-btn"
+                        data-dropdown="dropdown2"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-label="browse"
+          >
+            Designer <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for designer -->
+                <div id="dropdown2" class="dropdown">
                   <ul role="menu">
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Designer Subjects</span>
+                    </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/frontend.html">
-                        <span class="material-symbols-outlined">
-                                      important_devices
-                                      </span>
-                        
+                        <span class="material-symbols-outlined">important_devices</span>
                         <div>
-                           <span class="dropdown-link-title">Frontend Development</span>
+                           <span class="dropdown-link-title">Design Styles</span>
                             
-                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
+                          <p class="dropdown-link-p">Color, size, latout</p>
                         </div>
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/backend.html">
-                        <span class="material-symbols-outlined">
-                                      background_grid_small
-                                      </span>
+                        <span class="material-symbols-outlined">background_grid_small</span>
                         <div>
-                          <span class="dropdown-link-title"
-                            >Backend Development</span
-                          >
-                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
+                          <span class="dropdown-link-title">
+                            Branding</span>
+                          <p class="dropdown-link-p">Message, Audiance, Channel</p>
                         </div>
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/tools.html">
-                        <span class="material-symbols-outlined">
-                                      tools_power_drill
-                                      </span>
+                        <span class="material-symbols-outlined">tools_power_drill</span>
                         <div>
-                          <span class="dropdown-link-title">Development Tools</span>
-                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
+                          <span class="dropdown-link-title">SEO</span>
+                          <p class="dropdown-link-p">Intrinsic, Google, Facebook, X, TicTok, Socials </p>
                         </div>
                       </a>
                     </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
-                       <span class="material-symbols-outlined">
-                                      design_services
-                                      </span>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
                         <div>
-                          <span class="dropdown-link-title">Design Style</span>
-                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
+                          <span class="dropdown-link-title">Coumputer Science</span>
+                          <p class="dropdown-link-p">Analytics</p>
                         </div>
                       </a>
                     </li>
+                    
                   </ul>
-
+<!-- Second column of menu items for designer -->
                   <ul role="menu">
                     <li class="dropdown-title">
-                      <span class="dropdown-link-title">Browse by technology</span>
+                      <span class="dropdown-link-title">Hot Topics</span>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/html.html">
-             <span class="material-symbols-outlined">
-                            html
-                            </span>
-                        HTML
+                        <span class="material-symbols-outlined">html</span>
+                                    Yoast
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/css.html">
-                              <span class="material-symbols-outlined">
-                              css
-                              </span>
-                        CSS
+                              <span class="material-symbols-outlined">css</span>
+                                          Target Market
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/javascript.html">
-                       <span class="material-symbols-outlined">
-                                      javascript
-                                      </span>
-                        Javascript
+                       <span class="material-symbols-outlined">javascript</span>
+                                   Javascript
                       </a>
                     </li>
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/gitandgithub.html">
-                        <span class="material-symbols-outlined">
-                                      source_notes
-                                      </span>
-                        Git and HitHub
+                        <span class="material-symbols-outlined">source_notes</span>
+                                    GitHub
                       </a>
                     </li>
+<!-- Keywords items -->
                     <li role="menuitem">
                       <a class="dropdown-link" href="../html/vscode.html">
-                        <span class="material-symbols-outlined">
-                                      developer_mode
-                                      </span>
-                        Visual Studio Code
+                        <span class="material-symbols-outlined">developer_mode</span>
+                                               Keywords
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown2"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="discover"
-                >
-                  Discover
-                  <span class="material-symbols-outlined">
-                            arrow_drop_down
-                            </span>
-                  <i class="bx" aria-hidden="true"></i>
-                </button>
-                <div id="dropdown2" class="dropdown">
+<!-- Mega Heading for Projects  -->
+    <ul class="menu-bar">
+        <li>
+          <button
+            class="nav-link dropdown-btn"
+            data-dropdown="dropdown3"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label="browse"
+          >
+            Projects <span class="material-symbols-outlined">arrow_drop_down</span>
+          </button>
+<!-- Navigation mega menu for projects -->
+                <div id="dropdown3" class="dropdown">
                   <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">
-                                      browse
-                                      </span>
-                      <span class="dropdown-link-title">Browse Categories</span>
+                         <li class="dropdown-title">
+                      <span class="dropdown-link-title">Projects</span>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    brand_family
-                                    </span>
-                      <a class="dropdown-link" href="#branding">Branding</a>
+                      <a class="dropdown-link" href="../html/frontend.html">
+                        <span class="material-symbols-outlined">important_devices</span>
+                        <div>
+                           <span class="dropdown-link-title">CSS/HTML Focused Projects</span>
+                            
+                          <p class="dropdown-link-p">Navigation, Layout Grid and Flex, </p>
+                        </div>
+                      </a>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    regular_expression
-                                    </span>
-                      <a class="dropdown-link" href="#illustrations"
-                        >Algorithms</a
-                      >
+                      <a class="dropdown-link" href="../html/backend.html">
+                        <span class="material-symbols-outlined">background_grid_small</span>
+                        <div>
+                          <span class="dropdown-link-title">Javascript Projects</span>
+                          <p class="dropdown-link-p">Document, </p>
+                        </div>
+                      </a>
                     </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">tools_power_drill</span>
+                        <div>
+                          <span class="dropdown-link-title">Data Projects</span>
+                          <p class="dropdown-link-p">Stocks database, </p>
+                        </div>
+                      </a>
+                    </li>
+                      <li role="menuitem">
+                      <a class="dropdown-link" href="../html/tools.html">
+                        <span class="material-symbols-outlined">computer</span>
+                            
+                        <div>
+                          <span class="dropdown-link-title">Artificial Intelligence Projects</span>
+                          <p class="dropdown-link-p">DDS800 Syft Recruiting, DDS100 Acacia Stock Picker, DDS400 Portfolio Tuner</p>
+                        </div>
+                      </a>
+                    </li>
+                    
                   </ul>
+<!-- Second column of menu items for designer -->
                   <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">
-                                    download_for_offline
-                                    </span>
-                      <span class="dropdown-link-title">Download</span>
+                    <li class="dropdown-title">
+                      <span class="dropdown-link-title">Hot Projects</span>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    contact_page
-                                    </span>
-                      <a class="dropdown-link" href="#mac-windows"
-                        >J.R.Cooling Profile</a
-                      >
+                      <a class="dropdown-link" href="../html/html.html">
+             <span class="material-symbols-outlined">html</span>
+                        Stock price range
+                      </a>
                     </li>
                     <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    finance_chip
-                                    </span>
-                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
+                      <a class="dropdown-link" href="../html/css.html">
+                              <span class="material-symbols-outlined">css</span>
+                              Audio Books Collection
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/javascript.html">
+                          <span class="material-symbols-outlined">javascript</span>
+                          Walker for Fun
+                      </a>
+                    </li>
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/gitandgithub.html">
+                        <span class="material-symbols-outlined">source_notes</span>
+                        RPG
+                      </a>
+                    </li>
+<!-- Keywords items -->
+                    <li role="menuitem">
+                      <a class="dropdown-link" href="../html/vscode.html">
+                        <span class="material-symbols-outlined">developer_mode</span>
+                        Keywords
+                      </a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
-              <li><a class="nav-link" href="../html/press.html">Press</a></li>
-              <li><a class="nav-link" href="../html/profile.html">About</a></li>
-            </ul>
-          </nav>
-        </div>
 
-      
-        <div><a href="../html/home.html"><i class="material-symbols-outlined">home</i> </a>
-        </div>
+<!-- One click menu items -->
+      <li><a class="nav-link" href="../html/press.html">Press</a></li>
+      <l class="nav-link" href="../html/profile.html">About</a></li>
+    </ul>
+  </nav>
+
 <!-- The nav end group  -->
-        <div class="nav-end">
-          <div class="right-container">
-            <form class="search" role="search">
-              <input type="search" name="search" placeholder="Search.." />
-              <p class="search-icon"><i  class="material-symbols-outlined">
-                                                search  </i>
-             </p>
-            </form>
-
-            <a href="#profile">
-              <img
-                src="../images/service-3.jpg"
-                width="35"
-                height="35"
-                alt="user image"
-              />
-            </a>
-            <button class="btn btn-primary">Login</button>
-          </div>
-<!-- Hamburger Button, hidden on gigger screen size -->
-          <button
-            id="hamburger"
-            aria-label="hamburger"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-          <i class="material-symbols-outlined" aria-hidden="true">
-                  menu
-            </i>
-          </button>
+      <nav class="nav-end">
+        <div class="right-container">
+                <!-- <form class="search" role="search"> -->
+                  <!-- <input type="search" name="search" placeholder="Search.." /> -->
+                  <!-- <p class="search-icon"><i  class="material-symbols-outlined"> -->
+                                                    <!-- search  </i> -->
+                 <!-- </p> -->
+                <!-- </form> -->
+              
+        <div><a href="../html/home.html">
+            <i class="material-symbols-outlined">labs</i></a>
         </div>
+<!    -- Hamburger Button, hidden on gigger screen size -->
+        <button
+                id="hamburger"
+                aria-label="hamburger"
+                aria-haspopup="true"
+                aria-expanded="false"
+          >
+              <i class="material-symbols-outlined" aria-hidden="true">menu</i>
+        </button>
       </div>
- 
-        <h1>J.R. Cooling, Software Developer</h1>
-</header>
-
+    </nav>
+</div>
+<!-- On page navigation menu -->
 <nav>
-    <!-- On page navigation menu -->
         <ul>
+            <li class="active"><a href="../html/frontend.html">Frontend</a></li>
             <li><a href="../html/html.html">HTML</a></li>
             <li><a href="../html/css.html">CSS</a></li>
-            <li><a href="../html/javascript.html">JavaScript</a></li>
+            <li><a href="../html/javascript.html">Javascript</a></li>
         </ul>
 </nav>
-<!-- Start of two column display with left and right rows keeping in step-->
-<div class="container">
+
+<main> 
+ 
+<div class="grid-container">
     <header>
-    <h1 >Project Creative - Frontend Reference Project</h1>
+    <h1 >Frontend Development </h1>
     </header>
-    <aside> 
-    <h2>Frontend References</h2>
-        <!-- Reference links for HTML and CSS  -->
-        <article> 
-        <h3 id="htmlcss" class="aside_head ">External References </h3>
-        <ul>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML - Structuring the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">HTML - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/html">HTML Sample Code (GitHub)</a>
-            </li>
-             <li>
-                <a href="https://html.spec.whatwg.org/"> WHATWG HTML Living Standard</a>
-            </li>
-            <li>
-            <a href="https://codeguide.co/#html">Mark Otto Code Guide for HTML and CSS</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.html">CSS3 - awesome-cheatsheets (GitHub)</a>
-            </li>
-            <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Javascript - Dynamic client-side scripting (mdn)</a>
-            </li>
-            <li>
-                <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
-            </li>
-           
+   
+
+<div class="reference-grid">
+<article class="reference grid-col-span-2 flow sw-bg-101 quote  ">
+  <div class="flex"> 
+    <div>
+        <img src="../images/service-3.jpg"alt="user image"/>
+    </div>  
+  </div>
+
+  <div>
+    <h2 class="name sw-hdr-101">HTML</h2>
+    <p class="position sw-sub-101">Setout basic content framework</p>
+  </div>
+
+  <h3 id="htmlref" class="sw-sub-101">HTML5</h3>
+        <ul class="sw-txt-101">
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc..</li>
         </ul>
-        </article>
-        <!-- Reference Links for Javascript -->
-         <article> 
-        <h3 id="jsref" class="aside_head ">  Internal References </h3>
+    
+</article>
+
+ <!--CSS card 2  -->
+<article class="reference flow sw-bg-102 quote  ">
+  <div class="flex"> 
+    <div>
+        <img src="../images/service-3.jpg"alt="user image"/>
+    </div>  
+  </div>
+    <div>
+    <h2 class="name sw-hdr-102">CSS</h2>
+    <p class="position sw-sub-102">Create the layout and style</p>
+    </div>    
+      <h3 id="htmlref" class="sw-sub-102">CSS3</h3>
+
+      <p class="sw-txt-102">CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+       
+    </article>
+
+<!-- Javascript card 3  -->
+    <article class="reference flow sw-bg-103 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+        </div>
+        <div>
+          <h2 class="name sw-hdr-103">Javascript</h2>
+          <p class="position sw-sub-103">Add dynamic features to the site</p>
+        </div>
+          <p class="sw-txt-103">Javascript is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.</p>
+          <div>
+          <h2 class="name sw-hdr-104">JS Platforms </h2>
+          <p class="position sw-sub-104">Frameworks and Libraries</p>
+      </div>
+            <ul>
+                <li>
+                    <a href="https://react.dev/">React </a>
+                </li>
+                <li>
+                    <a href="https://jquery.com/">jQuery</a>
+                </li>
+                <li>
+                    <a href="https://flutter.dev/">Chart.js</a>
+                </li>
+                <li>
+                    <a href="https://d3js.org/">D3.js</a>
+                </li>
+                <li>
+                    <a href="https://underscorejs.org/">Underscore.js</a>
+                </li>
+                 <li>
+                    <a href="https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview">Polymer</a>
+                </li>
+            </ul>
+    </article>
+
+ 
+     
+<!-- Reference links for HTML and CSS card 4 -->
+    <article class="reference flow sw-bg-104 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+      </div>
+      <div>
+          <h2 class="name sw-hdr-104">Frontend External Reference Sites</h2>
+          <p class="position sw-sub-104">Top referernce site for fronend development</p>
+      </div>
+
+      <ul>
+          <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML - Structuring the web site (mdn)</a>
+          </li>
+          <li>
+              <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html">HTML - awesome-cheatsheets (GitHub)</a>
+          </li>
+          <li>
+              <a href="https://github.com/mdn/learning-area/tree/main/html">HTML Sample Code (GitHub)</a>
+          </li>
+           <li>
+              <a href="https://html.spec.whatwg.org/"> WHATWG HTML Living Standard</a>
+          </li>
+          <li>
+          <a href="https://codeguide.co/#html">Mark Otto Code Guide for HTML and CSS</a>
+          </li>
+          <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS - Styling the web site (mdn)</a>
+          </li>
+          <li>
+              <a href="https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/css3.html">CSS3 - awesome-cheatsheets (GitHub)</a>
+          </li>
+          <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Javascript - Dynamic client-side scripting (mdn)</a>
+          </li>
+          <li>
+              <a href="https://github.com/mdn/learning-area/tree/main/css">CSS Sample Code (GitHub)</a>
+          </li>
+      </ul>
+
+     <div>
+          <h2 class="name sw-hdr-104">Google </h2>
+          <p class="position sw-sub-104">Google developer links</p>
+      </div>
+            <ul>
+                <li>
+                    <a href="https://developers.google.com/">Google Developer </a>
+                </li>
+                <li>
+                    <a href="https://developer.android.com/jetpack">Android Jetpack</a>
+                </li>
+                <li>
+                    <a href="https://flutter.dev/">Flutter</a>
+                </li>
+            </ul>
+    </article>
+
+ 
+ <!-- onsite links for HTML and CSS card 5 -->
+    <article class="reference flow sw-bg-105 quote">
+      <div class="flex"> 
+        <div>
+          <img src="../images/service-3.jpg"alt="user image"/>
+        </div>
+      </div>
+      <div>
+          <h2 class="name sw-hdr-105">Onsite Internal Quick Links</h2>
+          <p class="position sw-sub-105">Fast jump to just the infor you want to know</p>
+      </div>
+ 
+    
         <ul>
              <li>
                 <a href="#can_i_use">Can I Use</a>
@@ -337,50 +570,11 @@
         </article>
         <!-- Page links to CSS Concepts -->
         <article> 
-            <h3 id="tools" class="aside_head ">Google  </h3>
-            <ul>
-                <li>
-                    <a href="https://developers.google.com/">Google Developer </a>
-                </li>
-                <li>
-                    <a href="https://developer.android.com/jetpack">Android Jetpack</a>
-                </li>
-                <li>
-                    <a href="https://flutter.dev/">Flutter</a>
-                </li>
-            </ul>
+            
         </article>
         <!-- Page links to CSS sample code -->
-         
-</aside>
-<main>
-   
-    <article> 
-        <h3 id="htmlref" class="article_head">HTML5</h3>
-        <ul>
-            <li>HTML stands for Hyper Text Markup Language</li>
-            <li>HTML is the standard markup language for creating Web pages</li>
-            <li>HTML describes the structure of a Web page</li>
-            <li>HTML consists of a series of elements</li>
-            <li>HTML elements tell the browser how to display the content</li>
-            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc..</li>
-        </ul>
-    </article>
-
-    <article> 
-            <h3 id="cssref" class="article_head">CSS3</h3>
-            <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
-    </article>
-
-    <article> 
-            <h3 id="jsref" class="article_head">Javascript</h3>
-            <p>Javascript is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.</p>
-    </article>
-
-  
-<!--End of container class on main-->
-     
-
+           </div>
+ 
     </div> 
 </main>
 
