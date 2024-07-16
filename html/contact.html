@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Add font awesome icon library includes some trademarks-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
      <!-- Add Google Icons libray item -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <!-- Load Source Code Pro font -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<!-- Load Roboto font for basic font for this site -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
 
     <!-- Reset browsers style back to clear -->
     <link rel="stylesheet" media="all" href="../css/reset.css">
@@ -18,230 +20,228 @@
     <link rel="stylesheet" media="all" href="../css/tables.css">
      <!-- Standard styling rule set for tables maintained in its own file -->
     <link rel="stylesheet" media="all" href="../css/forms.css">
-    <!-- From Freecodecamp Responsive dropdown menu-->
-    <link rel="stylesheet" media="all" href="../css/dropnav.css">
+     
      <!-- Syft styling added last  -->
     <link rel="stylesheet"  media="all" href="../css/syft_style_1.css">
     <title>J.R.Cooling</title>
   </head>
   <body>
-    <header id="nav-menu" aria-label="navigation bar">
-      <div class="nav_container">
-<!-- Nav Strat Div -->
-        <div class="nav-start">
-          <a class="logo" href="../html/index.html">
-            <img
-              src="../images/Icon_65x65px.png"
-              width="35"
-              height="35"
-              alt="Inc Logo"
-            />
-          </a>
-          <nav class="menu">
-            <ul class="menu-bar">
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown1"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="browse"
-                >
-                  References <span class="material-symbols-outlined">arrow_drop_down</span>
+  <!--========== Company LOGO Brand Header ======-->
+   <header class="header">
+      <nav class="nav nav-container">
+         <div class="nav__data">
+            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
 
-                </button>
-                <div id="dropdown1" class="dropdown">
-                  <ul role="menu">
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/frontend.html">
-                        <span class="material-symbols-outlined">important_devices</span>
-                        <div>
-                           <span class="dropdown-link-title">Frontend Development</span>
-                          <p class="dropdown-link-p">References for HTML, CSS and Javascript</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/backend.html">
-                        <span class="material-symbols-outlined">
-                                      background_grid_small
-                                      </span>
-                        <div>
-                          <span class="dropdown-link-title"
-                            >Backend Development</span
-                          >
-                          <p class="dropdown-link-p">References for Node, SQL, Linus, Security, API, Python</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/tools.html">
-                        <span class="material-symbols-outlined">
-                                      tools_power_drill
-                                      </span>
-                        <div>
-                          <span class="dropdown-link-title">Development Tools</span>
-                          <p class="dropdown-link-p">Reference for Git and GitHub, VSCode, Google Developer, Terminal</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/syft_style_guide-01.html">
-                       <span class="material-symbols-outlined">
-                                      design_services
-                                      </span>
-                        <div>
-                          <span class="dropdown-link-title">Design Style</span>
-                          <p class="dropdown-link-p">See trending creations, Syft and Smartworker</p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
+<!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+            <li><a href="../html/index.html" class="nav__link">Home</a></li>
+            <li><a href="../html/about.html" class="nav__link">About</a></li>  
+          
+<!--=============== DROPDOWN 1 Frontend ===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Frontend <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                        <a href="../html/frontend.html" class="dropdown__link">
+                        <i class="ri-pie-chart-line"></i>Overview</a>                          
+                  </li>
+                  <li>
+                        <a href="../html/html.html" class="dropdown__link">
+                        <i class="ri-html5-line"></i>HTML
+                     </a>
+                  </li>
+          
+<!--=============== DROPDOWN SUBMENU CSS===============-->
+                  <li class="dropdown__subitem">
+                     <div class="dropdown__link">
+                        <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
+                     </div>
+                     <ul class="dropdown__submenu">
+                        <li>
+                           <a href="../html/css_selectors.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Selectors
+                           </a>
+                        </li>
+                        <li>
+                           <a href="../html/responsive_design.html" class="dropdown__sublink">
+                              <i class="ri-cash-line"></i> Responsive Design
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-palette-line"></i>Color
+                           </a>
+                        </li>
+                           <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-refund-2-line"></i> Typography
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
 
-                  <ul role="menu">
-                    <li class="dropdown-title">
-                      <span class="dropdown-link-title">Browse by technology</span>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/html.html">
-             <span class="material-symbols-outlined">
-                            html
-                            </span>
-                        HTML
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/css.html">
-                              <span class="material-symbols-outlined">
-                              css
-                              </span>
-                        CSS
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/javascript.html">
-                       <span class="material-symbols-outlined">
-                                      javascript
-                                      </span>
-                        Javascript
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/gitandgithub.html">
-                        <span class="material-symbols-outlined">
-                                      source_notes
-                                      </span>
-                        Git and HitHub
-                      </a>
-                    </li>
-                    <li role="menuitem">
-                      <a class="dropdown-link" href="../html/vscode.html">
-                        <span class="material-symbols-outlined">
-                                      developer_mode
-                                      </span>
-                        Visual Studio Code
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <button
-                  class="nav-link dropdown-btn"
-                  data-dropdown="dropdown2"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  aria-label="discover"
-                >
-                  Discover
-                  <span class="material-symbols-outlined">
-                            arrow_drop_down
-                            </span>
-                  <i class="bx" aria-hidden="true"></i>
-                </button>
-                <div id="dropdown2" class="dropdown">
-                  <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">browse</span>
-                      <span class="dropdown-link-title">Browse Categories</span>
-                    </li>
-                    <li role="menuitem">
-                      <span class="material-symbols-outlined">brand_family</span>
-                      <a class="dropdown-link" href="#branding">Branding</a>
-                    </li>
-                    <li role="menuitem">
-                      <span class="material-symbols-outlined">regular_expression</span>
-                      <a class="dropdown-link" href="#illustrations"
-                        >Algorithms</a
-                      >
-                    </li>
-                  </ul>
-                  <ul role="menu">
-                    <li>
-                      <span class="material-symbols-outlined">download_for_offline</span>
-                      <span class="dropdown-link-title">Download</span>
-                    </li>
-                    <li role="menuitem">
-                      <span class="material-symbols-outlined">contact_page</span>
-                      <a class="dropdown-link" href="#mac-windows"
-                        >J.R.Cooling Profile</a
-                      >
-                    </li>
-                    <li role="menuitem">
-                      <span class="material-symbols-outlined">
-                                    finance_chip
-                                    </span>
-                      <a class="dropdown-link" href="#linux">Share Investment Algorithm</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li><a class="nav-link" href="../html/projects.html">Projects</a></li>
-              <li><a class="nav-link" href="../html/press.html">Press</a></li>
-              <li><a class="nav-link" href="../html/profile.html">About</a></li>
-            </ul>
-          </nav>
-        </div>
+<!--=============== DROPDOWN SUBMENU Javascript===============-->
+                  <li class="dropdown__subitem">
+                     <div class="dropdown__link">
+                        <i class="ri-javascript-line"></i>Javascript <i class="ri-add-line dropdown__add"></i>
+                     </div>
+                     <ul class="dropdown__submenu">
+                        <li>
+                           <a href="../html/javascript.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-cash-line"></i>Statements
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-refund-2-line"></i> Objects
+                           </a>
+                        </li>
+                           <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-refund-2-line"></i> Arrays
+                           </a>
+                        </li>
+                       <li>
+                           <a href="#" class="dropdown__sublink">
+                            <i class="ri-function-line"></i> Functions
+                           </a>
+                        </li>
+                         <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-spy-fill"></i>Classes
+                           </a>
+                        </li>
+                          <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-spy-line"></i> Modules
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+<!--=============== Social Medial Posts and press releases ===============-->           
+            <li><a href="#" class="nav__link">Posts</a></li>
 
-     
-        <div><a href="../html/home.html"><i class="material-symbols-outlined">home</i> </a>
-        </div>
-<!-- The nav end group  -->
-        <div class="nav-end">
-          <div class="right-container">
-            <form class="search" role="search">
-              <input type="search" name="search" placeholder="Search.." />
-              <p class="search-icon"><i  class="material-symbols-outlined">
-                                                search  </i>
-             </p>
-            </form>
-
-            <a href="#profile">
-              <img
-                src="../images/service-3.jpg"
-                width="35"
-                height="35"
-                alt="user image"
-              />
-            </a>
-            <button class="btn btn-primary">Login</button>
-          </div>
-<!-- Hamburger Button, hidden on gigger screen size -->
-          <button
-            id="hamburger"
-            aria-label="hamburger"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-          <i class="material-symbols-outlined" aria-hidden="true">
-                  menu
-            </i>
-          </button>
-        </div>
-      </div>
- 
-        <h1>J.R. Cooling, Software Developer</h1>
-</header>
+<!--=============== DROPDOWN 2 Backend ===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Backend <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/backend.html" class="dropdown__link">
+                        <i class="ri-pie-chart-line"></i> Overview
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-arrow-up-down-line"></i> Node
+                     </a>
+                  </li>
+          
+<!--=============== DROPDOWN SUBMENU ===============-->
+                  <li class="dropdown__subitem">
+                     <div class="dropdown__link">
+                     <i class="ri-database-2-line"></i>SQL <i class="ri-add-line dropdown__add"></i>
+                     </div>
+                     <ul class="dropdown__submenu">
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-database-2-line"></i> Fundamentals
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-pie-chart-line"></i>MySQL
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="ri-bubble-chart-line"></i>MongoDB
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+<!--=============== DROPDOWN 3 UI/UX Design===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  UI/UX Design <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-brush-line"></i> Style
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-file-text-line"></i> Content
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-user-heart-line"></i>User Interface
+                     </a>
+                  </li>
+               </ul>
+            </li>
+  <!--============= DROPDOWN 4 Tools===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Tools <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/vscode.html" class="dropdown__link">
+                      <i class="ri-terminal-window-line"></i> VS Code
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-github-line"></i> Git and GitHub
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-chrome-line"></i> Browser Developer Tools
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-terminal-box-line"></i> Terminal ann iTerm
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>MacOS and Linux
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <li>
+                <a href="../html/projects.html" class="nav__link">Projects</a></li> 
+         </ul>
+         </div>
+      </nav>
+   </header>
+ <!--End of header nav menu -->
 
 <div class="container">
   <header><h1>Contact Forms</h1></header>
@@ -379,7 +379,8 @@
 
 </footer>
  
-   <script src="../script/dropnav.js"></script>
+  <!--=============== MAIN JS ===============-->
+      <script src="../script/nav_responsive.js"></script> 
 </div>
 </body>
 </html>

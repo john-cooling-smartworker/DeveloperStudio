@@ -1,34 +1,32 @@
-/*
-  Rule set for Syft system style number 1 ~ syft_style_1.css .
-*/
 
 /*
-Uses seperate files for theme, tables, forms, reset
+Uses seperate files for theme, tables, forms, reset, dropnav
 */
 
 /* Default setting for universal selector   */
-*{
-  text-decoration: none;
+*, *::before, *::after {
   box-sizing: border-box;
-
-   }
+  text-decoration: none;
+}
 
 /* Default styling ruleset for standard type selector HTML elements */
 html {
-  font-family: var(--font);
-  line-height: 1.5;
+  width: 1440px;
   font-size: 16px;
+  font-family: var(--font);
   color: var(--text-color);
   background-color: var(--background-color);
   accent-color: var(--primary);
+
   /* Outer to inner is margin - border - padding */
-  margin: 4px 4px 4px 4px;
   border: var(--border);
   padding: 2px;
 
 }
 
 body {
+margin: 0;
+font-size: var(--normal-font-size);
 
   display: grid;
   place-content: center;
@@ -36,8 +34,9 @@ body {
   font-weight: var(--fw-400);
   color: var(--body-color);
   background-color: hsl(var(--clr-neutral-200));
-  line-height: 1.5;
   text-rendering: auto;
+
+  background-color: var(--body-color);
 }
 
 
@@ -54,18 +53,17 @@ body {
 
 /* rules set for H1, One per page */
 h1 {
-  display: inline-flexbox;
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
+font-size: 3rem;
+font-weight: 900;
+text-align: center;
 }
 
 h2 {
   font-size: 2.5rem;
-  text-align: left;
-  padding-top: 0rem;
-  margin-top: 0rem;
-  border-top: 0.25rem solid;
+  text-align: center;
+  margin: 0 auto;
+  /* border-top: 0.25rem solid var(--blue-nile); */
+  width: 80%;
 }
 
 h3 {
@@ -89,9 +87,6 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
 
 p {
   color: var(--text-color);
-  display: block;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   line-height: 1.5;
 }
 
@@ -105,13 +100,32 @@ button {
   background-color: transparent;
 }
 
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
 /*rule set for links. Seperate rules required for nav links and main links */
-a {
+
+
+
+body a {
   color: var(--link-color);
   cursor: grab;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.3rem;
 }
+
 
 a:link, a:visited{
   color: var(--link-color);
@@ -127,17 +141,322 @@ a:hover, a:focus{
   background-color: var(--red-gray);
   color:var(--white);
 }
-/* Add icon  */
-a[href^="http"] {
-  background: url("external-link-52.png") no-repeat 100% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+
+/* nav link style needs to come after general a link style to be more specific */
+ nav  a{
+  color: white;
 }
 
+nav > a:link, a:visited{
+  color: white;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.nav-container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+} 
+
+/*=============== HEADER for Nav Menu ===============*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-color);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
+  z-index: var(--z-fixed);
+}
 ul {
   list-style: none ;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+
+ 
+
+
+
+
+
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+}
+ 
+
+.nav__logo,
+.nav__burger,
+.nav__close {
+  color: var(--white-color);
 }
 
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-sub__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  font-weight: var(--font-semi-bold);
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+.nav__logo i {
+  font-weight: initial;
+  font-size: 1.25rem;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger,
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+  }
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+  .nav__list {
+    background-color: var(--black-color);
+    padding-top: 1rem;
+  }
+ 
+  .nav-sub__menu::-webkit-scrollbar {
+    width: 0;
+  }
+ 
+}
+
+.nav__link {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+ 
+ 
+
+.nav__link:hover {
+  background-color: var(--black-color-light);
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+
+.dropdown__arrow {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform 0.4s;
+}
+
+.dropdown__link,
+.dropdown__sublink {
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: var(--white-color);
+  background-color: var(--black-color-light);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color 0.3s;
+}
+
+.dropdown__link i,
+.dropdown__sublink i {
+  font-size: 1.25rem;
+  font-weight: initial;
+}
+
+.dropdown__link:hover,
+.dropdown__sublink:hover {
+  background-color: var(--black-color);
+}
+
+.dropdown__menu,
+.dropdown__submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+/* Show dropdown menu & submenu */
+.dropdown__item:hover .dropdown__menu,
+.dropdown__subitem:hover > .dropdown__submenu {
+  max-height: 1000px;
+  transition: max-height 0.4s ease-in;
+}
+
+/* Rotate dropdown icon */
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add {
+  margin-left: auto;
+}
+
+.dropdown__sublink {
+  background-color: var(--black-color-lighten);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .nav-container {
+    margin-inline: 1rem;
+  }
+
+  .nav__link {
+    padding-inline: 1rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .nav-container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: 0.25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item,
+  .dropdown__subitem {
+    position: relative;
+  }
+
+  .dropdown__menu,
+  .dropdown__submenu {
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, top 0.3s;
+  }
+
+  .dropdown__link,
+  .dropdown__sublink {
+    padding-inline: 1rem 3.5rem;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  .dropdown__submenu {
+    position: absolute;
+    left: 100%;
+    top: 0.5rem;
+  }
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top 0.3s;
+  }
+
+  /* Show dropdown submenu */
+  .dropdown__subitem:hover > .dropdown__submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top 0.3s;
+  }
+}
+/* End of nav menu responsive */
 ul li {
   list-style-position: inside;
   list-style-type: none;
@@ -159,15 +478,88 @@ ol {
   flex-wrap: wrap;
   gap: var(--gap);
   list-style: none;
-  
+  justify-content: center;
+
 }
 .tag {
   background-color: var(--red-gray);
   color: var(--text-color);
   border: var(--border);
-  border-radius: 10px;
+  border-radius: 1.5rem;
   padding: 0.5rem 1rem;
 }
+/* responsive design layout from kevin poweell used on responsive design page */
+/* 
+////// For this challenge ///////
+
+- You will have to modify the HTML
+
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created,
+   so you'll have to add it back in
+
+   */
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    gap: 50px;
+
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+ .colb {
+    background-color: hsl(var(--sw-bg-100));
+ }
+.hero {
+    padding: 100px 0;
+    background-color: var(--sw-bg-103);
+    color: #FFF;
+}
+
+.hero__text {
+    width: 60%;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: var(--light-red);
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
 
 
 /* first grid container used on index.html format container full width header section, one column aside and four column main */
@@ -175,7 +567,7 @@ ol {
   display: grid;
   gap: var(--gap);
   grid-template-columns: 2fr 1fr;
-   grid-template-columns: repeat(autofit, minmax(300px, 1fr)) 
+   grid-template-columns: repeat(autofit, minmax(300px, 1fr))
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header"
@@ -212,8 +604,8 @@ aside {
 main {
   grid-area: main;
 }
-/* Rule Set for Article containers 
- article { 
+/* Rule Set for Article containers
+ article {
   display: grid;
   gap: var(--gap);
   grid-template-columns: repeat(auto-fit, minmax(300px, 100%), 1fr);
@@ -223,13 +615,31 @@ main {
   margin: 15px auto;
   border: var(--border);
   border-radius: 10px;
-} */
+/* } */ 
 
+/*=============== Footer for a utility Nav Menu ===============*/
+footer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-color);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
+  z-index: var(--z-fixed);
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 3fr);
+  background-color: var(--florentine);
+  border: var(--border);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px auto auto 5px;
+}
 /* Ruleset for article header */
 .article_head {
   background-color: var(--blackcut);
   color: var(--lightest-gray);
   border-radius: .8rem;
+  margin: 0 auto;
 }
 
 /* Rule set for an aside article header */
@@ -245,7 +655,7 @@ hr {
   color: #333;
   overflow: visible;
   text-align: center;
-  height: 5px;
+  height: 0.3rem;
 }
 
 hr::after {
@@ -256,15 +666,6 @@ hr::after {
   top: -13px;
 }
 
-.font-panel {
-  display: inline-block;
-  width: 45%;
-}
-
-.font-label {
-  font-size: 20px;
-  text-decoration: underline;
-}
 
 .inline_list {
   display: inline-block;
@@ -281,14 +682,14 @@ hr::after {
 /* <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 200 to 900*/
 .code {
-  font-family: "Source Code Pro" monospace;
+  font-family: "Roboto Mono";
   background-color: var(--code-background-color);
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
 }
 
 .lastdate {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Roboto Mono";
   font-style: italic;
 }
 /* color swatchs used on color card for style sheets */
@@ -347,28 +748,11 @@ hr::after {
   border-radius: .8rem;
 }
 
-/* Rule set for button style for flat style buttons xxxxjc need to change colors */
-.flat {
-  background-color: var(--silver);
-  color: var(--textcolor);
-  border: var(--border);
-  border-radius: .8rem;
-}
-
-.flat:hover {
-  background-color: #782b90;
-  transition: background-color .15s, font-size .15s;
-  font-size: 18px;
-}
-
-.flat:active {
-  border-color: #fff;
-}
 
 
 .title {
   color: grey;
-  font-size: 18px;
+ ;
 }
 /*
 button {
@@ -388,12 +772,6 @@ button {
 /* code for grids lesson from KEvin Pwell  */
 
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 
 
@@ -413,6 +791,7 @@ html:focus-within {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  color: var(--link-color);
 }
 
 /* Make images easier to work with */
@@ -557,7 +936,7 @@ h3 {
   border: 2px solid #a775f1;
 }
 
-/* components */
+/* components for a reference page grid*/
 .reference-grid {
   display: grid;
   gap: 1.5rem;
@@ -635,7 +1014,7 @@ h3 {
 
 
 .reference.quote {
-  background-image: url("./images/bg-pattern-quotation.svg");
+
   background-repeat: no-repeat;
   background-position: top right 10%;
 }
@@ -670,3 +1049,37 @@ h3 {
 .reference > p:last-of-type {
   opacity: 0.7;
 } */
+ /* components for a content page grid */
+ .content-grid {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.content-col {
+  flex: 1;
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+  color: var(--text-color)
+}
+
+
+
+/* ============
+   === REMS ===
+   ============ */
+
+
+
+.container-col--rem {
+font-size: 1rem
+}
+
+.container-col--rem h1 {
+  font-size: 2.5rem;
+}
+
+.container-col--rem p {
+  font-size: 1rem;
+}
+

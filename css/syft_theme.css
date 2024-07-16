@@ -16,7 +16,7 @@
 
    
     --body-color: #212529;
-/* Card Color scheme for swiss style */
+/* Card Color scheme for swiss style cards */
 --sw-bg-100: 359.5 100% 25%;
 --sw-bg-101:var(--white-smoke);
 --sw-bg-102:var(--lightest-gray);
@@ -45,30 +45,19 @@
   --clr-neutral-200: 210 46% 95%;
   --clr-neutral-300: 0 0% 81%;
 
-  /*  font weights */
-  --fw-400: 500;
-  --fw-700: 600;
-
-/* font sizes */
-
-  --fs-300: 0.6875rem;
-  --fs-400: 0.8125rem;
-  --fs-500: 1.25rem;
-
 /* Light Mode Color Scheme using a Swiss Pallette red-black-white-blue*/
-
- 
     --background-color: var(--white);    
     --text-color: var(--black);
     --weak-text-color: var(--dark-gray);
+    --heading: var(--black);
+
     --link-color: var(--light-blue);
     --icon-color: var(--dark-blue);
     --hover-color: var(--dark-blue);
     --menu-background: var(--red-gray);
-    --heading: var(--black)
-/* xxxxjc thuse below still to be verified as needed and styled */
-    --inverted-background-color: var(--dark-gray);
-    --inverted-text-color: var(--white);
+
+ 
+
     --weak-border-color: var(--light-gray);
     --border-color: var(--dark-gray);
     --header-background-color: var(--light-blue);
@@ -90,7 +79,7 @@
     --dark-heading: var(--white)
 
 
-/* Syft colors*/
+/* Syft color scheme*/
     --silver:  #8ba0b7;
     --sapphire: #0072bc;
     --amethyst: #782b90;  
@@ -102,42 +91,67 @@
     --green: #a5c300;
     --blackcut: #000000;
 
-/* root variables for some basic styles */
-    --border: 1px solid var(--border-color);
-    --font: system-ui, "Segoe UI", Roboto,"Helvetica Neue",Arial,sans-serif; 
-    --font-heading: "pluto";
-    
-    --gap: 2rem;
-
-   
-
-
-  
-    --button-loader-primary: url("../images/loader-white.svg");
-    --button-loader-secondary: url("../images/loader-primary.svg");
+ 
 
     --flash-background-color: var(--light-blue);
     --flash-text-color: var(--white);
     --flash-alert-color: var(--light-red);
-/* Shadow style for dropdown nav */
-    --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-/* legacy shadow style */
-    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    --inset-box-shadow: 0 1px 3px rgba(0, 0, 0, .14) inset;
+ 
+ 
 
-    --dropdown-menu-background: var(--white);
+    
 
-    --header-height: 16rem;
-    --body-padding: 2rem;
-    --footer-height: 16rem;
-    --nav-width: 16rem;
-    --inverted-ic-logo: url("../images/ic-logo-white.svg");
-    --expand-image: url("../images/expand-black.svg");
-    --white-expand-image: url("../images/expand-white.svg");
 
-    --font: Montserrat, Helvetica, Arial, sans-serif;
-    --font-heading: "pluto";
+/* root variable for nav_responsive  */
+/*=============== VARIABLES CSS ===============*/
+ 
+  --header-height: 3.5rem;
+  --border: 1px solid var(--border-color);    
+  --gap: 2rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /* Private font files can be used for unique branding */
+@font-face {
+  font-family: "pluto";
+  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
+}
+@font-face {
+  font-family: "plutoBold";
+  font-weight: bold;
+  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
+}
+  /*.5rem = 8px | 1rem = 16px ...*/
+ --font-heading: "pluto";
+ --font: 'Roboto' , "Helvetica Neue" , Arial , sans-serif; 
+
+  /*altenative general font to roboto  */
+ /* --font: Montserrat, Helvetica, Arial, sans-serif; */
+ 
+
+  /*========== Font size ==========*/
+  --normal-font-size: 0.938rem;
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --fw-400: 500;
+  --fw-700: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -151,20 +165,14 @@
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
 
-        --inverted-background-color: var(--dark-red);
-
         --weak-border-color: var(--dark-gray);
         --border-color: var(--light-gray);
-     
-        --button-border-color: var(--white);
-
-        --button-loader-secondary: url("../images/loader-white.svg");
-
+ 
         --card-background-color: var(--darkest-gray);
         --dropdown-menu-background: var(--black);
         --toggle-background-off: var(--dark-gray);
 
-        --expand-image: url("../images/expand-white.svg");
+ 
     }
 }
 
@@ -175,16 +183,7 @@
     }
 }
 
-/* Private font files can be used for unique branding */
-@font-face {
-  font-family: "pluto";
-  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
-}
-@font-face {
-  font-family: "plutoBold";
-  font-weight: bold;
-  src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansBold.otf") format("openType");
-}
+
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
