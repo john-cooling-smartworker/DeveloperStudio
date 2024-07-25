@@ -25,11 +25,11 @@
     <title>About DeDeSt</title>
   </head>
   <body>
-  <!--========== Company LOGO Brand Header ======-->
+   <!--========== Company LOGO Brand Header ======-->
    <header class="header">
       <nav class="nav nav-container">
          <div class="nav__data">
-            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            <h4 class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</h4>
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -43,7 +43,7 @@
             <li><a href="../html/index.html" class="nav__link">Home</a></li>
             <li><a href="../html/about.html" class="nav__link">About</a></li>  
 <!--=============== Social Medial Posts and press releases ===============-->           
-            <li><a href="#" class="nav__link">Posts</a></li> 
+            <li><a href="#" class="nav__link">Posts</a></li>          
 <!--=============== DROPDOWN 1 Frontend ===============-->
             <li class="dropdown__item">
                <div class="nav__link">
@@ -62,10 +62,15 @@
           
 <!--=============== DROPDOWN SUBMENU CSS===============-->
                   <li class="dropdown__subitem">
-                     <div class="dropdown__link">
+                      <a href="../html/CSS.html" class="dropdown__link">
                         <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
-                     </div>
+                      </a>
                      <ul class="dropdown__submenu">
+                      <li>
+                           <a href="../html/css_fundamentals.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
                         <li>
                            <a href="../html/css_selectors.html" class="dropdown__sublink">
                               <i class="ri-file-list-line"></i> Selectors
@@ -234,7 +239,7 @@
                   </li>
                </ul>
             </li>
-            <!--============= DROPDOWN 5 Computer Science===============-->
+             <!--============= DROPDOWN 5 Computer Science===============-->
             <li class="dropdown__item">
                <div class="nav__link">
                   Comp. Sci. <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -265,44 +270,70 @@
                         <i class="ri-macbook-line"></i>Networks & Security
                      </a>
                   </li>
+                  <li>
+                     <a href="../html/periodic.html" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Periodic-Table
+                     </a>
+                  </li>
                </ul>
             </li>
+             
          </ul>
          </div>
       </nav>
    </header>
  <!--End of header nav menu -->
-    <!-- Using a grid layout of a main column and smaller aside column -->
+ <!--Hero style page header -->
 <div class="container">
-<!-- Page header -->
-  <header>
-    <h1>About DeDeStreet</h1>
-  </header>
+  <div class="hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1>About DeDeStreet</h1>
+                <p>History and background of DeDeSt and the people who behind the scenes.</p>
+                <p>The beginnings was with the creation of SYFT. This recruitment platform used the latest AI engine for HR and beautifully crafted graphics to enhance the UI/UX experience. </p>
+                <div class="hero__btn">
+                <a href="#" class="btn">I want to follow</a>
+                </div>
+            </div>
+            <div class="hero__img">
+              <img src="../images/Syft Platforms.jpg" alt="Syft Platforms logo of the first project completed"
+            </div>
+        </div>
+  </div>
+</div>
+ 
+
 <!-- Brief card view of profile -->
-  <aside>
-      <h3 class="aside_head ">Contact John Cooling</h3>
-      <article class="dev_card">
-                
-        <img src="../images/john_cooling_profile.jpg" alt="John"   width="256" height="384>
-        <h1>John Cooling</h1>
-        <p class="title">Software Developer</p>
+ <div class="container row">
+      <div class="col">
+          <h2 >Foundation SmartWorker</h2>
+         <h3>John Cooling</h3>
+             <div>       
+            <img src="../images/john_cooling_profile.jpg" alt="John"   />
+            </div>
+      </div>
+
+      <div class="col flex-center">
+    
+        <h3>Software Developer</h3>
         <p>University of Technology Sydney</p>
         <p>Queensland University Technology</p>
+     
         <!-- Social icons added  -->
-        <div style="float:inline-start">
         <a href="https://github.com/john-cooling-smartworker"><i class="fa fa-github"></i></a>
         <a href="https://twitter.com/johnrc"><i class="fa fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/johncooling/"><i class="fa fa-linkedin"></i></a>
         <a href="https://www.instagram.com/brigalowjohn/"><i class="fa fa-instagram"></i></a>
-        </div>
+       
+      </div>
+</div>
 
        <p> <a href="../html/contact.html">  Contact</a></p>
-
-      </article>
-    </aside>
+ 
+ 
     <main >
-        <h3 class="article_head">SmartWorker Team Lunch Celebrating a Great Year</h3>
-          <img src="../images/Slice 2.jpg" alt="Team Celebration Lunch" Title="Frontend devlopment technologies" width=512 height="384"/>
+        <h3  >SmartWorker Team Lunch Celebrating a Great Year</h3>
+          <img src="../images/Slice 2.jpg" alt="Team Celebration Lunch" Title="Frontend devlopment technologies" />
         <!-- first article-->
       <article>
          
@@ -310,32 +341,38 @@
             <article>
                <h3 class="aside_head">John Cooling Profile</h3>
                </article>
-               <article> 
+               <article class="container row"> 
                 <h4>In the Beginning</h4>
                 <p>Started programming in 1974. Yes, that's fifty years programming experince!</p>
                 <p> First coded banking applications using IBM Assempler. Writing the programs out long hand on coding sheets. Coding sheets turned into punch cards by enormous data preparation teams, over fifty people. Cards feed into a IBM 370 computer to assemble, link, and execute.</p>
-                <p>Errors were corrected by mentally assembling the code fix and manually hand puching it into a "link deck" for rerun. With this method you saved so much time, days, getting a rerun without having to reassemble the whole program.</p>
+                <p>Bugs were corrected by mentally assembling the code fix into machine code and manually hand puching it into a REM card for the "link deck" to rerun. With this method you saved so much time, days, getting a rerun without having to reassemble the whole program.</p>
             </article>
-             <article>
+             <article class="container row">
                 <h4>Software Developer</h4>
                 <p>Development of Banking applictions for Austratlias largest bank, Commbank.</p>
                 <p>Analyst programmer and project management of banking applications for one of Australias smallest banks, The Bank of Queensland</p>
                 <p>Analyst programmer of ERP applications for Australias largest software company, Mincom</p>
             </article>
-            <article>
+            <article class="container row">
                 <h4>Corporate Executive</h4>
                 <p>Director and Vice President of consulting and customer value for Mincom.</p>
                 <p>Created the fastest growing and most profitable consulting pactice in the company.</p>
                 <p>Customers were global and industries were mining, utility, transport and government enterprises.</p>
                 <p>These were great roles working with staff, customers and consultants to help people achive the best they could from a top tier ERP system.</p>
             </article>
-             <article>
+             <article class="container row">
+               <div class="col">
                 <h4>Business Owner</h4>
+                </div>
+                <div class="col"> 
                 <p>2006 launched SmartWorker, an IT consulting and contracting business in Australia.</p>
+                </div>
+                <div class="col"> 
                 <p>Customers ranged from small software houses to Australias largest mining companies.</p>
                 <p>Consultants are mainly Australian based. Mining companies introduced overseas porjects in New Cladonia, Kasicstan, Sierra Leone, Botswan to name a few of the more exotic ones.  </p>
+                </div> 
             </article>
-            <article>
+            <article class="container row">
                 <h4>Entrepreneur</h4>
                 <p>Buliding on the success of SmartWorker a disruptive software concept incorporationg AI and information visualisation was developed in 2014.  The Syft Platform was launced in 2015. Its an innovative recruitement application. Using AI technology to disassemble job requirements and candidate profiles. Using visualisation technology to present jobs and candidates in easy to compare formats. The app runs on the latest web site technology and is back ended by either Salesforce or Workday(next released).</p>
                 <p>Patent applied for the innovative use of AI and information visualisation in the talent matching and fulfilment process.</p>

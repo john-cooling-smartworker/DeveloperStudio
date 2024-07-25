@@ -1,22 +1,57 @@
 :root {
-/* Base color pallette */
-    --light-red: #C22727;
-    --dark-red: #990001;
-    --black: #131313;
-    --white: #fff;
-    --white-smoke: #f5f5f5;
-    --dark-blue: #062A77;
-    --light-blue: #0053AF;
-    --red-gray: #ded2cf;
-    --lightest-gray: #eeeeee;
-    --light-gray: #cccccc;
-    --mid-gray: #999999;
-    --dark-gray: #666666;
-    --darkest-gray: #333333;
+/* ========================================*/  
+/* =======Named colors for the scheme ==========*/
+/* =======================================*/   
+ --light-red: #C22727;
+--dark-red: hsl(360, 100%, 30%);
+--black: #131313;
+--white: #fff;
+--white-smoke: #f5f5f5;
+--dark-blue: #062A77;
+--light-blue: #0053AF;
+--red-gray: #ded2cf;
+--lightest-gray: #eeeeee;
+--light-gray: #cccccc;
+--mid-gray: #999999;
+--dark-gray: #666666;
+--darkest-gray: #333333; 
+--silver: #c0c0c0;
+--sapphire: #0072bc;
+--amethyst: #782b90;  
+--florentine: #ffd100;  
+--florentine_clear: #ffd100 opacity 30%;
+--midnight-blue: #27495d;  
+--blue-nile:  #75bee9;  
+--mauve: #bd8cbf;
+--green: #a5c300;
+--blackcut: #000000;
 
-   
-    --body-color: #212529;
-/* Card Color scheme for swiss style cards */
+/* ==================================*/  
+/* =======Text & font color pallette ==========*/
+/* ==================================*/  
+/* Light Mode Color Scheme */
+--text-color: var(--black);
+--weak-text-color: var(--dark-gray);
+--heading: var(--black);
+
+/* Dark Mode Color Scheme */
+--dark-text-color: var(--white);
+--dark-weak-text-color: var(--lightest-gray);
+--dark-heading: var(--white)
+
+/* ====================================*/  
+/* =======Background color pallette =========*/
+/* ====================================*/  
+/* Light Mode Color Scheme */
+--background-color: var(--white);  
+
+/* Dark Mode Color Scheme */
+--dark-background-color: var(--dark-blue); 
+
+/* ====================================*/  
+/* =======Card color pallette ===============*/
+/* ====================================*/  
+
 --sw-bg-100: 359.5 100% 25%;
 --sw-bg-101:var(--white-smoke);
 --sw-bg-102:var(--lightest-gray);
@@ -45,16 +80,12 @@
   --clr-neutral-200: 210 46% 95%;
   --clr-neutral-300: 0 0% 81%;
 
-/* Light Mode Color Scheme using a Swiss Pallette red-black-white-blue*/
-    --background-color: var(--white);    
-    --text-color: var(--black);
-    --weak-text-color: var(--dark-gray);
-    --heading: var(--black);
 
-    --link-color: var(--light-blue);
+
+    --link-color: var(--sapphire);
     --icon-color: var(--dark-blue);
     --hover-color: var(--dark-blue);
-    --menu-background: var(--red-gray);
+ 
 
  
 
@@ -72,24 +103,12 @@
     --button-alert-color: var(--light-red);
     --code-background-color: var(--lightest-gray);
 
-    /* Dark Mode Color Scheme using a Swiss Pallette red-black-white-blue */
-    --dark-background-color: var(--black);    
-    --dark-text-color: var(--white);
-    --dark-weak-text-color: var(--lightest-gray);
-    --dark-heading: var(--white)
+
 
 
 /* Syft color scheme*/
-    --silver:  #8ba0b7;
-    --sapphire: #0072bc;
-    --amethyst: #782b90;  
-    --florentine: #ffd100;  
-    --florentine_clear: #ffd100 opacity 30%;
-    --midnight-blue: #27495d;  
-    --blue-nile:  #75bee9;  
-    --mauve: #bd8cbf;
-    --green: #a5c300;
-    --blackcut: #000000;
+
+
 
  
 
@@ -107,7 +126,7 @@
  
   --header-height: 3.5rem;
   --border: 1px solid var(--border-color);    
-  --gap: 2rem;
+  --gap: 1.5rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -115,10 +134,11 @@
   --black-color-light: hsl(220, 24%, 15%);
   --black-color-lighten: hsl(220, 20%, 18%);
   --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
+
 
   /*========== Font and typography ==========*/
   /* Private font files can be used for unique branding */
+
 @font-face {
   font-family: "pluto";
   src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
@@ -136,17 +156,20 @@
  /* --font: Montserrat, Helvetica, Arial, sans-serif; */
  
 
-  /*========== Font size ==========*/
-  --normal-font-size: 0.938rem;
-  --fs-300: 0.6875rem;
-  --fs-400: 0.8125rem;
-  --fs-500: 1.25rem;
+  /*========== Font size, scale in eights ==========*/
+  /*==fs100, fs118, fs114, fs138, fs112, fs158, fs134, fs178, fs200;
+  /*========== Font size, scale in eights ==========*/
+  --fs-100: 1rem;
+  --fs-118: 1.125rem;
+  --fs-125: 1.25rem;
+  --fs-150: 1.5rem;
+  --fs-200: 2rem;
 
   /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --fw-400: 500;
-  --fw-700: 600;
+   --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-double-bold: 900;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -161,7 +184,7 @@
         --weak-text-color: var(--dark-weak-text-color) ;
         --heading: var(--dark-heading);
 
-        --link-color: var(--white);
+        --link-color: var(--blue-nile);
         --icon-color: var(--white);
         --hover-color: var(--darkest-gray);
 

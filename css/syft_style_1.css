@@ -1,69 +1,46 @@
 
-/*
-Uses seperate files for theme, tables, forms, reset, dropnav
-*/
+/*  =============================================
+Uses seperate files for reset, theme, tables, forms, main styling
+===============================================*/
 
 /* Default setting for universal selector   */
 *, *::before, *::after {
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 /* Default styling ruleset for standard type selector HTML elements */
-html {
-  width: 1440px;
-  font-size: 16px;
-  font-family: var(--font);
-  color: var(--text-color);
-  background-color: var(--background-color);
-  accent-color: var(--primary);
-
-  /* Outer to inner is margin - border - padding */
-  border: var(--border);
-  padding: 2px;
-
-}
-
 body {
-margin: 0;
-font-size: var(--normal-font-size);
-
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  font-weight: var(--fw-400);
-  color: var(--body-color);
-  background-color: hsl(var(--clr-neutral-200));
-  text-rendering: auto;
-
-  background-color: var(--body-color);
+font-family: var(--font);
+font-size: var(--fs-100);
+font-weight: var(--fw-normal);
+color: var(--text-color);
+line-height: 1.6;
+max-width: clamp(320px, 90%, 1128px);
+margin: auto; 
+min-height: 100vh;
 }
-
 
 /* Rules set for header type elements */
 
  h1, h2, h3, h4, h5 {
-  padding: 1rem;
+  font-family: var(--font-heading), var(--font);
+  font-weight: var(--fw-bold);
+  color: var(--heading);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  color: var(--heading);
-  font-family: var(--font-heading), var(--font);
-  font-weight: 600;
+  text-wrap: balance;
  }
 
 /* rules set for H1, One per page */
 h1 {
 font-size: 3rem;
-font-weight: 900;
-text-align: center;
+font-weight: var(--fw-double-bold);
+text-align: center; 
 }
 
 h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin: 0 auto;
-  /* border-top: 0.25rem solid var(--blue-nile); */
-  width: 80%;
 }
 
 h3 {
@@ -79,7 +56,7 @@ h4 {
 h5 {
   text-align: left;
   font-size: 1.25rem;
-  }
+}
 
 h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
     margin-top: 2rem;
@@ -87,7 +64,7 @@ h1:not(:first-child), h2:not(:first-child), h3:not(:first-child) {
 
 p {
   color: var(--text-color);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Default rule set for button type element */
@@ -95,18 +72,19 @@ button {
   height: 2rem;
   width: 8rem;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: var(--fw-semi-bold);
   border: none;
   background-color: transparent;
 }
 
+ 
 .btn {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     color: #23424A;
-    font-weight: 900;
-    background-color: #38CFD9;
+    font-weight: var(--fw-double-bold);
+    background-color: var(--blue-nile);
     padding: .75em 2em;
     border-radius: 100px;
 }
@@ -117,13 +95,11 @@ button {
 }
 /*rule set for links. Seperate rules required for nav links and main links */
 
-
-
 body a {
   color: var(--link-color);
   cursor: grab;
-  text-decoration: none;
-  font-size: 1.3rem;
+  /* text-decoration: none; */
+  font-size: var(--fs-125);
 }
 
 
@@ -133,39 +109,37 @@ a:link, a:visited{
 }
 
 a:hover, a:focus{
-  background-color: var(--light-gray);
+  background-color: var(--lightest-gray);
   color: var(--hover-color);
 }
 
-.active{
-  background-color: var(--red-gray);
-  color:var(--white);
-}
-
+ 
+/*=======================================================*/
 /* nav link style needs to come after general a link style to be more specific */
- nav  a{
-  color: white;
-}
-
-nav > a:link, a:visited{
-  color: white;
-}
-/*=============== REUSABLE CSS CLASSES ===============*/
-.nav-container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-} 
-
+/*=======================================================*/
 /*=============== HEADER for Nav Menu ===============*/
 .header {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+/* font-family: var(--font-heading) */
   background-color: var(--black-color);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: var(--z-fixed);
 }
+
+ nav  a {
+  color: white;
+}
+
+nav  a:link, a:visited{
+  color: white;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.nav-container {
+  margin-inline: 1.5rem;
+} 
+
 ul {
   list-style: none ;
   /* Color highlighting when pressed on mobile devices */
@@ -175,24 +149,16 @@ ul {
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 
- 
-
-
-
-
-
-
 /*=============== NAV ===============*/
 .nav {
   height: var(--header-height);
 }
  
 
-.nav__logo,
-.nav__burger,
-.nav__close {
-  color: var(--white-color);
+.nav__logo {
+  color: var(--light-red);
 }
+
 
 .nav__data {
   height: 100%;
@@ -200,18 +166,13 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-.nav-sub__data {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+ 
 
 .nav__logo {
   display: inline-flex;
   align-items: center;
   column-gap: 0.25rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--fw-semi-bold);
   /* Color highlighting when pressed on mobile devices */
   /*-webkit-tap-highlight-color: transparent;*/
 }
@@ -229,6 +190,7 @@ ul {
 
 .nav__burger,
 .nav__close {
+    color: var(--white-color);
   position: absolute;
   width: max-content;
   height: max-content;
@@ -246,6 +208,7 @@ ul {
 /* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
   .nav__menu {
+    
     position: absolute;
     left: 0;
     top: 2.5rem;
@@ -273,7 +236,7 @@ ul {
 .nav__link {
   color: var(--white-color);
   background-color: var(--black-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--fw-semi-bold);
   padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -281,8 +244,6 @@ ul {
   transition: background-color 0.3s;
 }
 
- 
- 
 
 .nav__link:hover {
   background-color: var(--black-color-light);
@@ -324,7 +285,7 @@ ul {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--fw-semi-bold);
   transition: background-color 0.3s;
 }
 
@@ -510,16 +471,15 @@ ol {
 
    */
 .container {
-    width: 80%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: 1128px;
     margin: 0 auto;
 }
 
 .row {
     /* display: flex => flex container */
     display: flex;
-    gap: 50px;
-
+    gap: 5em;
 }
 
 .col {
@@ -527,107 +487,57 @@ ol {
     width: 100%;
 }
 
- .colb {
-    background-color: hsl(var(--sw-bg-100));
- }
+.flex-center {
+  align-self: center;
+}
+
+.flex-bottom {
+  align-self:flex-end;
+}
+
 .hero {
-    padding: 100px 0;
+    padding: 3em 0;
     background-color: var(--sw-bg-103);
     color: #FFF;
 }
 
 .hero__text {
     width: 60%;
+ 
 }
 
-.hero p {
-    margin-bottom: 3em;
-}
+.hero p  {
+  padding:  0.5em 3em;
 
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase; 
-    color: #23424A;
-    font-weight: 900;
-    background-color: var(--light-red);
-    padding: .75em 2em;
-    border-radius: 100px;
 }
-
-.btn:hover,
-.btn:focus {
-    opacity: .75; 
+.hero__img {
+  max-width: 100%;
+padding-right: 1em;
 }
 
 
 
-/* first grid container used on index.html format container full width header section, one column aside and four column main */
-/* .container {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: 2fr 1fr;
-   grid-template-columns: repeat(autofit, minmax(300px, 1fr))
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "header header"
-    "main  aside "
-    "footer footer";
-  border: var(--border);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px auto auto 5px;
-
-} */
-
-/* default layout for HTML5 sections*/
-/* header {
-  grid-area: header;
+.hero__btn {
+  padding: 2em;
 }
 
-footer {
-  grid-area: footer;
-  gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 3fr);
-  background-color: var(--florentine);
-  border: var(--border);
-  border-radius: 20px;
-  padding: 15px;
-  margin: 15px auto auto 5px;
 
-}
+ 
 
-aside {
-  grid-area: aside;
-}
-
-main {
-  grid-area: main;
-}
-/* Rule Set for Article containers
- article {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 100%), 1fr);
-  background-color: var(--white-smoke);
-  color: black;
-  padding: 15px;
-  margin: 15px auto;
-  border: var(--border);
-  border-radius: 10px;
-/* } */ 
+ 
+ 
+ 
+ 
 
 /*=============== Footer for a utility Nav Menu ===============*/
 footer {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: var(--black-color);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: var(--z-fixed);
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 100%), 3fr);
+
   background-color: var(--florentine);
   border: var(--border);
   border-radius: 20px;
@@ -672,7 +582,7 @@ hr::after {
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .italic {
@@ -684,7 +594,7 @@ hr::after {
 .code {
   font-family: "Roboto Mono";
   background-color: var(--code-background-color);
-  font-weight: 500;
+  font-weight: var(--fw-semi-bold);
   font-style: normal;
 }
 
@@ -754,19 +664,7 @@ hr::after {
   color: grey;
  ;
 }
-/*
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}*/
+ 
 
 
 /* code for grids lesson from KEvin Pwell  */
@@ -830,7 +728,7 @@ select {
 h1,
 h2,
 h3 {
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-bold);
 }
 
 /* utilities */
@@ -935,25 +833,27 @@ h3 {
 .border-primary-400 {
   border: 2px solid #a775f1;
 }
-
-/* components for a reference page grid*/
+/*=============================*/
+/* components for a home page grid*/
+/*=============================*/
 .reference-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--gap);
   grid-auto-columns: 1fr;
   grid-template-areas:
    'one'
    'two'
    'three'
    'four'
-   'five';
+   'five'
+   'six';
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
 
 .reference {
-  font-size: var(--fs-400);
+  font-size: var(--fs-125);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
@@ -1031,25 +931,70 @@ h3 {
 }
 
 .reference .name {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-400);
+  font-size: var(--fs-125);
+  font-weight: var(--fw-normal);
   line-height: 1;
 }
 
 .reference .position {
-  font-size: var(--fs-300);
+  font-size: var(--fs-118);
   opacity: 0.5;
 }
 
-/* .reference > p:first-of-type {
-  font-size: var(--fs-500);
+.reference > p:first-of-type { 
+  font-size: var(--fs-150);
   line-height: 1.2;
 }
 
 .reference > p:last-of-type {
   opacity: 0.7;
 } */
- /* components for a content page grid */
+
+/*=============================*/
+/* end of components for a home page grid*/
+/*=============================*/
+
+/*===============================*/
+ /* components for a CSS page grid */
+
+ div {
+  display: grid;
+ }
+
+.css-grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(12, 1fr);
+}
+/*Spans 10 columns */
+.css-grid-item-1 {
+    grid-column: 1 / 11;
+    /* Adopts the adopts the parent's grid tracks */
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.css-subgrid-item:first-child {
+    grid-column: 1 / 6;
+}
+.css-subgrid-item:last-child {
+    grid-column: 6 / 11;
+}
+ /* Spans two columns */
+.css-grid-item-2 {
+    grid-column: 11 / 13;
+}
+/* Spans six columns each */
+.css-grid-item-3 {
+    grid-column: 1 / 7;
+}
+.css-grid-item-4 {
+    grid-column: 7 / 13;
+}
+.css-subgrid-item {
+    font-size: .5em;
+    padding: .5rem;
+}
+ 
  .content-grid {
   display: flex;
   width: 60%;
@@ -1062,6 +1007,7 @@ h3 {
   padding: 0 0.5em;
   color: var(--text-color)
 }
+
 
 
 

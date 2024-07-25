@@ -30,7 +30,7 @@
    <header class="header">
       <nav class="nav nav-container">
          <div class="nav__data">
-            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            <h4 class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</h4>
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -43,7 +43,8 @@
          <ul class="nav__list">
             <li><a href="../html/index.html" class="nav__link">Home</a></li>
             <li><a href="../html/about.html" class="nav__link">About</a></li>  
-          
+<!--=============== Social Medial Posts and press releases ===============-->           
+            <li><a href="#" class="nav__link">Posts</a></li>          
 <!--=============== DROPDOWN 1 Frontend ===============-->
             <li class="dropdown__item">
                <div class="nav__link">
@@ -62,10 +63,15 @@
           
 <!--=============== DROPDOWN SUBMENU CSS===============-->
                   <li class="dropdown__subitem">
-                     <div class="dropdown__link">
+                      <a href="../html/CSS.html" class="dropdown__link">
                         <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
-                     </div>
+                      </a>
                      <ul class="dropdown__submenu">
+                      <li>
+                           <a href="../html/css_fundamentals.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
                         <li>
                            <a href="../html/css_selectors.html" class="dropdown__sublink">
                               <i class="ri-file-list-line"></i> Selectors
@@ -134,8 +140,7 @@
                   </li>
                </ul>
             </li>
-<!--=============== Social Medial Posts and press releases ===============-->           
-            <li><a href="#" class="nav__link">Posts</a></li>
+
 
 <!--=============== DROPDOWN 2 Backend ===============-->
             <li class="dropdown__item">
@@ -235,8 +240,45 @@
                   </li>
                </ul>
             </li>
-            <li>
-                <a href="../html/projects.html" class="nav__link">Projects</a></li> 
+             <!--============= DROPDOWN 5 Computer Science===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Comp. Sci. <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/vscode.html" class="dropdown__link">
+                      <i class="ri-terminal-window-line"></i> Algorithms
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-github-line"></i> Data Structures
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-chrome-line"></i> AI
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-terminal-box-line"></i> Architecture
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Networks & Security
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../html/periodic.html" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Periodic-Table
+                     </a>
+                  </li>
+               </ul>
+            </li>
+             
          </ul>
          </div>
       </nav>
@@ -316,7 +358,31 @@
             <li>..</li>
         </ul>
     </article>
-    </main>
+    <article>
+      <h2>Application Program Interface (API)</h2>
+      <p>There are many APIs that provide important functionalities. You can read more about it from here 👉https://developer.mozilla.org/en-US/docs/Web/API</p>
+      <div>
+      <h3> DOM (Document Object Model) API</h3>
+
+        <p>The DOM API is perhaps the most fundamental web API for web developers. It allows you to interact with and manipulate the structure of web documents. You can add, remove, and modify elements and attributes using methods like getElementById, querySelector, appendChild, and removeChild.</p>
+      </div>
+      <div>
+      <h3>Fetch API</h3>
+
+      <p>-The Fetch API is a modern alternative to XMLHttpRequest for making network requests. It allows you to make HTTP requests to servers, handle responses, and process data asynchronously.</p>
+      <p>Here fetch is used for fetching data from API it returns a promise if the promise is resolved a response is generated otherwise error is thrown.</p>
+      </div>
+      <div>
+        <h3>Local Storage API        </h3>
+        <p>The Local Storage API allows you to store data locally within the user's browser. This data persists even after the browser is closed, making it useful for saving user preferences, caching, and more.</p>
+      </div>
+      <div>
+        <h3>Geolocation API</h3>
+        <p>The Geolocation API provides a way to retrieve the geographical location of the user's device. It's commonly used in location-based services and applications.</p>
+      </div>
+    </article>
+
+  </main>
  
   </div>
    <footer>

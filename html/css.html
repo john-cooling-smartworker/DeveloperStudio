@@ -27,11 +27,11 @@
     <title>DeDeSt</title>
   </head>
   <body>
-  <!--========== Company LOGO Brand Header ======-->
+ <!--========== Company LOGO Brand Header ======-->
    <header class="header">
       <nav class="nav nav-container">
          <div class="nav__data">
-            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            <h4 class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</h4>
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -44,7 +44,8 @@
          <ul class="nav__list">
             <li><a href="../html/index.html" class="nav__link">Home</a></li>
             <li><a href="../html/about.html" class="nav__link">About</a></li>  
-          
+<!--=============== Social Medial Posts and press releases ===============-->           
+            <li><a href="#" class="nav__link">Posts</a></li>          
 <!--=============== DROPDOWN 1 Frontend ===============-->
             <li class="dropdown__item">
                <div class="nav__link">
@@ -63,17 +64,22 @@
           
 <!--=============== DROPDOWN SUBMENU CSS===============-->
                   <li class="dropdown__subitem">
-                     <div class="dropdown__link">
+                      <a href="../html/CSS.html" class="dropdown__link">
                         <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
-                     </div>
+                      </a>
                      <ul class="dropdown__submenu">
+                      <li>
+                           <a href="../html/css_fundamentals.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
                         <li>
                            <a href="../html/css_selectors.html" class="dropdown__sublink">
                               <i class="ri-file-list-line"></i> Selectors
                            </a>
                         </li>
                         <li>
-                           <a href="../html/responsive_design.html" class="dropdown__sublink">
+                           <a href="../html/css_responsive_design.html" class="dropdown__sublink">
                               <i class="ri-cash-line"></i> Responsive Design
                            </a>
                         </li>
@@ -90,7 +96,7 @@
                      </ul>
                   </li>
 
-<!--=============== DROPDOWN SUBMENU Javascript===============-->
+<!--=============== DROPDOWN SUBMENU CSS Tools===============-->
                   <li class="dropdown__subitem">
                      <div class="dropdown__link">
                         <i class="ri-javascript-line"></i>Javascript <i class="ri-add-line dropdown__add"></i>
@@ -135,8 +141,7 @@
                   </li>
                </ul>
             </li>
-<!--=============== Social Medial Posts and press releases ===============-->           
-            <li><a href="#" class="nav__link">Posts</a></li>
+
 
 <!--=============== DROPDOWN 2 Backend ===============-->
             <li class="dropdown__item">
@@ -236,29 +241,56 @@
                   </li>
                </ul>
             </li>
-            <li>
-                <a href="../html/projects.html" class="nav__link">Projects</a></li> 
+             <!--============= DROPDOWN 5 Computer Science===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Comp. Sci. <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/vscode.html" class="dropdown__link">
+                      <i class="ri-terminal-window-line"></i> Algorithms
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-github-line"></i> Data Structures
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-chrome-line"></i> AI
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-terminal-box-line"></i> Architecture
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Networks & Security
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../html/periodic.html" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Periodic-Table
+                     </a>
+                  </li>
+               </ul>
+            </li>
+             
          </ul>
          </div>
       </nav>
    </header>
  <!--End of header nav menu -->
-<!-- On page navigation menu -->
-<nav>
-        <ul>
-            <li ><a href="../html/frontend.html">Frontend</a></li>
-            <li><a href="../html/html.html">HTML</a></li>
-            <li class="active"><a href="../html/css.html">CSS</a></li>
-            <li><a href="../html/javascript.html">Javascript</a></li>
-        </ul>
-</nav>
-
 <main> 
  <h1 >Cascading Style Sheets </h1>
  
-<!-- Card one of five  -->
 
 <div class="reference-grid">
+   <!--CSS Layouts (card position one)  -->
 <article class="reference grid-col-span-2 flow sw-bg-101 quote  ">
   <div class="flex"> 
     <div>
@@ -267,48 +299,35 @@
   </div>
 
   <div>
-    <h2 class="name sw-hdr-101">How to add style to HTML Documents.</h2>
-    <p class="position sw-sub-101">Adding Style Sheets, Fonts, Icons.</p>
+    <h2 class="name sw-hdr-101">Layouts</h2>
+    <p class="position sw-sub-101">Box Model, Grid, Flexbox</p>
   </div>
-    <p class="sw-txt-101">CSS provides style to the contents of a HTML page. Style can be included in the HTML page but more common is to use external Style Sheet</p> 
-   <h2 id="#stylesheets" class=" name sw-hdr-101">Stylesheets: External, Internal, Multiple </h2>
-        <p class="sw-txt-101">StyleSheets are usually external to the HTML document and are linked in within the <span class="sw-txt-102 code"> &lthead&gt </span> section. It is common for there to be multiple CSS files. They are added one after another in the <span class="code sw-txt-102">&lt head &gt</span> section. When styling in the different style sheets clash; eg <span class="code sw-txt-102" >&lth1&gt</span> styling is in all files, the styling is applied in the order the files are defined. The means the last  <span class="code sw-txt-102"> &lt h1 &gt</span> tag found in the last file will override earlier tags. Typical syntax is:</p>
-        <p class="code sw-txt-102">&ltlink rel="styleSheet" href="example.css" /&gt</p>
+    <p class="sw-txt-101">Your website look depends on the layout you create.  </p> 
 
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">MDN - Style Sheet Reference></a></p>
-        <p class="sw-txt-101" >CSS files are often kept in a "/ccs" or "/style" director as part of the overall site directory structure. This is preferred to including CSS styling in the html file because it is easier see, and control when it's a seperate file</p>
-       
-
-        <h2 class="name sw-sub-101" id="font">Fonts</h2>
-        <p class="sw-txt-101" >Fonts and Icons are loadeed in two ways:</p>
-        <p class="sw-txt-101">1. Added in the StyleSheet. The @font-face CSS at-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.</p>
-        <p class="code">@font-face {
-                                 font-family: "pluto";
-                src: url("../Fonts/HVD\ Fonts\ -\ PlutoSansRegular.otf") format("openType");
-                                                }</p>
-        <p class="sw-txt-101">2. Added in the HTML document. As a link in the &lthead&gt section </p>
-        <p class="code">&ltlink href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" /&gt;</p>
-        <p>Google is a source for fonts and icons with global availability at good performance.</p>
-        <p><a href="https://fonts.google.com/">Google Fonts and Icons</a></p>
-        <p><a href=https://developers.google.com/fonts/docs/material_symbols/>Google Material Icons Guide</a></p>
-
+     <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"><h2 id="#stylesheets" class=" name sw-hdr-101">Box Model</h2></a>  
+      <p class="sw-txt-101">Understanding the <strong></strong>Box model </strong> is the first step to creating a stylish layout. It introduces the basic fundamentals of layout: flow direction, margins, borders, padding.     </p>
+      
+    <a href="http://www.w3schools.com/css/css3_flexbox.asp"><h2 id="#stylesheets" class=" name sw-hdr-101">Flexbox</h2></a> 
+    <p class="sw-txt-101">Flexbox is known as a one-dimensional layout model. It can control either rows or columns, but not at the same time. It is much more powerful than it sounds. </p>
+    <a href="https://www.w3schools.com/css/css_grid.asp"><h2 id="#stylesheets" class=" name sw-hdr-101">Grid</h2></a>    
+    <p class="sw-txt-101">Grid is known as the two dimensional layout model. It divides the display area into a grid of rows and columns. Using grid you can keeping elements aligned in columns and rows. </p>
     </article>
- <!--CSS card 2  -->
+ <!--CSS Fundamentals (card position two)2  -->
 <article class="reference flow sw-bg-102 quote  ">
   <div class="flex"> 
     <div>
         <img src="../images/service-3.jpg"alt="user image"/>
     </div>  
   </div>
-    <div>
-    <h2 class="name sw-hdr-102">CSS</h2>
-    <p class="position sw-sub-102">Create the layout and style</p>
+  <div>
+  <a href="../html/css_fundamentals.html">  <h2 class="name sw-hdr-102">CSS Fundamentals </h2></a>
+    <p class="position sw-sub-102">Linking style to content</p>
     </div>    
-      <h3 id="htmlref" class="sw-sub-102">CSS3</h3>
-
-      <p class="sw-txt-102">CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+      <h3 id="htmlref" class="sw-sub-102">CSS3 / HTML5</h3>
+      <p class="sw-txt-102">CSS (Cascading Style Sheets) are used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
+      <p class="sw-txt-102">CSS fundamentals covers how to get style from CSS together with contenet from HTML</p>
        
-    </article>
+</article>
 
 <!-- Javascript card 3  -->
     <article class="reference flow sw-bg-103 quote">
@@ -318,32 +337,19 @@
         </div>
         </div>
         <div>
-          <h2 class="name sw-hdr-103">Javascript</h2>
-          <p class="position sw-sub-103">Add dynamic features to the site</p>
+            <a href="../html/tools.html">  <h2 class="name sw-hdr-103">CSS Tools </h2></a>
+          <p class="position sw-sub-103">Favorite tools for CSS</p>
         </div>
-          <p class="sw-txt-103">Javascript is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.</p>
-          <div>
-          <h2 class="name sw-hdr-104">JS Platforms </h2>
-          <p class="position sw-sub-104">Frameworks and Libraries</p>
-      </div>
+       
+       
             <ul>
                 <li>
-                    <a href="https://react.dev/">React </a>
-                </li>
+                    <a href="https://www.colorhexa.com/">Color Haxa</a>   
                 <li>
-                    <a href="https://jquery.com/">jQuery</a>
-                </li>
-                <li>
-                    <a href="https://flutter.dev/">Chart.js</a>
-                </li>
-                <li>
-                    <a href="https://d3js.org/">D3.js</a>
-                </li>
-                <li>
-                    <a href="https://underscorejs.org/">Underscore.js</a>
+                    <a href="https://www.kevinpowell.co/courses/">Kevin Powell Courses </a>
                 </li>
                  <li>
-                    <a href="https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview">Polymer</a>
+                    <a href="https://www.w3schools.com/w3css/default.asp">W3 CSS Template Library</a>
                 </li>
             </ul>
     </article>
@@ -404,9 +410,7 @@
                 </li>
             </ul>
     </article>
- 
-            
- 
+
 
  
  <!-- onsite links for HTML and CSS card 5 -->
@@ -418,81 +422,65 @@
         </div>
       </div>
       <div>
-          <h2 class="name sw-hdr-105">CSS Element Styling Fundamentals</h2>
-          <p class="position sw-sub-105">Fast jump to just the infor you want to know</p>
+          <h2 class="name sw-hdr-105">CSS Quick Links</h2>
+          <p class="position sw-sub-105">Fast start to just the info you want to know</p>
       </div>
+   
+      <ul>
+           <li>
+              <a href="../html/css_fundamentals.html">Managing Style Sheets</a> 
+          </li>
+           <li>
+              <a href="../html/css_selectors.html">Selectors Cascade and Inheritance</a> 
+          </li>
+          <li>
+              <a href="#color">Color,Spectrum, contrast, syntax, opacity, gradient.</a> 
+          </li>
+          </li>
+          <li>
+              <a href="#typography">Typography, Typeface, Font, Case, Decoration, Spacing</a>  
+          </li>
+          <li>
+              <a href="../html/css_responsive_design.html">Responsive Design - Layout,  Flexbox, Grids, Positioning.</a> 
+          </li>
+           <li>
+              <a href="#media">Media: Screen Sizes, Page Sizes, Fixed Layout, Liquid Layout</a> 
+          </li>
+          <li>
+              <a href="#background">Styling wrapper elements - Backgrounds and Borders</a> 
+          </li>
+          <li>
+              <a href="#lists">Styling core elements - Links, Lists, Tables, Forms, Images</a> 
+          </li>
+      </ul>
+   </article>
         
-        <ul>
-             <li>
-                <a href="#stylesheets">Stylesheets </a><p class="sw-txt-105"> Adding, external, internal, multiple.</p>
-            </li>
-             <li>
-                <a href="../html/css_selectors.html">Selectors </a><p class="sw-txt-105">Cascade and Inheritance</p>
-            </li>
-            <li>
-                <a href="#color">Color</a><p class="sw-txt-105">Spectrum, contrast, syntax, opacity, gradient.</p>
-            </li>
-            </li>
-            <li>
-                <a href="#typography">Typography. </a> <p class="sw-txt-105">Typeface, Font, Case, Decoration, Spacing </p>
-            </li>
-            <li>
-                <a href="../html/responsive_design.html">Responsive Design</a><p class="sw-txt-105">Layout,  Flexbox, Grids, Positioning.</p>
-            </li>
-             <li>
-                <a href="#media">Media:</a><p class="sw-txt-105"> Screen Sizes, Page Sizes, Fixed Layout, Liquid Layout.</p> 
-            </li>
-            <li>
-                <a href="#background">Styling 2D elements</a><p class="sw-txt-105">Backgrounds and Borders </p>
-            </li>
-            <li>
-                <a href="#lists">Styling Elements</a><p class="sw-txt-105">Links, Lists, Tables, Forms, Images </p>
-            </li>
-       
-        </ul>
-        </article>
-        
-        <!-- Page links to CSS sample code -->
-           </div>
- 
+<!-- Page links to CSS sample code -->
+      </div>
     </div> 
-</main>
+ 
 <!-- xxxxjc end of copyin  -->
-
- 
- 
-
-
-
-
-
- 
-      
-         
- 
-
     
-      <!-- CSS concepts  -->
-        <article>
-                <h3 class="aside_head ">
-                    <a id="#cssconcept">Concept</a>
-                </h3>
-               <p>The concept section discusses CSS concepts that combine a range of syntacixcal options to achive a design outcome.</p>
-                <ul>
-                    <li>
-                        <a href="#designprocess">Design Process</a>
-                    </li>
-                    <li>
-                        <a href="#responsive">Responsive Design: Media, Screen Sizes, Page Sizes, Liquid Layout</a>
-                    </li>
-                     <li>
-                        <a href="#navigation">Navigation Design: </a>
-                    </li>
-                    <li>
-                        <a href="#sizing">Sizing Design: Units of Measure, Intrinsic, Specific, Proportional, min-max, viewport</a>
-                    </li>
-                </ul>
-            </article>
+<!-- CSS concepts  -->
+   <article>
+         <h3>  <a id="#cssconcept">Concept</a>
+           </h3>
+          <p>The concept section discusses CSS concepts that combine a range of syntacixcal options to achive a design outcome.</p>
+           <ul>
+               <li>
+                   <a href="#designprocess">Design Process</a>
+               </li>
+               <li>
+                   <a href="#responsive">Responsive Design: Media, Screen Sizes, Page Sizes, Liquid Layout</a>
+               </li>
+                <li>
+                   <a href="#navigation">Navigation Design: </a>
+               </li>
+               <li>
+                   <a href="#sizing">Sizing Design: Units of Measure, Intrinsic, Specific, Proportional, min-max, viewport</a>
+               </li>
+           </ul>
+       </article>
 
         <article>
          <h3 id="csssamples" class="aside_head "> <a href="#csssamples">CSS Code Samples</a> </h3>
@@ -507,12 +495,6 @@
 <!-- Adding styles to HTML documents  card 1 -->
 <div class="reference-grid">
 
-
-    <!-- Selectors -->
-   
-
-
-        <!--Text Styling  -->
     <article>
         <h2 id="#typography" class="article_head">Typography: Typeface, Font, Case, Decoration, Spacing</h2>
         <p>Styling text to maximise communication of the content </p>

@@ -32,11 +32,11 @@
 </head>
 <body>
 
-<!--========== Company LOGO Brand Header ======-->
+ <!--========== Company LOGO Brand Header ======-->
    <header class="header">
       <nav class="nav nav-container">
          <div class="nav__data">
-            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            <h4 class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</h4>
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -49,7 +49,8 @@
          <ul class="nav__list">
             <li><a href="../html/index.html" class="nav__link">Home</a></li>
             <li><a href="../html/about.html" class="nav__link">About</a></li>  
-          
+<!--=============== Social Medial Posts and press releases ===============-->           
+            <li><a href="#" class="nav__link">Posts</a></li>          
 <!--=============== DROPDOWN 1 Frontend ===============-->
             <li class="dropdown__item">
                <div class="nav__link">
@@ -68,12 +69,17 @@
           
 <!--=============== DROPDOWN SUBMENU CSS===============-->
                   <li class="dropdown__subitem">
-                     <div class="dropdown__link">
+                      <a href="../html/CSS.html" class="dropdown__link">
                         <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
-                     </div>
+                      </a>
                      <ul class="dropdown__submenu">
+                      <li>
+                           <a href="../html/css_fundamentals.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
                         <li>
-                           <a href="#" class="dropdown__sublink">
+                           <a href="../html/css_selectors.html" class="dropdown__sublink">
                               <i class="ri-file-list-line"></i> Selectors
                            </a>
                         </li>
@@ -140,8 +146,7 @@
                   </li>
                </ul>
             </li>
-<!--=============== Social Medial Posts and press releases ===============-->           
-            <li><a href="#" class="nav__link">Posts</a></li>
+
 
 <!--=============== DROPDOWN 2 Backend ===============-->
             <li class="dropdown__item">
@@ -185,7 +190,7 @@
                   </li>
                </ul>
             </li>
-            <!--=============== DROPDOWN 3 UI/UX Design===============-->
+<!--=============== DROPDOWN 3 UI/UX Design===============-->
             <li class="dropdown__item">
                <div class="nav__link">
                   UI/UX Design <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -241,12 +246,50 @@
                   </li>
                </ul>
             </li>
-            <li><a href="../html/projects.html" class="nav__link">Projects</a></li>
+             <!--============= DROPDOWN 5 Computer Science===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Comp. Sci. <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/vscode.html" class="dropdown__link">
+                      <i class="ri-terminal-window-line"></i> Algorithms
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-github-line"></i> Data Structures
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-chrome-line"></i> AI
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-terminal-box-line"></i> Architecture
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Networks & Security
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../html/periodic.html" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Periodic-Table
+                     </a>
+                  </li>
+               </ul>
+            </li>
+             
          </ul>
          </div>
       </nav>
    </header>
- <!--End of header nav  -->
+ <!--End of header nav menu -->
 
 <!-- Start of main body -->
 <main>
@@ -559,7 +602,7 @@
         <p>Stylesheets cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.</p>
         <p>ID use ID attribute to unique style a single element. Any particular ID can only be used once per page. use #id-name in css and id=’id-nam,e’ in html overrides styles of types and classes</p>
         <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">MDN reference for Cascade and Inheritance </a></p>
-        <h3 class="sw-sub-101">Cascade Layers </h3>
+        <h3 class="sw-sub-103">Cascade Layers </h3>
         <p>An advanced topic about precedence </p>
         <p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers">CSS - Cascade Layers</a></p>
 

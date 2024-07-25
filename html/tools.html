@@ -30,7 +30,7 @@
    <header class="header">
       <nav class="nav nav-container">
          <div class="nav__data">
-            <a href="#" class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</a>
+            <h4 class="nav__logo"><i class="ri-road-map-fill"></i>DeDeStreet</h4>
             
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line nav__burger"></i>
@@ -43,7 +43,8 @@
          <ul class="nav__list">
             <li><a href="../html/index.html" class="nav__link">Home</a></li>
             <li><a href="../html/about.html" class="nav__link">About</a></li>  
-          
+<!--=============== Social Medial Posts and press releases ===============-->           
+            <li><a href="#" class="nav__link">Posts</a></li>          
 <!--=============== DROPDOWN 1 Frontend ===============-->
             <li class="dropdown__item">
                <div class="nav__link">
@@ -62,10 +63,15 @@
           
 <!--=============== DROPDOWN SUBMENU CSS===============-->
                   <li class="dropdown__subitem">
-                     <div class="dropdown__link">
+                      <a href="../html/CSS.html" class="dropdown__link">
                         <i class="ri-css3-line"></i>CSS <i class="ri-add-line dropdown__add"></i>
-                     </div>
+                      </a>
                      <ul class="dropdown__submenu">
+                      <li>
+                           <a href="../html/css_fundamentals.html" class="dropdown__sublink">
+                              <i class="ri-file-list-line"></i> Fundamentals
+                           </a>
+                        </li>
                         <li>
                            <a href="../html/css_selectors.html" class="dropdown__sublink">
                               <i class="ri-file-list-line"></i> Selectors
@@ -134,8 +140,7 @@
                   </li>
                </ul>
             </li>
-<!--=============== Social Medial Posts and press releases ===============-->           
-            <li><a href="#" class="nav__link">Posts</a></li>
+
 
 <!--=============== DROPDOWN 2 Backend ===============-->
             <li class="dropdown__item">
@@ -235,14 +240,51 @@
                   </li>
                </ul>
             </li>
-            <li>
-                <a href="../html/projects.html" class="nav__link">Projects</a></li> 
+             <!--============= DROPDOWN 5 Computer Science===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Comp. Sci. <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="../html/vscode.html" class="dropdown__link">
+                      <i class="ri-terminal-window-line"></i> Algorithms
+                     </a>                          
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-github-line"></i> Data Structures
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-chrome-line"></i> AI
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-terminal-box-line"></i> Architecture
+                     </a>
+                  </li>
+                     <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Networks & Security
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../html/periodic.html" class="dropdown__link">
+                        <i class="ri-macbook-line"></i>Periodic-Table
+                     </a>
+                  </li>
+               </ul>
+            </li>
+             
          </ul>
          </div>
       </nav>
    </header>
  <!--End of header nav menu -->
-<nav>
+<div class="container">
     <!-- On page navigation menu -->
         <ul>
             <li><a href="../html/github.html">GitHub</a></li>
@@ -250,9 +292,9 @@
             <li><a href="../html/googledev.html">Google Dev</a></li>
             <li><a href="../html/googledev.html">Terminal</a></li>
         </ul>
-</nav>
-<header>
-    <div class="body-text">
+</div>
+<div class="container row">
+    <div class="col">
         <h1>Development Tools</h1>
     </div>
     <h2>Frequently used tools </h2>
@@ -262,7 +304,7 @@
     </div>
     <p>The style guide for this site is <a href="../html/syft_style_guide-01.html">Syft Style 01</a></p>
     <hr />
-</header>
+ </div>
     <!-- Start of two column display with left and right rows keeping in step-->
     <main class="col2-container content">
     
@@ -357,7 +399,35 @@
                 </li>
             </ul>
         </div>
-    
+    <div class="container row">
+         <h3>Essential Tools and Technologies</h3>
+      <div class="col">
+   
+1. MEVN Stack (MongoDB, Express.js, Vue.js, Node.js)
+The MEVN stack is popular for its efficiency and the seamless use of JavaScript across the entire development process. Vue.js is known for its simplicity and flexibility, making it a great choice for front-end development, while Node.js and Express.js handle the backend.
+</div>
+   <div class="col"> 
+2. Next.js
+Next.js, a React framework, is gaining traction for its ability to handle both server-side rendering (SSR) and static site generation (SSG). This framework simplifies building optimized and scalable applications.
+</div>
+   <div class="col"> 
+3. GraphQL
+GraphQL is preferred over traditional REST APIs for its flexibility in querying data. It allows clients to request exactly what they need, reducing the amount of data transferred over the network and improving performance.
+</div>
+   <div class="col"> 
+4. Docker and Kubernetes
+Containerization with Docker and orchestration with Kubernetes are essential for managing and scaling applications. They allow for consistent environments across development, testing, and production, simplifying deployment and scaling.
+</div>
+   <div class="col">
+5. CI/CD Pipelines
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the testing and deployment process, ensuring that new code is integrated smoothly and that applications can be deployed quickly and reliably.
+</div>
+   <div class="col">
+<a href="https://momentjs.com/docs/#/-project-status/">Moment.js reference site</a> /a
+<p>Moment.js has been successfully used in millions of projects, and we are happy to have contributed to making date and time better on the web. </p>
+</div>
+
+    </div>
         <!-- third column -->
         <div class="col-sm">
             <small>

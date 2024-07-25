@@ -14,7 +14,6 @@ body {
    font-family: Inter;
    font-size: 0.85rem;
    color: #fff;
-   background: var(--dark-red);
   letter-spacing: -1px;
 }
 
@@ -64,7 +63,7 @@ h1 span {
    font-weight: 600;
 }
 
-.container {
+.periodic-container {
    display: grid;
    grid-template-columns: repeat(18, 70px);
    grid-auto-rows: minmax(10px, auto);
